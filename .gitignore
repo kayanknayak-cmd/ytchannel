@@ -1,0 +1,7 @@
+node_modules/
+out/
+refs/
+analysis/
+*.mp4
+!public/assets/**/*.mp4
+.DS_Store
