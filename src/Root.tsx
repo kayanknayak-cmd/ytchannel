@@ -2,14 +2,16 @@ import React from 'react';
 import {Composition} from 'remotion';
 import {FPS, H, W} from './lib/tokens';
 import {Timeline, beatsDuration, Beat} from './lib/timeline';
-import {nickelCoke} from './videos/nickelCoke';
+import {styleTest} from './videos/StyleTest';
+import {Lab} from './videos/Lab';
 
 const videos: Record<string, Beat[]> = {
-  NickelCoke: nickelCoke,
+  StyleTest: styleTest,
 };
 
 export const Root: React.FC = () => (
   <>
+    <Composition id="Lab" component={Lab} durationInFrames={120} fps={FPS} width={W} height={H} />
     {Object.entries(videos).map(([id, beats]) => (
       <Composition
         key={id}

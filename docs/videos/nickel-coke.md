@@ -1,6 +1,6 @@
-# Why a Coke cost 5¢ for 73 years (demo)
+# Why a Coke cost 5¢ for 73 years (script + fact check; visuals to be rebuilt with archival photos)
 
-Render: `npm run render -- NickelCoke out/nickel-coke.mp4` (~23.5s, 9:16, 24fps base)
+Status: v1 clip-art visuals retired. Rebuild once archive hosts are reachable.
 
 ## Fact check
 
