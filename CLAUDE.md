@@ -10,6 +10,7 @@ Faceless Vox / Johnny Harris-style 9:16 shorts (econ, business, science), render
 - Frames must be dense and layered (photo + newspaper scraps + tape + marker + clippings), never a
   lone element on blank paper. Visuals tell the story; text is the accent, not a slideshow.
 - Stepped animation: 12/8/6 fps (`step` 2/3/4) over 24fps base. Nothing smooth at 24.
+- Every script topic must have public-domain photos/documents to cut up. No brand-owned subjects without PD imagery.
 - Scripts: curious-storyteller tone, 20-30s, must not sound AI-written (see docs/NOTES.md).
 - Voiceover: the owner records it. No ElevenLabs/AI voice. Visuals get locked first, then retimed to VO.
 - Fact-check every on-screen claim; log sources in docs/videos/<video>.md. No readable fabricated

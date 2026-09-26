@@ -7,8 +7,7 @@ Contractions, fragments and "okay so" are on purpose. 20-30s each (~60-80 words)
 straight into the first so the join sounds natural, then I cut it at the marked point (`||`).
 Only the hook line itself needs to work cold.
 
-**Visuals:** PD = public domain photos exist. TM = the subject is a brand; product shots are trademarked,
-so we lean on archival/PD material and our own clippings.
+**Visuals:** every script is built on public-domain (PD) photos, documents or engravings. Topics without them were replaced.
 
 ---
 
@@ -61,12 +60,12 @@ Loop: "And it's why / one family was rich because of a stone at the bottom of th
 Visuals: rai stone photos (Furness 1910, PD), ocean-blue paper, ledger typewriter.
 Sources: [NPR Planet Money](https://www.npr.org/sections/money/2011/02/15/131934618/the-island-of-stone-money); [Milton Friedman, "The Island of Stone Money" (1991)](https://miltonfriedman.hoover.org/objects/56723/the-island-of-stone-money); [Wikipedia, Rai stones](https://en.wikipedia.org/wiki/Rai_stones). Sunken-stone story is from anthropologist William Furness's 1910 account.
 
-## 8. Buried in a Pringles can (business) · TM
-> The guy who invented the Pringles can is buried in one. Okay, some of his ashes. Fred Baur, a chemist at Procter and Gamble, figured out how to stack the chips in a tube so they wouldn't break. Back in the eighties he told his kids, when I die, put me in a can. They weren't sure he was joking. 2008, he dies. On the way to the funeral home, they stop at Walgreens. Original flavor. So yeah, ||
+## 8. The kid who was mailed (business) · PD
+> In 1914, a family mailed their daughter to her grandparents. Fifty-three cents in stamps, stuck to her coat. Parcel post was brand new, and nothing in the rules said you couldn't. So May Pierstorff, five years old, rode seventy-three miles in a train's mail car. Okay, with a relative who worked there. Right after, the Post Office banned mailing people. It took another year for kids to actually stop showing up. People still don't believe it, but ||
 
-Loop: "So yeah, / the guy who invented the Pringles can is buried in one."
-Visuals: hardest one: no PD photos of Baur; generic tube/chip shapes, clippings, 1960s P&G-era archival.
-Sources: [NPR (2008)](https://www.npr.org/2008/06/03/91098067/inventors-ashes-buried-in-his-creation-pringles-can); [Wikipedia, Fred Baur](https://en.wikipedia.org/wiki/Fred_Baur); [Today I Found Out](https://www.todayifoundout.com/index.php/2012/04/the-inventor-of-the-pringles-can-was-buried-in-one/) (Walgreens, original flavor).
+Loop: "People still don't believe it, but / in 1914, a family mailed their daughter to her grandparents."
+Visuals: Smithsonian National Postal Museum photos of mailed children (1913-14, no known copyright restrictions), parcel post stamps (PD), "53¢" clippings, train mail car.
+Sources: [Smithsonian National Postal Museum](https://postalmuseum.si.edu/very-special-deliveries); [Smithsonian Magazine](https://www.smithsonianmag.com/smart-news/brief-history-children-sent-through-mail-180959372/); [Wikipedia, Charlotte May Pierstorff](https://en.wikipedia.org/wiki/Charlotte_May_Pierstorff).
 
 ## 9. The chocolate bar that tastes bad (business) · PD
 > You ask Hershey to make a chocolate bar that tastes bad. On purpose. That's what the US Army did in 1937. The list: four ounces, won't melt in the heat, loaded with energy, and it should taste, quote, "a little better than a boiled potato." Because it's emergency food. Troops were supposed to save it. But if it tastes good, they eat it before the emergency. So what do you do? ||
@@ -96,19 +95,19 @@ Loop: "Notice the corners? Because / airplane windows used to be square."
 Visuals: Comet photos (Wikimedia/PD UK gov), crack drawn with marker from a corner, stress arrows.
 Sources: [FAA Lessons Learned](https://www.faa.gov/lessons_learned/transport_airplane/accidents/G-ALYV); [Admiral Cloudberg](https://admiralcloudberg.medium.com/neither-money-nor-manpower-the-story-of-the-de-havilland-comet-and-the-crash-of-boac-flight-781-36db2a3435ce); [Wikipedia, SAA 201](https://en.wikipedia.org/wiki/South_African_Airways_Flight_201). Failure origin: ADF window cutout in the roof, not a passenger window (script says "cutout in the roof").
 
-## 13. Bubble wrap was wallpaper (business) · TM-light
-> Bubble wrap was supposed to be wallpaper. In 1957, two engineers sealed two shower curtains together to trap air bubbles, and tried to sell it as textured wallpaper. Nobody bought it. Then they tried greenhouse insulation. Also no. Then IBM needed a way to ship a new computer without breaking it. Suddenly bubble wrap had a job. So next time you pop it, just remember, ||
+## 13. This check bought Alaska (econ) · PD
+> This check bought Alaska. Seven point two million dollars, written in 1868 to Russia's minister in Washington. Critics called the deal Seward's Folly. Seward's Icebox. Then gold. The Klondike strike in 1896 sent stampedes of miners through Alaska, and more gold turned up in Alaska itself. Almost six hundred thousand square miles, for under two cents an acre. Not bad for one piece of paper. Because ||
 
-Loop: "just remember, / bubble wrap was supposed to be wallpaper."
-Visuals: 1950s wallpaper samples (PD ads), IBM 1401 photos (IBM archives, check license), halftone bubbles.
-Sources: [Smithsonian](https://www.smithsonianmag.com/innovation/accidental-invention-bubble-wrap-180971325/); [Wikipedia](https://en.wikipedia.org/wiki/Bubble_wrap); [Today I Found Out](https://www.todayifoundout.com/index.php/2011/11/bubble-wrap-was-originally-designed-to-be-used-as-wallpaper/) (shower curtains).
+Loop: "Because / this check bought Alaska."
+Visuals: the actual 1868 Treasury warrant (National Archives, PD), Seward portrait (PD), 1890s gold rush photos (LoC, PD), map torn from an 1867 atlas.
+Sources: [National Archives, Check for the Purchase of Alaska](https://www.archives.gov/milestone-documents/check-for-the-purchase-of-alaska); [Council on Foreign Relations](https://www.cfr.org/articles/remembering-the-alaska-purchase). Note: historians say "Seward's Folly" mockery was less universal than the legend, so the script says "critics", not "everyone".
 
-## 14. The glue that failed (business) · TM
-> The glue on Post-it notes was a failure. In 1968, a 3M chemist named Spencer Silver was trying to make a super strong adhesive. He got the opposite. Something that stuck, but barely. For years nobody at 3M cared. Then his coworker Art Fry kept losing the bookmarks in his church hymnal. Weak glue. Perfect. Post-its went national in 1980. All because ||
+## 14. Unplug the batteries (science) · PD
+> In 1859, telegraph operators unplugged their batteries and kept sending messages. The power was coming from the sun. A massive solar storm had just hit Earth. Auroras showed up as far south as the Caribbean. Telegraph lines went haywire. Sparks. Paper catching fire. One operator in Washington got shocked right in the forehead. But between Boston and Portland, the storm itself was pushing current through the wires. So, ||
 
-Loop: "All because / the glue on Post-it notes was a failure."
-Visuals: yellow paper squares (our own), hymnal photo, clippings "FAILURE" to "1980".
-Sources: [Post-it history](https://www.post-it.com/3M/en_US/post-it/contact-us/about-us/); [Wikipedia](https://en.wikipedia.org/wiki/Post-it_note); [NIHF](https://www.invent.org/inductees/spencer-silver).
+Loop: "So, / in 1859, telegraph operators unplugged their batteries and kept sending messages."
+Visuals: Richard Carrington's 1859 sunspot drawing (PD), telegraph engravings (PD), aurora illustrations from 1859 newspapers, marker sparks.
+Sources: [History.com](https://www.history.com/articles/a-perfect-solar-superstorm-the-1859-carrington-event); [Science History Institute](https://www.sciencehistory.org/stories/magazine/that-time-demons-possessed-the-telegraph/); [Wikipedia](https://en.wikipedia.org/wiki/Carrington_Event).
 
 ## 15. The moldy cantaloupe (science) · PD
 > A moldy cantaloupe from a fruit market in Illinois helped save millions of lives. 1943. World War Two. Scientists could make penicillin, but barely any. So a lab in Peoria went looking for better mold. Anywhere. Soil, fruit, everything. The winner came off a rotten cantaloupe. About two hundred times more penicillin than the original mold. And that strain is what made mass production possible. So yeah, ||
@@ -131,12 +130,12 @@ Loop: "But for a while there, / in the 1830s, tomatoes were sold at the pharmacy
 Visuals: 1830s newspaper ads (PD, Chronicling America), pill box cutouts, tomato halftone.
 Sources: [Popular Science](https://www.popsci.com/science/ketchup-history-medicine/); [Mental Floss](https://www.mentalfloss.com/article/620380/when-tomatoes-were-marketed-medicine/).
 
-## 18. Kodak invented the digital camera (business) · TM
-> Kodak invented the digital camera. In 1975. A Kodak engineer named Steve Sasson built it. Black and white, a hundred by a hundred pixels, and it took twenty-three seconds to save one photo to a cassette tape. Management was curious. And skeptical. Kodak patented it, and never put it into production. In 2012, after digital crushed film, Kodak filed for bankruptcy. Which is wild, because ||
+## 18. Twenty-two orphans (science) · PD
+> In 1803, Spain shipped a vaccine across the Atlantic inside twenty-two orphans. There was no way to keep smallpox vaccine alive on a long voyage. Except in a person. So they gave one boy cowpox, and when his sore was ready, they passed it to the next kid. Arm to arm. For the whole trip. A nurse named Isabel Zendal kept those boys alive. It worked. And that's how, ||
 
-Loop: "Which is wild, because / Kodak invented the digital camera."
-Visuals: film canisters, cassette tape, 100x100 pixel grid built from paper squares.
-Sources: [Wikipedia, Steven Sasson](https://en.wikipedia.org/wiki/Steven_Sasson); [PetaPixel](https://petapixel.com/how-steve-sasson-invented-the-digital-camera/); [Snopes](https://www.snopes.com/fact-check/kodak-digital-camera-invention/) (why "Kodak hid it" is overstated; script avoids that claim).
+Loop: "And that's how, / in 1803, Spain shipped a vaccine across the Atlantic inside twenty-two orphans."
+Visuals: 18th-19th c. engravings of the expedition and Balmis (PD), Jenner cowpox plates (PD), ship María Pita illustrations, marker chain linking 22 small cutouts.
+Sources: [Science History Institute](https://www.sciencehistory.org/stories/disappearing-pod/orphan-vaccines/); [History of Vaccines](https://historyofvaccines.org/blog/isabel-zendal-first-public-health-nurse/); [Wikipedia, Isabel Zendal](https://en.wikipedia.org/wiki/Isabel_Zendal).
 
 ## 19. The Great Stink (science) · PD
 > Parliament couldn't stand the smell. Summer 1858. The Thames was basically an open sewer, and a heatwave cooked it. They soaked the curtains in chemicals to block the stink. Didn't work. So they rushed a law through in about eighteen days to build a giant sewer system. Funny part? They thought the smell caused cholera. It didn't. Dirty water did. But the sewers fixed that too. So London got healthier, and it was all because ||
