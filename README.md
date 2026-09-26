@@ -9,7 +9,7 @@ and **stepped frame rates**: everything animates "on 2s/3s/4s" (12/8/6 fps) over
 npm install
 npm run studio                                   # live preview/editor
 npm run render -- NickelCoke out/nickel-coke.mp4 # render a video
-python3 tools/analyze_ref.py refs/clip.mp4       # extract style from a reference clip
+pip install imageio-ffmpeg numpy pillow; python3 tools/analyze_ref.py refs/clip.mp4
 ```
 In the cloud container, set `REMOTION_CHROME=/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell`
 (the Chrome download is blocked there).

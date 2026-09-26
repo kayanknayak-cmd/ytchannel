@@ -10,25 +10,24 @@ Measures:
   - Cut rhythm: shot lengths.
   - Palette: dominant colors across the clip.
 """
-import json, os, subprocess, sys
+import os, subprocess, sys
 from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw
 
 ROOT = Path(__file__).resolve().parents[1]
-FFMPEG = ROOT / 'node_modules/@remotion/compositor-linux-x64-gnu/ffmpeg'
-FFPROBE = ROOT / 'node_modules/@remotion/compositor-linux-x64-gnu/ffprobe'
-ENV = {**os.environ, 'LD_LIBRARY_PATH': str(FFMPEG.parent)}
+# Full static ffmpeg (Remotion's bundled one lacks the rawvideo muxer): pip install imageio-ffmpeg numpy pillow
+import imageio_ffmpeg
+FFMPEG = imageio_ffmpeg.get_ffmpeg_exe()
+ENV = os.environ
 SW, SH = 96, 170  # analysis resolution (keeps 9:16-ish; aspect doesn't matter for diffs)
 HOLD_T = 1.2   # mean abs diff (0-255) below which a frame repeats the previous drawing
 CUT_T = 38.0   # above which it's a cut
 
 
 def probe_fps(path):
-    out = subprocess.run([str(FFPROBE), '-v', 'error', '-select_streams', 'v:0', '-show_entries',
-                          'stream=r_frame_rate', '-of', 'json', str(path)], capture_output=True, env=ENV, text=True)
-    num, den = json.loads(out.stdout)['streams'][0]['r_frame_rate'].split('/')
-    return float(num) / float(den)
+    reader = imageio_ffmpeg.read_frames(str(path))
+    return float(next(reader)['fps'])
 
 
 def frames(path, w, h, gray):
