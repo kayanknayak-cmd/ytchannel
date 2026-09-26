@@ -106,6 +106,32 @@ def declip(audio, thresh=0.985):
     return x.astype(np.float32), n, longest / SR * 1000
 
 
+def speech_bounds(audio, sr, t_first, t_last):
+    """True start of the first word and true end of the last word, from loudness.
+    The model only gives word START times, so the last word's end must come from the audio:
+    walk forward until the level sits near the room noise for 120ms."""
+    hop = sr // 100
+    fr = audio[:len(audio) // hop * hop].reshape(-1, hop)
+    db = 20 * np.log10(np.sqrt((fr ** 2).mean(1)) + 1e-9)
+    floor = np.percentile(db, 5)
+    quiet = db < floor + 9
+    i = int(t_last * 100)
+    run = 0
+    while i < len(db):
+        run = run + 1 if quiet[i] else 0
+        if run >= 12:
+            break
+        i += 1
+    end = (i - run + 1) / 100 if i < len(db) else len(audio) / sr
+    j = int(t_first * 100)
+    if quiet[min(j, len(quiet) - 1)]:  # model placed the word early, in silence: walk forward to the onset
+        while j < len(quiet) - 1 and quiet[j]:
+            j += 1
+    while j > 0 and not quiet[j - 1]:
+        j -= 1
+    return max(0.0, j / 100), end
+
+
 def transcribe(audio):
     import sherpa_onnx
     rec = sherpa_onnx.OfflineRecognizer.from_transducer(
@@ -189,12 +215,14 @@ def main():
         if [x for x, _ in flat[k:k + len(head)]] == head:
             loop_i = flat[k][1]
             break
-    t0 = max(0.0, words[0]['start'] - 0.04)
+    first_on, _ = speech_bounds(audio, 48000, words[0]['start'], words[-1]['start'])
+    t0 = max(0.0, first_on - 0.03)
     if loop_i is not None:
         t1 = words[loop_i]['start'] - 0.02
         body = [w for w in words if w['start'] < t1]
     else:
-        t1 = min(len(audio) / 48000, words[-1]['end'] + 0.15)
+        _, last_off = speech_bounds(audio, 48000, words[0]['start'], words[-1]['start'])
+        t1 = min(len(audio) / 48000, last_off + 0.12)  # small natural tail after the word dies away
         body = words
         print('Note: take ends without rolling into the first line; loop cut right after the last word (fine, rolling in just makes the join smoother).')
 
@@ -204,9 +232,9 @@ def main():
     stem = Path(args.out) if args.out else ROOT / 'public' / 'vo' / str(args.script)
     OUT = 48000
     clip = audio[int(t0 * OUT):int(t1 * OUT)].copy()
-    fade = int(0.008 * OUT)
-    clip[:fade] *= np.linspace(0, 1, fade)
-    clip[-fade:] *= np.linspace(1, 0, fade)
+    fade_in, fade_out = int(0.006 * OUT), int(0.06 * OUT)
+    clip[:fade_in] *= np.linspace(0, 1, fade_in)
+    clip[-fade_out:] *= np.linspace(1, 0, fade_out) ** 2
     peak = np.abs(clip).max() or 1
     clip = clip / peak * 0.89
     with wave.open(str(stem) + '.loop.wav', 'wb') as f:
@@ -214,7 +242,9 @@ def main():
         f.setsampwidth(2)
         f.setframerate(OUT)
         f.writeframes((clip * 32767).astype(np.int16).tobytes())
-    out_words = [{'text': w['text'], 'start': round(w['start'] - t0, 3), 'end': round(min(w['end'], t1) - t0, 3)} for w in body]
+    if loop_i is None and body:
+        body[-1]['end'] = t1  # the last word lasts until the speech actually dies away
+    out_words = [{'text': w['text'], 'start': round(max(0.0, w['start'] - t0), 3), 'end': round(min(w['end'], t1) - t0, 3)} for w in body]
     dur = (t1 - t0)
     Path(str(stem) + '.words.json').write_text(json.dumps({'script': int(args.script), 'duration': round(dur, 3), 'words': out_words}, indent=1))
 
