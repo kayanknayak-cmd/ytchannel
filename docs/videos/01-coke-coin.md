@@ -19,4 +19,12 @@ Script: docs/scripts/SCRIPTS.md #1
 | Next coin up is a dime; doubling the price | Arithmetic | |
 
 ## Visuals
-Blocked on archive access (Eisenhower portrait, 1950s vending machines, pre-1929 Coke ads, US Mint coin photos).
+Composition `CokeCoin` (src/videos/CokeCoin.tsx). Every event keyed to a word in the take; re-recording retimes it.
+Animatic done 2026-09-26: motion, clippings, stamps, marker, transitions, audio, seamless loop
+(last->first frame diff 2.3 vs 1.9 typical frame step).
+
+Photo slots still empty (archive hosts blocked). Fill `P` in CokeCoin.tsx with treated PNGs:
+- ike: Eisenhower official portrait (PD)
+- ad: pre-1929 Coca-Cola print ad (PD)
+- vending: 1950s Coca-Cola vending machine (LoC)
+- nickel / dime: Jefferson nickel, Roosevelt dime (US Mint, PD)

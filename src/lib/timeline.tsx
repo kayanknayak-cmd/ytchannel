@@ -1,5 +1,5 @@
-import React from 'react';
-import {AbsoluteFill, Sequence, useCurrentFrame} from 'remotion';
+import React, {createContext, useContext} from 'react';
+import {AbsoluteFill, Audio, Freeze, Sequence, staticFile, useCurrentFrame} from 'remotion';
 import {Stepped} from './stepped';
 import {FPS, H, W} from './tokens';
 import {toPolygon, tornRectPoints} from './torn';
@@ -21,6 +21,14 @@ export type Beat = {
 };
 
 export const RIP_FRAMES = 14;
+
+/** Absolute frame where the current beat starts. Lets scenes time things to absolute VO cues. */
+const BeatFrom = createContext(0);
+/** Convert an absolute (voiceover) frame into this beat's local frame. */
+export const useLocal = () => {
+  const from = useContext(BeatFrom);
+  return (absFrame: number) => absFrame - from;
+};
 export const SLIDE_FRAMES = 10;
 
 export const beatsDuration = (beats: Beat[]) => beats.reduce((s, b) => s + Math.round(b.seconds * FPS), 0);
@@ -44,7 +52,16 @@ const SlideOver: React.FC<{duration: number; seed: string; children: React.React
  * Lays beats end to end. 'rip' keeps the outgoing beat alive RIP_FRAMES past its end and tears it
  * off the top of the stack; 'slide' starts the next beat SLIDE_FRAMES early on top of it.
  */
-export const Timeline: React.FC<{beats: Beat[]}> = ({beats}) => {
+export const Timeline: React.FC<{
+  beats: Beat[];
+  /** Voiceover in public/, e.g. "vo/01.loop.wav". */
+  audio?: string;
+  /**
+   * Seamless loop: the last beat tears away in its final RIP_FRAMES, revealing the first beat
+   * frozen at frame 0, so the last frame hands off to the first with no jump.
+   */
+  loop?: boolean;
+}> = ({beats, audio, loop = false}) => {
   let cursor = 0;
   let z = 500;
   const placed = beats.map((b, i) => {
@@ -63,6 +80,7 @@ export const Timeline: React.FC<{beats: Beat[]}> = ({beats}) => {
         {placed.map(({b, from, dur, slidIn, z: zi}, i) => {
           const last = i === placed.length - 1;
           const rip = (b.exit ?? 'rip') === 'rip' && !last;
+          const loopRip = loop && last;
           const Scene = b.render;
           const body = (
             <AbsoluteFill style={{overflow: 'hidden'}}>
@@ -72,8 +90,9 @@ export const Timeline: React.FC<{beats: Beat[]}> = ({beats}) => {
           );
           return (
             <Sequence key={b.id} from={from} durationInFrames={dur + (rip ? RIP_FRAMES : 0)} style={{zIndex: zi}}>
+              <BeatFrom.Provider value={from}>
               <Stepped step={b.step}>
-                <RipAway start={rip ? dur : Infinity} duration={RIP_FRAMES} seed={b.id}>
+                <RipAway start={rip ? dur : loopRip ? dur - RIP_FRAMES : Infinity} duration={RIP_FRAMES} seed={b.id}>
                   {slidIn ? (
                     <SlideOver duration={SLIDE_FRAMES} seed={b.id}>
                       {body}
@@ -83,10 +102,31 @@ export const Timeline: React.FC<{beats: Beat[]}> = ({beats}) => {
                   )}
                 </RipAway>
               </Stepped>
+              </BeatFrom.Provider>
             </Sequence>
           );
         })}
+        {loop && (() => {
+          const first = placed[0].b;
+          const Scene = first.render;
+          const total = placed[placed.length - 1].from + placed[placed.length - 1].dur;
+          return (
+            <Sequence from={total - RIP_FRAMES} durationInFrames={RIP_FRAMES} style={{zIndex: 1}}>
+              <Freeze frame={0}>
+                <BeatFrom.Provider value={0}>
+                  <Stepped step={first.step}>
+                    <AbsoluteFill style={{overflow: 'hidden'}}>
+                      <Board paper={first.paper ?? 'newsprint'} />
+                      <Scene />
+                    </AbsoluteFill>
+                  </Stepped>
+                </BeatFrom.Provider>
+              </Freeze>
+            </Sequence>
+          );
+        })()}
       </StopMotion>
+      {audio && <Audio src={staticFile(audio)} />}
       <AbsoluteFill style={{zIndex: 1000}}>
         <Stepped step={2}>
           <GrainOverlay strength={0.12} />
