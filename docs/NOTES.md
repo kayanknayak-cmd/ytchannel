@@ -6,3 +6,4 @@
 - Script problems (owner): sounds too AI; weak hooks.
 - Tone: curious storyteller (Johnny Harris style: personal, "here's the weird thing", suspense).
 - Length: 20-30s. One story, one twist, loop point designed in from the start.
+- 2026-09-26: v2 scripts written (docs/scripts/SCRIPTS.md, 20 scripts). Owner liked the rewritten Coke hook style.
