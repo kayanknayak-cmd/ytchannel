@@ -1,7 +1,7 @@
 import React from 'react';
-import {AbsoluteFill, random, useCurrentFrame} from 'remotion';
+import {AbsoluteFill, random, staticFile, useCurrentFrame} from 'remotion';
 import {toPath, toPolygon, tornLine} from '../lib/torn';
-import {W, H, color} from '../lib/tokens';
+import {W, H} from '../lib/tokens';
 
 type Pt = [number, number];
 
@@ -35,7 +35,18 @@ export const RipAway: React.FC<{start: number; duration: number; seed: string; c
         <filter id={`rs-${seed}`} x="-10%" y="-50%" width="120%" height="200%">
           <feDropShadow dx="0" dy="16" stdDeviation="10" floodColor="rgba(20,14,6,0.5)" />
         </filter>
-        <path d={toPath([...edge, ...top])} fill={color.fiber} filter={`url(#rs-${seed})`} />
+        <pattern id={`rf-${seed}`} patternUnits="userSpaceOnUse" width={W} height={H}>
+          <image href={staticFile('paper/white.jpg')} width={W} height={H} />
+        </pattern>
+        <path d={toPath([...edge, ...top])} fill={`url(#rf-${seed})`} filter={`url(#rs-${seed})`} />
+        {/* loose fibers sticking out of the tear */}
+        {edge.filter((_, i) => random(`${seed}-h-${i}`) > 0.55).map(([x, yy], i) => {
+          const len = 4 + random(`${seed}-hl-${i}`) * 10;
+          const a = Math.PI / 2 + (random(`${seed}-ha-${i}`) - 0.5) * 1.4;
+          return (
+            <line key={i} x1={x} y1={yy - 1} x2={x + Math.cos(a) * len} y2={yy + Math.sin(a) * len} stroke="rgba(250,246,236,0.85)" strokeWidth={1.1} strokeLinecap="round" />
+          );
+        })}
       </svg>
       <AbsoluteFill style={{clipPath: toPolygon([...face, ...top])}}>{children}</AbsoluteFill>
     </AbsoluteFill>

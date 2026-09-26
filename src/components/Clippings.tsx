@@ -80,7 +80,7 @@ type ClipProps = {
 
 /** One scrap of paper carrying a letter or word. */
 export const Clip: React.FC<ClipProps> = ({text, size, seed, face, stock, rotate = 0, lift = 1, fragments = true}) => {
-  const pool = text.length > 2 ? CLIP_FACES.filter((c) => c.family !== 'UnifrakturCook') : CLIP_FACES;
+  const pool = CLIP_FACES.filter((c) => c.family !== 'UnifrakturCook'); // blackletter hurts legibility
   const f = face ?? pool[Math.floor(random(`${seed}-face`) * pool.length)];
   const s = STOCKS[stock ?? pick(`${seed}-stock`, STOCK_WEIGHTS)];
   const fs = size * (f.scale ?? 1);

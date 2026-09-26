@@ -47,10 +47,11 @@ export const Camera: React.FC<{keys: CamKey[]; children: React.ReactNode}> = ({k
 
 // ---------- items ----------
 
-export type Enter = 'none' | 'drop' | 'slap' | 'slideL' | 'slideR' | 'slideU' | 'slideD' | 'pop';
+export type Enter = 'none' | 'drop' | 'slap' | 'slideL' | 'slideR' | 'slideU' | 'slideD' | 'pop' | 'flip' | 'fall';
 
 // One pose per drawing. [dx, dy] as fractions of travel, lift (1 = resting), extra rotation.
-const POSES: Record<Exclude<Enter, 'none'>, {off: number; lift: number; rot: number; scale?: number}[]> = {
+type Pose = {off: number; lift: number; rot: number; scale?: number; ry?: number; blur?: number};
+const POSES: Record<Exclude<Enter, 'none'>, Pose[]> = {
   drop: [
     {off: 0, lift: 1.28, rot: 6},
     {off: 0, lift: 1.12, rot: 2},
@@ -72,6 +73,20 @@ const POSES: Record<Exclude<Enter, 'none'>, {off: number; lift: number; rot: num
   slideR: [],
   slideU: [],
   slideD: [],
+  flip: [
+    {off: 0, lift: 1.1, rot: -4, ry: 82},
+    {off: 0, lift: 1.08, rot: -2, ry: 48},
+    {off: 0, lift: 1.03, rot: 0, ry: 14},
+    {off: 0, lift: 1, rot: 0.5, ry: -4},
+    {off: 0, lift: 1, rot: 0, ry: 0},
+  ],
+  fall: [
+    {off: 0, lift: 1, rot: 9, scale: 2.4, blur: 14},
+    {off: 0, lift: 1, rot: 5, scale: 1.6, blur: 6},
+    {off: 0, lift: 1, rot: 1.5, scale: 1.14, blur: 1.5},
+    {off: 0, lift: 0.99, rot: -0.4, scale: 0.99},
+    {off: 0, lift: 1, rot: 0, scale: 1},
+  ],
   pop: [
     {off: 0, lift: 1, rot: 0, scale: 0.2},
     {off: 0, lift: 1.1, rot: 3, scale: 1.12},
@@ -102,12 +117,14 @@ type ItemProps = {
   jitter?: number;
   shadow?: boolean;
   seed?: string;
+  /** Depth-of-field blur in px (foreground scraps close to the lens). */
+  blur?: number;
   children: React.ReactNode;
 };
 
 /** A physical piece on the collage board: enters with a pose sequence, casts a lift-dependent shadow, boils. */
 export const Item: React.FC<ItemProps> = ({
-  x, y, w, rotate = 0, at = 0, enter = 'drop', exitAt, exit = 'slideU', z = 0, jitter = 1.4, shadow = true, seed = `${x}-${y}`, children,
+  x, y, w, rotate = 0, at = 0, enter = 'drop', exitAt, exit = 'slideU', z = 0, jitter = 1.4, shadow = true, seed = `${x}-${y}`, blur = 0, children,
 }) => {
   const f = useSteppedFrame();
   const step = useStep();
@@ -115,7 +132,7 @@ export const Item: React.FC<ItemProps> = ({
   const cam = useContext(CamCtx);
   if (f < at) return null;
 
-  let pose: {off: number; lift: number; rot: number; scale?: number} = {off: 0, lift: 1, rot: 0};
+  let pose: Pose = {off: 0, lift: 1, rot: 0};
   let dir: [number, number] = [0, 0];
   if (enter !== 'none') {
     const seq = POSES[enter];
@@ -146,10 +163,12 @@ export const Item: React.FC<ItemProps> = ({
         left: x,
         top: y,
         width: w,
-        transform: `translate(-50%, -50%) translate(${dir[0] * pose.off * travel + jx + px}px, ${dir[1] * pose.off * travel + jy + py}px) rotate(${rotate + pose.rot + jr}deg) scale(${sc})`,
-        filter: shadow
-          ? `drop-shadow(${4 + lifted * 40}px ${8 + lifted * 70}px ${5 + lifted * 40}px rgba(20,12,4,${Math.max(0.12, 0.42 - lifted * 0.5)}))`
-          : undefined,
+        transform: `translate(-50%, -50%) translate(${dir[0] * pose.off * travel + jx + px}px, ${dir[1] * pose.off * travel + jy + py}px) perspective(1600px) rotateY(${pose.ry ?? 0}deg) rotate(${rotate + pose.rot + jr}deg) scale(${sc})`,
+        filter:
+          [
+            shadow ? `drop-shadow(${4 + lifted * 40 + z * 30}px ${8 + lifted * 70 + z * 50}px ${5 + lifted * 40 + z * 30}px rgba(20,12,4,${Math.max(0.12, 0.42 - lifted * 0.5)}))` : '',
+            blur + (pose.blur ?? 0) > 0 ? `blur(${blur + (pose.blur ?? 0)}px)` : '',
+          ].join(' ') || undefined,
       }}
     >
       {children}
@@ -356,6 +375,106 @@ export const TornPaper: React.FC<{width: number; height: number; seed: string; p
       <div style={{position: 'absolute', inset: 0, clipPath: toPolygon(face), background: `url(${staticFile(`paper/${paper}.jpg`)}) -${ox}px -${oy}px`, overflow: 'hidden'}}>
         {children}
       </div>
+    </div>
+  );
+};
+
+// ---------- paper shapes (color blocks) ----------
+
+/** Jagged closed outline around an ellipse. `rough` 0 = scissor-smooth, 1 = torn. */
+const blobPoints = (cx: number, cy: number, rx: number, ry: number, seed: string, rough: number, n = 90, irregular = 1) =>
+  Array.from({length: n}, (_, i) => {
+    const a = (i / n) * Math.PI * 2;
+    const slow =
+      (Math.sin(a * 2 + random(`${seed}-ph0`) * 6) * 0.09 * (irregular - 1) +
+        Math.sin(a * 3 + random(`${seed}-ph`) * 6) * 0.025 * irregular +
+        Math.sin(a * 5 + random(`${seed}-ph2`) * 6) * 0.015 * irregular);
+    const tooth = (random(`${seed}-t-${i}`) - 0.5) * 0.035 * rough;
+    const k = 1 + slow + tooth;
+    return [cx + Math.cos(a) * rx * k, cy + Math.sin(a) * ry * k] as [number, number];
+  });
+
+/**
+ * Bold paper shape cut from a coloured stock: sits behind a cutout to pop it off the page.
+ * circle = cut with scissors (smooth-ish), torn = ripped by hand (fiber rim).
+ */
+export const PaperShape: React.FC<{w: number; h: number; paper?: string; shape?: 'circle' | 'rect'; torn?: boolean; seed: string}> = ({
+  w, h, paper = 'red', shape = 'circle', torn = false, seed,
+}) => {
+  const ox = Math.floor(random(`${seed}-ox`) * 500);
+  const oy = Math.floor(random(`${seed}-oy`) * 900);
+  const rough = torn ? 1 : 0.25;
+  const outer = shape === 'circle' ? blobPoints(w / 2, h / 2, w / 2, h / 2, `${seed}-o`, rough) : tornRectPoints(w, h, torn ? {top: true, right: true, bottom: true, left: true} : {}, `${seed}-o`, 14, 9);
+  const inner = torn
+    ? shape === 'circle'
+      ? blobPoints(w / 2, h / 2, w / 2 - 9, h / 2 - 9, `${seed}-i`, rough)
+      : tornRectPoints(w - 14, h - 14, {top: true, right: true, bottom: true, left: true}, `${seed}-i`, 12, 9).map(([a, b]) => [a + 7, b + 7] as [number, number])
+    : outer;
+  return (
+    <div style={{position: 'relative', width: w, height: h}}>
+      {torn && <div style={{position: 'absolute', inset: 0, background: '#fbf8f1', clipPath: toPolygon(outer)}} />}
+      <div style={{position: 'absolute', inset: 0, clipPath: toPolygon(inner), background: `url(${staticFile(`paper/${paper}.jpg`)}) -${ox}px -${oy}px`}} />
+    </div>
+  );
+};
+
+// ---------- torn-hole reveal ----------
+
+/**
+ * A sheet of paper lies over the content; a hole is ripped open in it over a few drawings,
+ * revealing what's underneath. Fiber rim + shadow cast by the hole's edge onto the content.
+ */
+export const TornReveal: React.FC<{
+  w: number;
+  h: number;
+  at: number;
+  /** Final hole radius as a fraction of the box (1 = touches the sides). */
+  open?: number;
+  paper?: string;
+  seed: string;
+  cx?: number;
+  cy?: number;
+  children: React.ReactNode;
+}> = ({w, h, at, open = 1.25, paper = 'newsprint', seed, cx = 0.5, cy = 0.5, children}) => {
+  const f = useSteppedFrame();
+  const step = useStep();
+  const k = f < at ? -1 : Math.floor((f - at) / step);
+  const poses = [0.2, 0.42, 0.66, 0.86, 0.97, 1];
+  const p = k < 0 ? 0 : poses[Math.min(k, poses.length - 1)] * open;
+  const hx = w * cx;
+  const hy = h * cy;
+  const rx = (w / 2) * p;
+  const ry = (h / 2) * p;
+  const face = blobPoints(hx, hy, rx + 12, ry + 12, `${seed}-hole`, 3.4, 140, 3);
+  const rim = blobPoints(hx, hy, rx, ry, `${seed}-hole`, 1.2, 140, 3);
+  const path = (pts: [number, number][]) => `M${pts.map(([a, b]) => `${a.toFixed(1)},${b.toFixed(1)}`).join('L')}Z`;
+  const ox = Math.floor(random(`${seed}-ox`) * 400);
+  const oy = Math.floor(random(`${seed}-oy`) * 800);
+  const m = 70;
+  const outerRect = path(
+    tornRectPoints(w + m * 2, h + m * 2, {top: true, right: true, bottom: true, left: true}, `${seed}-sheet`, 14, 9).map(
+      ([a, b]) => [a - m, b - m] as [number, number],
+    ),
+  );
+  return (
+    <div style={{position: 'relative', width: w, height: h}}>
+      {children}
+      {(
+        <svg width={w} height={h} style={{position: 'absolute', left: 0, top: 0, overflow: 'visible'}}>
+          <defs>
+            <filter id={`th-${seed}`} x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="6" dy="12" stdDeviation="9" floodColor="rgba(20,12,4,0.5)" />
+            </filter>
+            <pattern id={`tp-${seed}`} patternUnits="userSpaceOnUse" width={1080} height={1920} x={-ox} y={-oy}>
+              <image href={staticFile(`paper/${paper}.jpg`)} width={1080} height={1920} />
+            </pattern>
+          </defs>
+          <g filter={`url(#th-${seed})`}>
+            {p > 0 ? <path d={`${outerRect} ${path(rim)}`} fillRule="evenodd" fill="#fbf8f1" /> : <path d={outerRect} fill="#fbf8f1" />}
+            {p > 0 ? <path d={`${outerRect} ${path(face)}`} fillRule="evenodd" fill={`url(#tp-${seed})`} /> : <path d={outerRect} fill={`url(#tp-${seed})`} />}
+          </g>
+        </svg>
+      )}
     </div>
   );
 };
