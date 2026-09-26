@@ -1,7 +1,10 @@
 # Scripts v2: 20 shorts
 
 Voice: curious storyteller, talking to one friend. Read it like you're telling it, not reading it.
-Contractions, fragments and "okay so" are on purpose. 20-30s each (~60-80 words).
+Contractions, fragments and "okay so" are on purpose. All scripts are PG. 60-80 words: about 20-25s at your fast pace (~200 wpm).
+
+**Editing on the fly is fine.** Say it how it sounds right. `tools/vo_sync.py` transcribes the take, lists every change,
+flags any change to a number, name or date for a fresh fact check, and retimes the visuals to what you actually said.
 
 **Loop:** every script ends mid-thought, and the first line finishes it. Record the last line flowing
 straight into the first so the join sounds natural, then I cut it at the marked point (`||`).
@@ -75,7 +78,7 @@ Visuals: US Army WWII ration photos (PD), boiled potato cutout, the four require
 Sources: [Hershey Community Archives](https://hersheyarchives.org/encyclopedia/ration-d-bars/); [Smithsonian](https://www.smithsonianmag.com/smithsonian-institution/hersheys-military-chocolate-troops-wwii-180983065/); [Wikipedia, Paul Logan](https://en.wikipedia.org/wiki/Paul_Logan_(colonel)).
 
 ## 10. Lip, dip, paint (science/business) · PD
-> Their bosses told them to lick the paint. In the 1920s, young women painted glowing watch dials with radium paint. The brushes kept losing their point, so they were taught to shape them with their lips. Lip, dip, paint. The paint was radioactive. Their jaws started falling apart. The companies fought them for years. In 1938, Catherine Donohue won her case. She died that same year. She was thirty-five. And it started because ||
+> Their bosses told them to lick the paint. In the 1920s, young women painted glowing watch dials with radium paint. The brushes kept losing their point, so they were taught to shape them with their lips. Lip, dip, paint. The paint was radioactive. It settled in their bones, and they got sick. The companies fought them for years. In 1938, Catherine Donohue won her case. She died that same year. She was thirty-five. And it started because ||
 
 Loop: "And it started because / their bosses told them to lick the paint."
 Visuals: 1920s dial painter photos (PD), glowing green halftone accents, stamp "1938".
@@ -124,7 +127,7 @@ Visuals: Lustig mugshot (PD), 1920s Eiffel photos, forged letterhead with stamp.
 Sources: [Wikipedia](https://en.wikipedia.org/wiki/Victor_Lustig); [Tour Eiffel official](https://www.toureiffel.paris/en/news/history-and-culture/who-sold-eiffel-tower).
 
 ## 17. Tomato pills (business/science) · PD
-> In the 1830s, tomatoes were sold at the pharmacy. As pills. An Ohio doctor named John Cook Bennett said tomatoes could treat diarrhea, indigestion, even jaundice. He pushed ketchup recipes as medicine. Then a drug maker turned it into pills. Ads everywhere. It got so big that knockoffs flooded in, and a lot of them didn't even have tomato in them. The fad was basically over by 1850. But for a while there, ||
+> In the 1830s, tomatoes were sold at the pharmacy. As pills. An Ohio doctor named John Cook Bennett said tomatoes could treat upset stomachs, indigestion, even jaundice. He pushed ketchup recipes as medicine. Then a drug maker turned it into pills. Ads everywhere. It got so big that knockoffs flooded in, and a lot of them didn't even have tomato in them. The fad was basically over by 1850. But for a while there, ||
 
 Loop: "But for a while there, / in the 1830s, tomatoes were sold at the pharmacy."
 Visuals: 1830s newspaper ads (PD, Chronicling America), pill box cutouts, tomato halftone.

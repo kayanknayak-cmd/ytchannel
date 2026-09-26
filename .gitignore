@@ -5,3 +5,4 @@ analysis/
 *.mp4
 !public/assets/**/*.mp4
 .DS_Store
+.models/
