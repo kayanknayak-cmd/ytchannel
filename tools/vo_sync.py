@@ -64,12 +64,46 @@ def normalize(text):
 
 # ---------- audio ----------
 
-def load_audio(path):
+def resample(audio, src, dst):
+    from scipy.signal import resample_poly
+    from math import gcd
+    g = gcd(src, dst)
+    return resample_poly(audio, dst // g, src // g).astype(np.float32)
+
+
+def load_audio(path, sr=SR):
     import imageio_ffmpeg
     ff = imageio_ffmpeg.get_ffmpeg_exe()
-    raw = subprocess.run([ff, '-v', 'error', '-i', str(path), '-ac', '1', '-ar', str(SR), '-f', 's16le', '-'],
+    raw = subprocess.run([ff, '-v', 'error', '-i', str(path), '-ac', '1', '-ar', str(sr), '-f', 's16le', '-'],
                          capture_output=True, check=True).stdout
     return np.frombuffer(raw, np.int16).astype(np.float32) / 32768
+
+
+def declip(audio, thresh=0.985):
+    """Rebuild flattened peaks: fit a cubic through the good samples around each clipped run.
+    Works well for short runs (a few ms), which is what an overloaded phone mic produces on stressed words.
+    Returns (repaired, n_clipped_samples, longest_run_ms)."""
+    from scipy.interpolate import CubicSpline
+    x = audio.astype(np.float64).copy()
+    bad = np.abs(x) >= thresh
+    n = int(bad.sum())
+    if n == 0:
+        return audio, 0, 0.0
+    edges = np.flatnonzero(np.diff(np.r_[0, bad.astype(np.int8), 0]))
+    longest = 0
+    for s, e in zip(edges[::2], edges[1::2]):
+        longest = max(longest, e - s)
+        ctx = 6
+        lo, hi = max(0, s - ctx), min(len(x), e + ctx)
+        good = np.r_[np.arange(lo, s), np.arange(e, hi)]
+        if len(good) < 4:
+            continue
+        cs = CubicSpline(good, x[good])
+        rebuilt = cs(np.arange(s, e))
+        sign = np.sign(x[s:e])
+        x[s:e] = sign * np.maximum(np.abs(rebuilt), thresh)  # never below the clip level it came from
+    x /= max(1.0, np.abs(x).max() / 0.89)
+    return x.astype(np.float32), n, longest / SR * 1000
 
 
 def transcribe(audio):
@@ -138,8 +172,9 @@ def main():
 
     text = script_text(args.script)
     names = {w.lower() for w in re.findall(r"\b[A-Z][a-z]+\b", text)} - {'the', 'and', 'but', 'so', 'okay', 'in', 'a'}
-    audio = load_audio(args.audio)
-    words = transcribe(audio)
+    audio = load_audio(args.audio, sr=48000)
+    audio, n_clip, longest_ms = declip(audio)
+    words = transcribe(resample(audio, 48000, SR))
     said = [w for word in words for w in normalize(word['text'])]
     target = normalize(text)
 
@@ -159,16 +194,17 @@ def main():
         t1 = words[loop_i]['start'] - 0.02
         body = [w for w in words if w['start'] < t1]
     else:
-        t1 = min(len(audio) / SR, words[-1]['end'] + 0.15)
+        t1 = min(len(audio) / 48000, words[-1]['end'] + 0.15)
         body = words
-        print('! No repeat of the first line found at the end: loop point not cut. Read the last line straight into the first line.')
+        print('Note: take ends without rolling into the first line; loop cut right after the last word (fine, rolling in just makes the join smoother).')
 
     said_body = [w for word in body for w in normalize(word['text'])]
     ops, ratio = diff(target, said_body, names)
 
     stem = Path(args.out) if args.out else ROOT / 'public' / 'vo' / str(args.script)
-    clip = audio[int(t0 * SR):int(t1 * SR)].copy()
-    fade = int(0.008 * SR)
+    OUT = 48000
+    clip = audio[int(t0 * OUT):int(t1 * OUT)].copy()
+    fade = int(0.008 * OUT)
     clip[:fade] *= np.linspace(0, 1, fade)
     clip[-fade:] *= np.linspace(1, 0, fade)
     peak = np.abs(clip).max() or 1
@@ -176,13 +212,16 @@ def main():
     with wave.open(str(stem) + '.loop.wav', 'wb') as f:
         f.setnchannels(1)
         f.setsampwidth(2)
-        f.setframerate(SR)
+        f.setframerate(OUT)
         f.writeframes((clip * 32767).astype(np.int16).tobytes())
     out_words = [{'text': w['text'], 'start': round(w['start'] - t0, 3), 'end': round(min(w['end'], t1) - t0, 3)} for w in body]
     dur = (t1 - t0)
     Path(str(stem) + '.words.json').write_text(json.dumps({'script': int(args.script), 'duration': round(dur, 3), 'words': out_words}, indent=1))
 
     wpm = len(said_body) / dur * 60 if dur else 0
+    if n_clip:
+        print(f'! Mic clipped on {n_clip} samples (longest burst {longest_ms:.1f} ms). Repaired by peak reconstruction.'
+              + (' Bursts over ~3 ms may still sound rough: listen, re-record if so.' if longest_ms > 3 else ''))
     print(f'Script {args.script}: {dur:.1f}s loop, {len(said_body)} words, {wpm:.0f} wpm, match {ratio:.0%}')
     if not ops:
         print('Read exactly as written.')

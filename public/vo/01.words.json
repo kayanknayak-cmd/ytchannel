@@ -1,0 +1,371 @@
+{
+ "script": 1,
+ "duration": 25.281,
+ "words": [
+  {
+   "text": "Coca-Cola",
+   "start": 0.04,
+   "end": 1.08
+  },
+  {
+   "text": "once",
+   "start": 1.08,
+   "end": 1.4
+  },
+  {
+   "text": "asked",
+   "start": 1.4,
+   "end": 1.72
+  },
+  {
+   "text": "the",
+   "start": 1.72,
+   "end": 1.88
+  },
+  {
+   "text": "president",
+   "start": 1.88,
+   "end": 2.44
+  },
+  {
+   "text": "of",
+   "start": 2.44,
+   "end": 2.6
+  },
+  {
+   "text": "the",
+   "start": 2.6,
+   "end": 2.76
+  },
+  {
+   "text": "United",
+   "start": 2.76,
+   "end": 3.16
+  },
+  {
+   "text": "States",
+   "start": 3.16,
+   "end": 3.56
+  },
+  {
+   "text": "to",
+   "start": 3.56,
+   "end": 3.72
+  },
+  {
+   "text": "invent",
+   "start": 3.72,
+   "end": 4.12
+  },
+  {
+   "text": "a",
+   "start": 4.12,
+   "end": 4.28
+  },
+  {
+   "text": "new",
+   "start": 4.28,
+   "end": 4.52
+  },
+  {
+   "text": "coin,",
+   "start": 4.52,
+   "end": 5.32
+  },
+  {
+   "text": "seven",
+   "start": 5.32,
+   "end": 5.72
+  },
+  {
+   "text": "and",
+   "start": 5.72,
+   "end": 5.88
+  },
+  {
+   "text": "a",
+   "start": 5.88,
+   "end": 5.96
+  },
+  {
+   "text": "half",
+   "start": 5.96,
+   "end": 6.28
+  },
+  {
+   "text": "cents.",
+   "start": 6.28,
+   "end": 7.0
+  },
+  {
+   "text": "He",
+   "start": 7.0,
+   "end": 7.24
+  },
+  {
+   "text": "said",
+   "start": 7.24,
+   "end": 7.64
+  },
+  {
+   "text": "no.",
+   "start": 7.64,
+   "end": 8.84
+  },
+  {
+   "text": "But",
+   "start": 8.92,
+   "end": 9.16
+  },
+  {
+   "text": "why",
+   "start": 9.16,
+   "end": 9.32
+  },
+  {
+   "text": "would",
+   "start": 9.32,
+   "end": 9.48
+  },
+  {
+   "text": "a",
+   "start": 9.48,
+   "end": 9.64
+  },
+  {
+   "text": "soda",
+   "start": 9.64,
+   "end": 10.04
+  },
+  {
+   "text": "company",
+   "start": 10.04,
+   "end": 10.44
+  },
+  {
+   "text": "even",
+   "start": 10.44,
+   "end": 10.76
+  },
+  {
+   "text": "ask?",
+   "start": 10.76,
+   "end": 11.56
+  },
+  {
+   "text": "Because",
+   "start": 11.56,
+   "end": 11.88
+  },
+  {
+   "text": "for",
+   "start": 11.88,
+   "end": 12.12
+  },
+  {
+   "text": "over",
+   "start": 12.12,
+   "end": 12.36
+  },
+  {
+   "text": "seventy",
+   "start": 12.36,
+   "end": 12.92
+  },
+  {
+   "text": "years,",
+   "start": 12.92,
+   "end": 13.4
+  },
+  {
+   "text": "a",
+   "start": 13.4,
+   "end": 13.56
+  },
+  {
+   "text": "coke",
+   "start": 13.56,
+   "end": 14.12
+  },
+  {
+   "text": "cost",
+   "start": 14.12,
+   "end": 14.36
+  },
+  {
+   "text": "a",
+   "start": 14.36,
+   "end": 14.44
+  },
+  {
+   "text": "nickel,",
+   "start": 14.44,
+   "end": 15.16
+  },
+  {
+   "text": "and",
+   "start": 15.16,
+   "end": 15.4
+  },
+  {
+   "text": "they",
+   "start": 15.4,
+   "end": 15.56
+  },
+  {
+   "text": "were",
+   "start": 15.56,
+   "end": 15.72
+  },
+  {
+   "text": "trapped.",
+   "start": 15.72,
+   "end": 16.44
+  },
+  {
+   "text": "Their",
+   "start": 16.44,
+   "end": 16.68
+  },
+  {
+   "text": "vending",
+   "start": 16.68,
+   "end": 17.16
+  },
+  {
+   "text": "machines",
+   "start": 17.16,
+   "end": 17.64
+  },
+  {
+   "text": "took",
+   "start": 17.64,
+   "end": 17.96
+  },
+  {
+   "text": "one",
+   "start": 17.96,
+   "end": 18.2
+  },
+  {
+   "text": "coin,",
+   "start": 18.2,
+   "end": 18.84
+  },
+  {
+   "text": "a",
+   "start": 18.84,
+   "end": 19.0
+  },
+  {
+   "text": "nickel.",
+   "start": 19.0,
+   "end": 19.72
+  },
+  {
+   "text": "Raise",
+   "start": 19.72,
+   "end": 20.04
+  },
+  {
+   "text": "the",
+   "start": 20.04,
+   "end": 20.12
+  },
+  {
+   "text": "price,",
+   "start": 20.12,
+   "end": 20.6
+  },
+  {
+   "text": "and",
+   "start": 20.6,
+   "end": 20.76
+  },
+  {
+   "text": "the",
+   "start": 20.76,
+   "end": 20.84
+  },
+  {
+   "text": "next",
+   "start": 20.84,
+   "end": 21.08
+  },
+  {
+   "text": "coin",
+   "start": 21.08,
+   "end": 21.48
+  },
+  {
+   "text": "up",
+   "start": 21.48,
+   "end": 21.64
+  },
+  {
+   "text": "is",
+   "start": 21.64,
+   "end": 21.8
+  },
+  {
+   "text": "a",
+   "start": 21.8,
+   "end": 21.88
+  },
+  {
+   "text": "dime.",
+   "start": 21.88,
+   "end": 22.571
+  },
+  {
+   "text": "you're",
+   "start": 22.571,
+   "end": 22.891
+  },
+  {
+   "text": "doubling",
+   "start": 22.891,
+   "end": 23.291
+  },
+  {
+   "text": "the",
+   "start": 23.291,
+   "end": 23.371
+  },
+  {
+   "text": "price",
+   "start": 23.371,
+   "end": 23.611
+  },
+  {
+   "text": "of",
+   "start": 23.611,
+   "end": 23.691
+  },
+  {
+   "text": "a",
+   "start": 23.691,
+   "end": 23.851
+  },
+  {
+   "text": "Coke,",
+   "start": 23.851,
+   "end": 24.651
+  },
+  {
+   "text": "which",
+   "start": 24.651,
+   "end": 24.811
+  },
+  {
+   "text": "is",
+   "start": 24.811,
+   "end": 25.051
+  },
+  {
+   "text": "why",
+   "start": 25.051,
+   "end": 25.131
+  }
+ ]
+}

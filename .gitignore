@@ -6,3 +6,4 @@ analysis/
 !public/assets/**/*.mp4
 .DS_Store
 .models/
+*-preview.m4a
