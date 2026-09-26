@@ -14,6 +14,8 @@ Faceless Vox / Johnny Harris-style 9:16 shorts (econ, business, science), render
 - Fact-check every on-screen claim; log sources in docs/videos/<video>.md. No readable fabricated
   headlines/quotes in decor (NewsScrap stays illegible body text).
 - No em dashes in any output.
+- Videos must loop perfectly: last line/frame flows into the first. No "follow for more" outros.
+- Open owner notes live in docs/NOTES.md. Check them before starting work.
 
 ## Pipeline
 - Photos: `python3 tools/treat_photo.py in.jpg public/assets/<video>/x.png --cut|--torn --style halftone|duotone|mono|color`
