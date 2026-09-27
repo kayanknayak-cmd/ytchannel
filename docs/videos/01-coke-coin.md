@@ -28,3 +28,15 @@ Photo slots still empty (archive hosts blocked). Fill `P` in CokeCoin.tsx with t
 - ad: pre-1929 Coca-Cola print ad (PD)
 - vending: 1950s Coca-Cola vending machine (LoC)
 - nickel / dime: Jefferson nickel, Roosevelt dime (US Mint, PD)
+
+## Photos (all public domain, verified license)
+| Slot | Source |
+|---|---|
+| ike | [Eisenhower official portrait, May 29, 1959](https://commons.wikimedia.org/wiki/File:Dwight_D._Eisenhower,_official_photo_portrait,_May_29,_1959.jpg) (US gov) |
+| ad | [Coca-Cola 5¢ ad, c.1900, Hilda Clark](https://commons.wikimedia.org/wiki/File:Cocacola-5cents-1900_edit1.jpg) (pre-1929) |
+| vending | [Carol M. Highsmith, Coke machine, Benton Harbor MI](https://www.loc.gov/item/2020742383/) (LoC, no known restrictions) |
+| nickel | [1938 Jefferson nickel, Smithsonian NNC](https://commons.wikimedia.org/wiki/File:NNC-US-1938-5C-Jefferson_Nickel.jpg) |
+| dime | [Roosevelt dime, US Mint](https://commons.wikimedia.org/wiki/File:Dime_Obverse_13.png) (2013 strike; design unchanged since 1946) |
+
+Status 2026-09-27: final render done. Loop seam 2.3 vs 2.1 typical frame step.
+Note: Wikimedia rate-limits this IP for originals; use standard thumbnail widths (1280/1920).

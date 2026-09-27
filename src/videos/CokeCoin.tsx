@@ -15,11 +15,11 @@ const C = cues(vo as VoWords);
 
 /** Treated public-domain photos. null = not sourced yet (animatic card). */
 const P: Record<string, string | null> = {
-  ike: null, // Eisenhower official portrait (PD, US gov)
-  ad: null, // pre-1929 Coca-Cola print ad (PD)
-  vending: null, // 1950s Coca-Cola vending machine (LoC)
-  nickel: null, // Jefferson nickel (US Mint, PD)
-  dime: null, // Roosevelt dime (US Mint, PD)
+  ike: 'assets/01/ike.png', // Eisenhower official portrait (PD, US gov)
+  ad: 'assets/01/ad.png', // pre-1929 Coca-Cola print ad (PD)
+  vending: 'assets/01/vending.png', // 1950s Coca-Cola vending machine (LoC)
+  nickel: 'assets/01/nickel.png', // Jefferson nickel (US Mint, PD)
+  dime: 'assets/01/dime.png', // Roosevelt dime (US Mint, PD)
 };
 
 const Overlay: React.FC<{children: React.ReactNode}> = ({children}) => <AbsoluteFill>{children}</AbsoluteFill>;
@@ -109,8 +109,8 @@ const Vending: React.FC = () => {
           <PhotoSlot src={P.vending} label="1950s Coca-Cola vending machine" w={640} h={1180} seed="vendSlot" />
         </Item>
         <Tape x={290} y={330} rotate={-30} at={10} seed="t5" />
-        <MarkerCircle x={760} y={620} rx={90} ry={70} at={L(C.at('coin'))} drawings={3} seed="slot" color="#f4c430" width={11} />
-        <MarkerArrow x1={980} y1={330} x2={810} y2={560} bend={0.3} at={L(C.at('coin')) + 4} drawings={3} color="#f4c430" width={10} />
+        <MarkerCircle x={688} y={1278} rx={62} ry={80} at={L(C.at('coin'))} drawings={3} seed="slot" color="#f4c430" width={11} />
+        <MarkerArrow x1={930} y1={1060} x2={740} y2={1210} bend={0.3} at={L(C.at('coin')) + 4} drawings={3} color="#f4c430" width={10} />
         <Item x={900} y={1500} rotate={12} enter="pop" at={L(C.at('nickel', 1))} seed="nickel2" z={0.15}>
           <PhotoSlot src={P.nickel} label="Jefferson nickel" w={300} h={300} seed="nickelSlot2" dark />
         </Item>

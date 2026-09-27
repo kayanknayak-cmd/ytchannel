@@ -144,11 +144,27 @@ def main():
     ap.add_argument('--border', type=int, default=0, help='cutout white border px (default: width/60)')
     ap.add_argument('--tear', type=float, default=0.7, help='torn-edge strength multiplier')
     ap.add_argument('--width', type=int, default=1400, help='output width px')
+    ap.add_argument('--crop', default=None, help='x0,y0,x1,y1 as fractions of the source, e.g. 0.26,0.02,0.73,1')
     args = ap.parse_args()
 
-    im = Image.open(args.src).convert('RGB')
+    src = Image.open(args.src)
+    src_alpha = src.getchannel('A') if src.mode in ('RGBA', 'LA') else None
+    if args.crop:
+        x0, y0, x1, y1 = [float(v) for v in args.crop.split(',')]
+        box = (round(x0 * src.width), round(y0 * src.height), round(x1 * src.width), round(y1 * src.height))
+        src = src.crop(box)
+        src_alpha = src_alpha.crop(box) if src_alpha is not None else None
+    if src_alpha is not None:  # composite over white so transparent areas don't turn black
+        bg = Image.new('RGB', src.size, 'white')
+        bg.paste(src.convert('RGB'), mask=src_alpha)
+        im = bg
+    else:
+        im = src.convert('RGB')
     if im.width != args.width:
-        im = im.resize((args.width, round(im.height * args.width / im.width)), Image.LANCZOS)
+        size = (args.width, round(im.height * args.width / im.width))
+        im = im.resize(size, Image.LANCZOS)
+        if src_alpha is not None:
+            src_alpha = src_alpha.resize(size, Image.LANCZOS)
     rgb = np.asarray(im, float) / 255
     h, w, _ = rgb.shape
     ink, paper = hex_rgb(args.ink), hex_rgb(args.paper)
@@ -157,9 +173,12 @@ def main():
     white = np.array([0.985, 0.975, 0.955])
 
     if args.cut:
-        from rembg import remove, new_session
-        cut = remove(im, session=new_session('isnet-general-use'))
-        a = np.asarray(cut, float)[..., 3] / 255
+        if src_alpha is not None:  # source already cut out: trust its alpha
+            a = np.asarray(src_alpha.resize(im.size), float) / 255
+        else:
+            from rembg import remove, new_session
+            cut = remove(im, session=new_session('isnet-general-use'))
+            a = np.asarray(cut, float)[..., 3] / 255
         a = ndimage.gaussian_filter(a, 0.7)
         border = args.border or max(6, w // 60)
         pad = border * 3
