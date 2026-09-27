@@ -11,3 +11,8 @@ Niche: econ
 Loop: "All because / one man gave away so much gold..."
 Visuals: Catalan Atlas (1375) Mansa Musa figure, gold coin cutouts raining, price line falling.
 Sources: [Al-Umari's account, World History Commons](https://worldhistorycommons.org/al-umaris-account-mansa-musas-visit-cairo); [Wikipedia](https://en.wikipedia.org/wiki/Mansa_Musa). Note: the only primary source is al-Umari; scholars debate the scale, so the script says "by one account".
+
+## Photos (license checked before use)
+| File | Source | Link |
+|---|---|---|
+| musa | Catalan Atlas BNF Sheet 6 Mansa Musa (cropped).jpg (Public domain) | https://commons.wikimedia.org/wiki/File:Catalan_Atlas_BNF_Sheet_6_Mansa_Musa_(cropped).jpg |

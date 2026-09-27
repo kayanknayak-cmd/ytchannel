@@ -11,3 +11,9 @@ Niche: science
 Loop: "So, / in 1859, telegraph operators unplugged their batteries and kept sending messages."
 Visuals: Richard Carrington's 1859 sunspot drawing (PD), telegraph engravings (PD), aurora illustrations from 1859 newspapers, marker sparks.
 Sources: [History.com](https://www.history.com/articles/a-perfect-solar-superstorm-the-1859-carrington-event); [Science History Institute](https://www.sciencehistory.org/stories/magazine/that-time-demons-possessed-the-telegraph/); [Wikipedia](https://en.wikipedia.org/wiki/Carrington_Event).
+
+## Photos (license checked before use)
+| File | Source | Link |
+|---|---|---|
+| sunspots | Carrington Richard drawing of 1859 sunspots.jpeg (Public domain) | https://commons.wikimedia.org/wiki/File:Carrington_Richard_drawing_of_1859_sunspots.jpeg |
+| telegraph | Atlantic Pacific Telegraph Office (8273067012).jpg (No restrictions) | https://commons.wikimedia.org/wiki/File:Atlantic_Pacific_Telegraph_Office_(8273067012).jpg |

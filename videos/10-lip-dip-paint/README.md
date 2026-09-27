@@ -11,3 +11,9 @@ Niche: science/business
 Loop: "And it started because / their bosses told them to lick the paint."
 Visuals: 1920s dial painter photos (PD), glowing green halftone accents, stamp "1938".
 Sources: [History.com](https://www.history.com/articles/radium-girls-workplace-safety); [Wikipedia](https://en.wikipedia.org/wiki/Radium_Girls); [ORAU](https://www.orau.org/blog/history/radium-girls-the-health-scandal-of-radium-dial-painters-in-the-1920s-and-1930s.html).
+
+## Photos (license checked before use)
+| File | Source | Link |
+|---|---|---|
+| dials | All women or girls using radium paint with no protection or warnings in 1922, from- USRadiumGirls-Argonne1,ca1922-23-150dpi (cropped).jpg (Public domain) | https://commons.wikimedia.org/wiki/File:All_women_or_girls_using_radium_paint_with_no_protection_or_warnings_in_1922,_from-_USRadiumGirls-Argonne1,ca1922-23-150dpi_(cropped).jpg |
+| fryer | Grace Fryer.jpg (Public domain) | https://commons.wikimedia.org/wiki/File:Grace_Fryer.jpg |

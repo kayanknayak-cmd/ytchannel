@@ -11,3 +11,9 @@ Niche: science
 Loop: "Notice the corners? Because / airplane windows used to be square."
 Visuals: Comet photos (Wikimedia/PD UK gov), crack drawn with marker from a corner, stress arrows.
 Sources: [FAA Lessons Learned](https://www.faa.gov/lessons_learned/transport_airplane/accidents/G-ALYV); [Admiral Cloudberg](https://admiralcloudberg.medium.com/neither-money-nor-manpower-the-story-of-the-de-havilland-comet-and-the-crash-of-boac-flight-781-36db2a3435ce); [Wikipedia, SAA 201](https://en.wikipedia.org/wiki/South_African_Airways_Flight_201). Failure origin: ADF window cutout in the roof, not a passenger window (script says "cutout in the roof").
+
+## Photos (license checked before use)
+| File | Source | Link |
+|---|---|---|
+| comet | British Overseas Airways Corporation - de Havilland DH-106 Comet 1 G-ALYP.jpg (Public domain) | https://commons.wikimedia.org/wiki/File:British_Overseas_Airways_Corporation_-_de_Havilland_DH-106_Comet_1_G-ALYP.jpg |
+| comet2 | DeHavilland, DH 106, Comet.jpg (No restrictions) | https://commons.wikimedia.org/wiki/File:DeHavilland,_DH_106,_Comet.jpg |

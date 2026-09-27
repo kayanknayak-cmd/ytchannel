@@ -11,3 +11,8 @@ Niche: business
 Loop: "So what do you do? / You ask Hershey to make a chocolate bar that tastes bad."
 Visuals: US Army WWII ration photos (PD), boiled potato cutout, the four requirements as typewriter checklist.
 Sources: [Hershey Community Archives](https://hersheyarchives.org/encyclopedia/ration-d-bars/); [Smithsonian](https://www.smithsonianmag.com/smithsonian-institution/hersheys-military-chocolate-troops-wwii-180983065/); [Wikipedia, Paul Logan](https://en.wikipedia.org/wiki/Paul_Logan_(colonel)).
+
+## Photos (license checked before use)
+| File | Source | Link |
+|---|---|---|
+| drations | Pakje chocolade als noodrantsoen 'US Army Field Ration D', asset i1bAedKasRfSAQaWXs4Howk5.jpg (CC0) | https://commons.wikimedia.org/wiki/File:Pakje_chocolade_als_noodrantsoen_%27US_Army_Field_Ration_D%27,_asset_i1bAedKasRfSAQaWXs4Howk5.jpg |

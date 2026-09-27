@@ -11,3 +11,8 @@ Niche: science
 Loop: "So yeah, / a moldy cantaloupe from a fruit market..."
 Visuals: USDA Peoria lab photos (PD, federal), cantaloupe, WWII penicillin posters (PD).
 Sources: [USDA Tellus](https://tellus.ars.usda.gov/stories/articles/enduring-mystery-moldy-mary); [Science History Institute](https://www.sciencehistory.org/stories/disappearing-pod/the-forgotten-mother-of-penicillin/). Who found it ("Moldy Mary") is disputed, so the script doesn't name her.
+
+## Photos (license checked before use)
+| File | Source | Link |
+|---|---|---|
+| melon | Adolphe Millot legume et plante potageres-pour tous melon cantaloup.jpg (Public domain) | https://commons.wikimedia.org/wiki/File:Adolphe_Millot_legume_et_plante_potageres-pour_tous_melon_cantaloup.jpg |

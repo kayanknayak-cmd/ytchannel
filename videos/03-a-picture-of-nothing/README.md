@@ -11,3 +11,10 @@ Niche: science
 Loop: "So technically, / this is a picture of nothing."
 Visuals: already built (Hubble reveal, zoom to galaxy). Loop visual: pull back out to the opening frame.
 Sources: [NASA](https://science.nasa.gov/mission/hubble/science/universe-uncovered/hubble-deep-fields/); [Williams et al. 1996](https://arxiv.org/abs/astro-ph/9607174) (342 exposures, 10 days); [Futura-Sciences](https://www.futura-sciences.com/en/he-was-advised-against-taking-this-cosmic-image-and-he-dared-anyway-the-result-changed-our-vision-of-the-universe_29563/) (advised against).
+
+## Photos (license checked before use)
+| File | Source | Link |
+|---|---|---|
+| hst | Hubble 2009 close-up.jpg (Public domain) | https://commons.wikimedia.org/wiki/File:Hubble_2009_close-up.jpg |
+| deepfield | Hubble deep field (NASA, public domain; via scikit-image sample data) | https://science.nasa.gov/mission/hubble/science/universe-uncovered/hubble-deep-fields/ |
+| dime | Roosevelt dime, US Mint (public domain) | https://commons.wikimedia.org/wiki/File:Dime_Obverse_13.png |

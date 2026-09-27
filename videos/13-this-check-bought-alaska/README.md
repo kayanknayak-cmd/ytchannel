@@ -11,3 +11,10 @@ Niche: econ
 Loop: "Because / this check bought Alaska."
 Visuals: the actual 1868 Treasury warrant (National Archives, PD), Seward portrait (PD), 1890s gold rush photos (LoC, PD), map torn from an 1867 atlas.
 Sources: [National Archives, Check for the Purchase of Alaska](https://www.archives.gov/milestone-documents/check-for-the-purchase-of-alaska); [Council on Foreign Relations](https://www.cfr.org/articles/remembering-the-alaska-purchase). Note: historians say "Seward's Folly" mockery was less universal than the legend, so the script says "critics", not "everyone".
+
+## Photos (license checked before use)
+| File | Source | Link |
+|---|---|---|
+| seward | L'Illustration 1862 William Henry Seward d'après photo de Brady.jpg (Public domain) | https://commons.wikimedia.org/wiki/File:L%27Illustration_1862_William_Henry_Seward_d%27apr%C3%A8s_photo_de_Brady.jpg |
+| check | check (Public domain (US gov / no known restrictions)) | https://www.archives.gov/milestone-documents/check-for-the-purchase-of-alaska |
+| chilkoot | chilkoot (Public domain (US gov / no known restrictions)) | https://www.loc.gov/item/2012646448/ |

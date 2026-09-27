@@ -21,23 +21,23 @@ The files at the top level (`package.json`, `tsconfig.json`, `remotion.config.ts
 | # | Video | Voiceover | Photos | Finished video |
 |---|---|---|---|---|
 | 01 | [The 7½¢ coin](videos/01-the-7-5-cent-coin/) | synced | 5 | [01-the-7-5-cent-coin.mp4](finished/01-the-7-5-cent-coin.mp4) |
-| 02 | [The four-cent penny](videos/02-the-four-cent-penny/) | recorded | - | - |
-| 03 | [A picture of nothing](videos/03-a-picture-of-nothing/) | recorded | - | - |
-| 04 | [Death by molasses](videos/04-death-by-molasses/) | recorded | - | - |
-| 05 | [Too much gold](videos/05-too-much-gold/) | recorded | - | - |
-| 06 | [Monopoly was a warning](videos/06-monopoly-was-a-warning/) | recorded | - | - |
-| 07 | [Money at the bottom of the sea](videos/07-money-at-the-bottom-of-the-sea/) | recorded | - | - |
-| 08 | [The kid who was mailed](videos/08-the-kid-who-was-mailed/) | recorded | - | - |
-| 09 | [The chocolate bar that tastes bad](videos/09-the-chocolate-bar-that-tastes-bad/) | recorded | - | - |
-| 10 | [Lip, dip, paint](videos/10-lip-dip-paint/) | recorded | - | - |
-| 11 | [The army lost to emus](videos/11-the-army-lost-to-emus/) | recorded | - | - |
-| 12 | [Why plane windows are round](videos/12-why-plane-windows-are-round/) | recorded | - | - |
-| 13 | [This check bought Alaska](videos/13-this-check-bought-alaska/) | recorded | - | - |
-| 14 | [Unplug the batteries](videos/14-unplug-the-batteries/) | recorded | - | - |
-| 15 | [The moldy cantaloupe](videos/15-the-moldy-cantaloupe/) | recorded | - | - |
-| 16 | [He sold the Eiffel Tower](videos/16-he-sold-the-eiffel-tower/) | recorded | - | - |
-| 17 | [Tomato pills](videos/17-tomato-pills/) | recorded | - | - |
-| 18 | [Twenty-two orphans](videos/18-twenty-two-orphans/) | recorded | - | - |
+| 02 | [The four-cent penny](videos/02-the-four-cent-penny/) | synced | 3 | [02-the-four-cent-penny.mp4](finished/02-the-four-cent-penny.mp4) |
+| 03 | [A picture of nothing](videos/03-a-picture-of-nothing/) | synced | 3 | [03-a-picture-of-nothing.mp4](finished/03-a-picture-of-nothing.mp4) |
+| 04 | [Death by molasses](videos/04-death-by-molasses/) | synced | 3 | [04-death-by-molasses.mp4](finished/04-death-by-molasses.mp4) |
+| 05 | [Too much gold](videos/05-too-much-gold/) | synced | 1 | [05-too-much-gold.mp4](finished/05-too-much-gold.mp4) |
+| 06 | [Monopoly was a warning](videos/06-monopoly-was-a-warning/) | synced | 2 | - |
+| 07 | [Money at the bottom of the sea](videos/07-money-at-the-bottom-of-the-sea/) | synced | 3 | - |
+| 08 | [The kid who was mailed](videos/08-the-kid-who-was-mailed/) | synced | 1 | - |
+| 09 | [The chocolate bar that tastes bad](videos/09-the-chocolate-bar-that-tastes-bad/) | synced | 1 | - |
+| 10 | [Lip, dip, paint](videos/10-lip-dip-paint/) | synced | 2 | - |
+| 11 | [The army lost to emus](videos/11-the-army-lost-to-emus/) | synced | 2 | - |
+| 12 | [Why plane windows are round](videos/12-why-plane-windows-are-round/) | synced | 2 | - |
+| 13 | [This check bought Alaska](videos/13-this-check-bought-alaska/) | synced | 3 | - |
+| 14 | [Unplug the batteries](videos/14-unplug-the-batteries/) | synced | 2 | - |
+| 15 | [The moldy cantaloupe](videos/15-the-moldy-cantaloupe/) | synced | 1 | - |
+| 16 | [He sold the Eiffel Tower](videos/16-he-sold-the-eiffel-tower/) | synced | 2 | - |
+| 17 | [Tomato pills](videos/17-tomato-pills/) | synced | 2 | - |
+| 18 | [Twenty-two orphans](videos/18-twenty-two-orphans/) | synced | 2 | - |
 | 19 | [The Great Stink](videos/19-the-great-stink/) | - | - | - |
 | 20 | [Tulip mania didn't happen](videos/20-tulip-mania-didnt-happen/) | - | - | - |
 <!-- status:end -->

@@ -11,3 +11,8 @@ Niche: business
 Loop: "People still don't believe it, but / in 1914, a family mailed their daughter to her grandparents."
 Visuals: Smithsonian National Postal Museum photos of mailed children (1913-14, no known copyright restrictions), parcel post stamps (PD), "53¢" clippings, train mail car.
 Sources: [Smithsonian National Postal Museum](https://postalmuseum.si.edu/very-special-deliveries); [Smithsonian Magazine](https://www.smithsonianmag.com/smart-news/brief-history-children-sent-through-mail-180959372/); [Wikipedia, Charlotte May Pierstorff](https://en.wikipedia.org/wiki/Charlotte_May_Pierstorff).
+
+## Photos (license checked before use)
+| File | Source | Link |
+|---|---|---|
+| may | Charlotte May Pierstorff.jpg (Public domain) | https://commons.wikimedia.org/wiki/File:Charlotte_May_Pierstorff.jpg |

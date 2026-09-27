@@ -47,7 +47,7 @@ const v3 = defineVideo(B, v03 as VoWords, [
 const Cm = '04-death-by-molasses';
 const v4 = defineVideo(Cm, v04 as VoWords, [
   {at: '21', layout: 'hero', photo: pic(Cm, 'wreck', 1.257, {enter: 'reveal'}), title: {text: 'Boston, 1919'}, big: {text: 'MOLASSES', cue: 'molasses', stock: 'kraft'}},
-  {at: 'january', layout: 'hero', paper: 'aged', photo: pic(Cm, 'eltrain', 1.335, {enter: 'drop'}), photo2: pic(Cm, 'globe', 4.947, {cue: 'burst'}), big: {text: '2.3 MILLION GALLONS', cue: 'million'}, scrawl: {text: '15 ft wave', cue: 'feet', x: 790, y: 180}},
+  {at: 'january', layout: 'hero', paper: 'aged', photo: pic(Cm, 'eltrain', 1.335, {enter: 'drop'}), photo2: pic(Cm, 'globe', 4.947, {cue: 'burst'}), big: {text: '2.3 MILLION GALLONS', cue: 'million'}, scrawl: {text: '15 ft wave?', cue: 'feet', x: 790, y: 180}},
   {at: 'and that tank', layout: 'hero', paper: 'kraft', photo: pic(Cm, 'wreck', 1.257, {enter: 'drop', mark: {cue: 'leaking', fx: 0.3, fy: 0.45, r: 0.18}}), scrawl: {text: 'leaks?', cue: 'leaking', x: 300, y: 250}, stamp: {text: 'Painted brown', cue: 'brown', x: 200, y: 700}},
   {at: 'then the cold', layout: 'doc', paper: 'blue', photo: pic(Cm, 'eltrain', 1.335, {enter: 'drop'}), type: {text: 'Molasses gets thicker as it cools.', cue: ['molasses', 1]}, stamp: {text: 'Stuck', cue: 'stuck', x: 330, y: 520}},
 ]);

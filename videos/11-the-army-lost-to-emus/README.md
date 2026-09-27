@@ -11,3 +11,9 @@ Niche: science/econ
 Loop: "And that's the true story of how, / in 1932, Australia sent soldiers..."
 Visuals: 1932 Australian photos (PD in Australia), emu cutouts scattering on 2s, Lewis gun, truck.
 Sources: [Wikipedia, Emu War](https://en.wikipedia.org/wiki/Emu_War); [History Hit](https://www.historyhit.com/the-great-emu-war/). Meredith's "invulnerability of tanks" quote.
+
+## Photos (license checked before use)
+| File | Source | Link |
+|---|---|---|
+| soldiers | Australian soldiers resting during Emu War.jpg (Public domain) | https://commons.wikimedia.org/wiki/File:Australian_soldiers_resting_during_Emu_War.jpg |
+| emuhead | HeadofEmu.jpg (CC0) | https://commons.wikimedia.org/wiki/File:HeadofEmu.jpg |

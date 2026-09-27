@@ -11,3 +11,9 @@ Niche: business/science
 Loop: "But for a while there, / in the 1830s, tomatoes were sold at the pharmacy."
 Visuals: 1830s newspaper ads (PD, Chronicling America), pill box cutouts, tomato halftone.
 Sources: [Popular Science](https://www.popsci.com/science/ketchup-history-medicine/); [Mental Floss](https://www.mentalfloss.com/article/620380/when-tomatoes-were-marketed-medicine/).
+
+## Photos (license checked before use)
+| File | Source | Link |
+|---|---|---|
+| tomato | Lycopersicon Galeni - Pomidoro + Pomme d'ammour. (Tomato) (NYPL b14444147-1125092).tiff (Public domain) | https://commons.wikimedia.org/wiki/File:Lycopersicon_Galeni_-_Pomidoro_%2B_Pomme_d%27ammour._(Tomato)_(NYPL_b14444147-1125092).tiff |
+| bottles | Apothecarybottles.jpg (Public domain) | https://commons.wikimedia.org/wiki/File:Apothecarybottles.jpg |

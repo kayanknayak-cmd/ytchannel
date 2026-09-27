@@ -11,3 +11,9 @@ Niche: science
 Loop: "And that's how, / in 1803, Spain shipped a vaccine across the Atlantic inside twenty-two orphans."
 Visuals: 18th-19th c. engravings of the expedition and Balmis (PD), Jenner cowpox plates (PD), ship María Pita illustrations, marker chain linking 22 small cutouts.
 Sources: [Science History Institute](https://www.sciencehistory.org/stories/disappearing-pod/orphan-vaccines/); [History of Vaccines](https://historyofvaccines.org/blog/isabel-zendal-first-public-health-nurse/); [Wikipedia, Isabel Zendal](https://en.wikipedia.org/wiki/Isabel_Zendal).
+
+## Photos (license checked before use)
+| File | Source | Link |
+|---|---|---|
+| balmis | Balmis.jpg (Public domain) | https://commons.wikimedia.org/wiki/File:Balmis.jpg |
+| gillray | James Gillray, "The Cow-Pock", 1802 (LoC, no known restrictions) | https://www.loc.gov/item/94509853/ |

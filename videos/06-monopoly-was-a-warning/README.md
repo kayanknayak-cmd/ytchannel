@@ -11,3 +11,9 @@ Niche: business
 Loop: "Which is why almost nobody knows / Monopoly was invented as a warning."
 Visuals: 1904 patent drawing (PD), Magie photo (PD), $500 clippings, board squares torn.
 Sources: [Library of Congress](https://guides.loc.gov/this-month-in-business-history/december/game-of-monopoly-patent); [Wikipedia, Lizzie Magie](https://en.wikipedia.org/wiki/Lizzie_Magie); [History.com](https://www.history.com/articles/monopoly-game-inventor-elizabeth-magie).
+
+## Photos (license checked before use)
+| File | Source | Link |
+|---|---|---|
+| patent | BoardGamePatentMagie.png (Public domain) | https://commons.wikimedia.org/wiki/File:BoardGamePatentMagie.png |
+| magie | Lizzie Magie - My Betrothed, and Other Poems.jpg (Public domain) | https://commons.wikimedia.org/wiki/File:Lizzie_Magie_-_My_Betrothed,_and_Other_Poems.jpg |
