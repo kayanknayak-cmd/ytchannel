@@ -25,7 +25,7 @@ The files at the top level (`package.json`, `tsconfig.json`, `remotion.config.ts
 | 03 | [A picture of nothing](videos/03-a-picture-of-nothing/) | synced | 3 | [03-a-picture-of-nothing.mp4](finished/03-a-picture-of-nothing.mp4) |
 | 04 | [Death by molasses](videos/04-death-by-molasses/) | synced | 3 | [04-death-by-molasses.mp4](finished/04-death-by-molasses.mp4) |
 | 05 | [Too much gold](videos/05-too-much-gold/) | synced | 1 | [05-too-much-gold.mp4](finished/05-too-much-gold.mp4) |
-| 06 | [Monopoly was a warning](videos/06-monopoly-was-a-warning/) | synced | 2 | - |
+| 06 | [Monopoly was a warning](videos/06-monopoly-was-a-warning/) | synced | 2 | [06-monopoly-was-a-warning.mp4](finished/06-monopoly-was-a-warning.mp4) |
 | 07 | [Money at the bottom of the sea](videos/07-money-at-the-bottom-of-the-sea/) | synced | 3 | - |
 | 08 | [The kid who was mailed](videos/08-the-kid-who-was-mailed/) | synced | 1 | - |
 | 09 | [The chocolate bar that tastes bad](videos/09-the-chocolate-bar-that-tastes-bad/) | synced | 1 | - |
