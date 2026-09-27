@@ -3,9 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "studio": "remotion studio",
-    "render": "remotion render",
-    "still": "remotion still"
+    "studio": "python3 engine/tools/build_public.py && remotion studio",
+    "render": "python3 engine/tools/render.py",
+    "status": "python3 engine/tools/status.py"
   },
   "dependencies": {
     "@fontsource/abril-fatface": "^5.3.0",
