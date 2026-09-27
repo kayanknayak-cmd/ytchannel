@@ -1,0 +1,376 @@
+{
+ "script": 17,
+ "duration": 25.63,
+ "words": [
+  {
+   "text": "In",
+   "start": 0.0,
+   "end": -0.03
+  },
+  {
+   "text": "the",
+   "start": 0.0,
+   "end": 0.13
+  },
+  {
+   "text": "1830s,",
+   "start": 0.13,
+   "end": 1.01
+  },
+  {
+   "text": "tomatoes",
+   "start": 1.01,
+   "end": 1.57
+  },
+  {
+   "text": "were",
+   "start": 1.57,
+   "end": 1.73
+  },
+  {
+   "text": "sold",
+   "start": 1.73,
+   "end": 2.05
+  },
+  {
+   "text": "at",
+   "start": 2.05,
+   "end": 2.21
+  },
+  {
+   "text": "the",
+   "start": 2.21,
+   "end": 2.29
+  },
+  {
+   "text": "pharmacy",
+   "start": 2.29,
+   "end": 3.01
+  },
+  {
+   "text": "as",
+   "start": 3.01,
+   "end": 3.25
+  },
+  {
+   "text": "pills.",
+   "start": 3.25,
+   "end": 4.05
+  },
+  {
+   "text": "An",
+   "start": 4.05,
+   "end": 4.29
+  },
+  {
+   "text": "Ohio",
+   "start": 4.29,
+   "end": 4.69
+  },
+  {
+   "text": "doctor",
+   "start": 4.69,
+   "end": 5.01
+  },
+  {
+   "text": "named",
+   "start": 5.01,
+   "end": 5.25
+  },
+  {
+   "text": "John",
+   "start": 5.25,
+   "end": 5.57
+  },
+  {
+   "text": "Cook",
+   "start": 5.57,
+   "end": 5.89
+  },
+  {
+   "text": "Bennett",
+   "start": 5.89,
+   "end": 6.29
+  },
+  {
+   "text": "said",
+   "start": 6.29,
+   "end": 6.45
+  },
+  {
+   "text": "tomatoes",
+   "start": 6.45,
+   "end": 6.85
+  },
+  {
+   "text": "could",
+   "start": 6.85,
+   "end": 7.01
+  },
+  {
+   "text": "treat",
+   "start": 7.01,
+   "end": 7.25
+  },
+  {
+   "text": "upset",
+   "start": 7.25,
+   "end": 7.65
+  },
+  {
+   "text": "stomachs,",
+   "start": 7.65,
+   "end": 8.29
+  },
+  {
+   "text": "indigestion,",
+   "start": 8.29,
+   "end": 9.25
+  },
+  {
+   "text": "even",
+   "start": 9.25,
+   "end": 9.49
+  },
+  {
+   "text": "jaundice.",
+   "start": 9.49,
+   "end": 10.45
+  },
+  {
+   "text": "He",
+   "start": 10.45,
+   "end": 10.61
+  },
+  {
+   "text": "pushed",
+   "start": 10.61,
+   "end": 10.93
+  },
+  {
+   "text": "ketchup",
+   "start": 10.93,
+   "end": 11.49
+  },
+  {
+   "text": "recipes",
+   "start": 11.49,
+   "end": 11.89
+  },
+  {
+   "text": "as",
+   "start": 11.89,
+   "end": 12.13
+  },
+  {
+   "text": "medicine.",
+   "start": 12.13,
+   "end": 13.09
+  },
+  {
+   "text": "Then",
+   "start": 13.09,
+   "end": 13.41
+  },
+  {
+   "text": "a",
+   "start": 13.41,
+   "end": 13.57
+  },
+  {
+   "text": "drug",
+   "start": 13.57,
+   "end": 13.81
+  },
+  {
+   "text": "maker",
+   "start": 13.81,
+   "end": 14.21
+  },
+  {
+   "text": "turned",
+   "start": 14.21,
+   "end": 14.45
+  },
+  {
+   "text": "it",
+   "start": 14.45,
+   "end": 14.53
+  },
+  {
+   "text": "into",
+   "start": 14.53,
+   "end": 14.77
+  },
+  {
+   "text": "pills.",
+   "start": 14.77,
+   "end": 15.57
+  },
+  {
+   "text": "Ads",
+   "start": 15.57,
+   "end": 16.13
+  },
+  {
+   "text": "everywhere.",
+   "start": 16.13,
+   "end": 16.93
+  },
+  {
+   "text": "It",
+   "start": 16.93,
+   "end": 17.17
+  },
+  {
+   "text": "got",
+   "start": 17.17,
+   "end": 17.41
+  },
+  {
+   "text": "so",
+   "start": 17.41,
+   "end": 17.65
+  },
+  {
+   "text": "big",
+   "start": 17.65,
+   "end": 17.89
+  },
+  {
+   "text": "that",
+   "start": 17.89,
+   "end": 18.05
+  },
+  {
+   "text": "knockoffs",
+   "start": 18.05,
+   "end": 18.69
+  },
+  {
+   "text": "flooded",
+   "start": 18.69,
+   "end": 19.09
+  },
+  {
+   "text": "in,",
+   "start": 19.09,
+   "end": 19.41
+  },
+  {
+   "text": "and",
+   "start": 19.41,
+   "end": 19.57
+  },
+  {
+   "text": "a",
+   "start": 19.57,
+   "end": 19.65
+  },
+  {
+   "text": "lot",
+   "start": 19.65,
+   "end": 19.81
+  },
+  {
+   "text": "of",
+   "start": 19.81,
+   "end": 19.89
+  },
+  {
+   "text": "them",
+   "start": 19.89,
+   "end": 20.13
+  },
+  {
+   "text": "didn't",
+   "start": 20.13,
+   "end": 20.37
+  },
+  {
+   "text": "even",
+   "start": 20.37,
+   "end": 20.45
+  },
+  {
+   "text": "have",
+   "start": 20.45,
+   "end": 20.61
+  },
+  {
+   "text": "tomato",
+   "start": 20.61,
+   "end": 21.17
+  },
+  {
+   "text": "in",
+   "start": 21.17,
+   "end": 21.33
+  },
+  {
+   "text": "them.",
+   "start": 21.33,
+   "end": 21.803
+  },
+  {
+   "text": "The",
+   "start": 21.803,
+   "end": 21.963
+  },
+  {
+   "text": "fad",
+   "start": 21.963,
+   "end": 22.363
+  },
+  {
+   "text": "was",
+   "start": 22.363,
+   "end": 22.523
+  },
+  {
+   "text": "basically",
+   "start": 22.523,
+   "end": 22.843
+  },
+  {
+   "text": "over",
+   "start": 22.843,
+   "end": 23.083
+  },
+  {
+   "text": "by",
+   "start": 23.083,
+   "end": 23.323
+  },
+  {
+   "text": "1850.",
+   "start": 23.323,
+   "end": 24.363
+  },
+  {
+   "text": "But",
+   "start": 24.363,
+   "end": 24.603
+  },
+  {
+   "text": "for",
+   "start": 24.603,
+   "end": 24.763
+  },
+  {
+   "text": "a",
+   "start": 24.763,
+   "end": 24.923
+  },
+  {
+   "text": "while",
+   "start": 24.923,
+   "end": 25.243
+  },
+  {
+   "text": "there",
+   "start": 25.243,
+   "end": 25.63
+  }
+ ]
+}

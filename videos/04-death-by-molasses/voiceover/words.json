@@ -1,0 +1,361 @@
+{
+ "script": 4,
+ "duration": 27.59,
+ "words": [
+  {
+   "text": "21",
+   "start": 0.0,
+   "end": 0.68
+  },
+  {
+   "text": "people",
+   "start": 0.68,
+   "end": 0.92
+  },
+  {
+   "text": "in",
+   "start": 0.92,
+   "end": 1.16
+  },
+  {
+   "text": "Boston",
+   "start": 1.16,
+   "end": 1.64
+  },
+  {
+   "text": "were",
+   "start": 1.64,
+   "end": 1.8
+  },
+  {
+   "text": "killed",
+   "start": 1.8,
+   "end": 2.04
+  },
+  {
+   "text": "by",
+   "start": 2.04,
+   "end": 2.2
+  },
+  {
+   "text": "molasses.",
+   "start": 2.2,
+   "end": 3.32
+  },
+  {
+   "text": "January",
+   "start": 3.32,
+   "end": 4.04
+  },
+  {
+   "text": "1919,",
+   "start": 4.04,
+   "end": 5.24
+  },
+  {
+   "text": "a",
+   "start": 5.32,
+   "end": 5.48
+  },
+  {
+   "text": "giant",
+   "start": 5.48,
+   "end": 5.88
+  },
+  {
+   "text": "tank",
+   "start": 5.88,
+   "end": 6.2
+  },
+  {
+   "text": "of",
+   "start": 6.2,
+   "end": 6.36
+  },
+  {
+   "text": "it",
+   "start": 6.36,
+   "end": 6.52
+  },
+  {
+   "text": "burst,",
+   "start": 6.52,
+   "end": 7.32
+  },
+  {
+   "text": "2.3",
+   "start": 7.32,
+   "end": 8.12
+  },
+  {
+   "text": "million",
+   "start": 8.12,
+   "end": 8.52
+  },
+  {
+   "text": "gallons,",
+   "start": 8.52,
+   "end": 9.16
+  },
+  {
+   "text": "in",
+   "start": 9.16,
+   "end": 9.24
+  },
+  {
+   "text": "a",
+   "start": 9.24,
+   "end": 9.4
+  },
+  {
+   "text": "wave",
+   "start": 9.4,
+   "end": 9.8
+  },
+  {
+   "text": "people",
+   "start": 9.8,
+   "end": 10.04
+  },
+  {
+   "text": "said",
+   "start": 10.04,
+   "end": 10.28
+  },
+  {
+   "text": "was",
+   "start": 10.28,
+   "end": 10.44
+  },
+  {
+   "text": "15",
+   "start": 10.44,
+   "end": 11.0
+  },
+  {
+   "text": "feet",
+   "start": 11.0,
+   "end": 11.32
+  },
+  {
+   "text": "tall.",
+   "start": 11.32,
+   "end": 12.04
+  },
+  {
+   "text": "And",
+   "start": 12.04,
+   "end": 12.2
+  },
+  {
+   "text": "that",
+   "start": 12.2,
+   "end": 12.36
+  },
+  {
+   "text": "tank",
+   "start": 12.36,
+   "end": 12.76
+  },
+  {
+   "text": "had",
+   "start": 12.76,
+   "end": 12.92
+  },
+  {
+   "text": "been",
+   "start": 12.92,
+   "end": 13.08
+  },
+  {
+   "text": "leaking",
+   "start": 13.08,
+   "end": 13.88
+  },
+  {
+   "text": "for",
+   "start": 13.88,
+   "end": 14.2
+  },
+  {
+   "text": "years.",
+   "start": 14.2,
+   "end": 15.0
+  },
+  {
+   "text": "The",
+   "start": 15.0,
+   "end": 15.16
+  },
+  {
+   "text": "company's",
+   "start": 15.16,
+   "end": 15.72
+  },
+  {
+   "text": "fix?",
+   "start": 15.72,
+   "end": 16.44
+  },
+  {
+   "text": "Paint",
+   "start": 16.44,
+   "end": 16.76
+  },
+  {
+   "text": "it",
+   "start": 16.76,
+   "end": 16.92
+  },
+  {
+   "text": "brown",
+   "start": 16.92,
+   "end": 17.32
+  },
+  {
+   "text": "so",
+   "start": 17.32,
+   "end": 17.48
+  },
+  {
+   "text": "you",
+   "start": 17.48,
+   "end": 17.64
+  },
+  {
+   "text": "couldn't",
+   "start": 17.64,
+   "end": 17.96
+  },
+  {
+   "text": "see",
+   "start": 17.96,
+   "end": 18.12
+  },
+  {
+   "text": "the",
+   "start": 18.12,
+   "end": 18.2
+  },
+  {
+   "text": "leaks.",
+   "start": 18.2,
+   "end": 19.16
+  },
+  {
+   "text": "Then",
+   "start": 19.16,
+   "end": 19.48
+  },
+  {
+   "text": "the",
+   "start": 19.48,
+   "end": 19.64
+  },
+  {
+   "text": "cold",
+   "start": 19.64,
+   "end": 20.04
+  },
+  {
+   "text": "kicked",
+   "start": 20.04,
+   "end": 20.36
+  },
+  {
+   "text": "in.",
+   "start": 20.36,
+   "end": 20.76
+  },
+  {
+   "text": "Molasses",
+   "start": 20.76,
+   "end": 21.48
+  },
+  {
+   "text": "gets",
+   "start": 21.48,
+   "end": 21.72
+  },
+  {
+   "text": "thicker",
+   "start": 21.72,
+   "end": 22.12
+  },
+  {
+   "text": "as",
+   "start": 22.12,
+   "end": 22.28
+  },
+  {
+   "text": "it",
+   "start": 22.28,
+   "end": 22.44
+  },
+  {
+   "text": "cools.",
+   "start": 22.44,
+   "end": 23.129
+  },
+  {
+   "text": "So",
+   "start": 23.129,
+   "end": 23.449
+  },
+  {
+   "text": "people",
+   "start": 23.449,
+   "end": 23.689
+  },
+  {
+   "text": "got",
+   "start": 23.689,
+   "end": 23.929
+  },
+  {
+   "text": "stuck",
+   "start": 23.929,
+   "end": 24.409
+  },
+  {
+   "text": "and",
+   "start": 24.409,
+   "end": 24.569
+  },
+  {
+   "text": "the",
+   "start": 24.569,
+   "end": 24.729
+  },
+  {
+   "text": "rescuers",
+   "start": 24.729,
+   "end": 25.369
+  },
+  {
+   "text": "couldn't",
+   "start": 25.369,
+   "end": 25.769
+  },
+  {
+   "text": "reach",
+   "start": 25.769,
+   "end": 26.169
+  },
+  {
+   "text": "them.",
+   "start": 26.169,
+   "end": 26.729
+  },
+  {
+   "text": "That's",
+   "start": 26.729,
+   "end": 27.049
+  },
+  {
+   "text": "how.",
+   "start": 27.049,
+   "end": 27.59
+  }
+ ]
+}

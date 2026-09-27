@@ -200,6 +200,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('script', help='video number, e.g. 11')
     ap.add_argument('audio', nargs='?', help='default: videos/NN-*/voiceover/original.m4a')
+    ap.add_argument('--end-after', default=None, help='drop everything after the last occurrence of this word (e.g. a trailing "uh")')
     ap.add_argument('--out', default=None, help='output folder (default: the video\'s voiceover/ folder)')
     args = ap.parse_args()
     vdir = video_dir(args.script)
@@ -210,6 +211,10 @@ def main():
     audio = load_audio(args.audio, sr=48000)
     audio, n_clip, longest_ms = declip(audio)
     words = transcribe(resample(audio, 48000, SR))
+    if args.end_after:
+        tgt = normalize(args.end_after)[0]
+        idx = max(i for i, w in enumerate(words) if tgt in normalize(w['text']))
+        words = words[:idx + 1]
     said = [w for word in words for w in normalize(word['text'])]
     target = normalize(text)
 

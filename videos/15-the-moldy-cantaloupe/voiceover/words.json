@@ -1,0 +1,341 @@
+{
+ "script": 15,
+ "duration": 25.18,
+ "words": [
+  {
+   "text": "A",
+   "start": 0.0,
+   "end": -0.0
+  },
+  {
+   "text": "moldy",
+   "start": 0.0,
+   "end": 0.56
+  },
+  {
+   "text": "cantaloupe",
+   "start": 0.56,
+   "end": 1.12
+  },
+  {
+   "text": "from",
+   "start": 1.12,
+   "end": 1.28
+  },
+  {
+   "text": "a",
+   "start": 1.28,
+   "end": 1.36
+  },
+  {
+   "text": "fruit",
+   "start": 1.36,
+   "end": 1.68
+  },
+  {
+   "text": "market",
+   "start": 1.68,
+   "end": 2.0
+  },
+  {
+   "text": "in",
+   "start": 2.0,
+   "end": 2.16
+  },
+  {
+   "text": "Illinois",
+   "start": 2.16,
+   "end": 2.56
+  },
+  {
+   "text": "helped",
+   "start": 2.56,
+   "end": 2.8
+  },
+  {
+   "text": "save",
+   "start": 2.8,
+   "end": 3.04
+  },
+  {
+   "text": "millions",
+   "start": 3.04,
+   "end": 3.44
+  },
+  {
+   "text": "of",
+   "start": 3.44,
+   "end": 3.6
+  },
+  {
+   "text": "lives.",
+   "start": 3.6,
+   "end": 4.32
+  },
+  {
+   "text": "1943,",
+   "start": 4.32,
+   "end": 5.52
+  },
+  {
+   "text": "World",
+   "start": 5.68,
+   "end": 6.0
+  },
+  {
+   "text": "War",
+   "start": 6.0,
+   "end": 6.32
+  },
+  {
+   "text": "II.",
+   "start": 6.32,
+   "end": 6.88
+  },
+  {
+   "text": "Scientists",
+   "start": 6.88,
+   "end": 7.68
+  },
+  {
+   "text": "could",
+   "start": 7.68,
+   "end": 7.84
+  },
+  {
+   "text": "make",
+   "start": 7.84,
+   "end": 8.08
+  },
+  {
+   "text": "penicillin,",
+   "start": 8.08,
+   "end": 8.88
+  },
+  {
+   "text": "but",
+   "start": 8.88,
+   "end": 9.04
+  },
+  {
+   "text": "barely",
+   "start": 9.04,
+   "end": 9.36
+  },
+  {
+   "text": "any.",
+   "start": 9.36,
+   "end": 9.84
+  },
+  {
+   "text": "So",
+   "start": 9.84,
+   "end": 10.08
+  },
+  {
+   "text": "a",
+   "start": 10.08,
+   "end": 10.16
+  },
+  {
+   "text": "lab",
+   "start": 10.16,
+   "end": 10.48
+  },
+  {
+   "text": "and",
+   "start": 10.48,
+   "end": 10.64
+  },
+  {
+   "text": "peoria",
+   "start": 10.64,
+   "end": 11.44
+  },
+  {
+   "text": "went",
+   "start": 11.44,
+   "end": 11.76
+  },
+  {
+   "text": "looking",
+   "start": 11.76,
+   "end": 12.0
+  },
+  {
+   "text": "for",
+   "start": 12.0,
+   "end": 12.24
+  },
+  {
+   "text": "better",
+   "start": 12.24,
+   "end": 12.48
+  },
+  {
+   "text": "mold.",
+   "start": 12.48,
+   "end": 13.2
+  },
+  {
+   "text": "Anywhere.",
+   "start": 13.2,
+   "end": 13.84
+  },
+  {
+   "text": "Soil,",
+   "start": 13.84,
+   "end": 14.4
+  },
+  {
+   "text": "fruit,",
+   "start": 14.4,
+   "end": 15.04
+  },
+  {
+   "text": "everything.",
+   "start": 15.04,
+   "end": 15.76
+  },
+  {
+   "text": "The",
+   "start": 15.76,
+   "end": 15.92
+  },
+  {
+   "text": "winner",
+   "start": 15.92,
+   "end": 16.4
+  },
+  {
+   "text": "came",
+   "start": 16.4,
+   "end": 16.56
+  },
+  {
+   "text": "off",
+   "start": 16.56,
+   "end": 16.72
+  },
+  {
+   "text": "of",
+   "start": 16.72,
+   "end": 16.8
+  },
+  {
+   "text": "a",
+   "start": 16.8,
+   "end": 16.96
+  },
+  {
+   "text": "rotten",
+   "start": 16.96,
+   "end": 17.36
+  },
+  {
+   "text": "cantaloupe.",
+   "start": 17.36,
+   "end": 18.24
+  },
+  {
+   "text": "About",
+   "start": 18.24,
+   "end": 18.48
+  },
+  {
+   "text": "200",
+   "start": 18.48,
+   "end": 18.96
+  },
+  {
+   "text": "times",
+   "start": 18.96,
+   "end": 19.2
+  },
+  {
+   "text": "more",
+   "start": 19.2,
+   "end": 19.44
+  },
+  {
+   "text": "penicillin",
+   "start": 19.44,
+   "end": 20.16
+  },
+  {
+   "text": "than",
+   "start": 20.16,
+   "end": 20.32
+  },
+  {
+   "text": "the",
+   "start": 20.32,
+   "end": 20.4
+  },
+  {
+   "text": "original",
+   "start": 20.4,
+   "end": 20.72
+  },
+  {
+   "text": "mold.",
+   "start": 20.72,
+   "end": 21.472
+  },
+  {
+   "text": "And",
+   "start": 21.472,
+   "end": 21.712
+  },
+  {
+   "text": "that",
+   "start": 21.712,
+   "end": 21.872
+  },
+  {
+   "text": "strain",
+   "start": 21.872,
+   "end": 22.272
+  },
+  {
+   "text": "is",
+   "start": 22.272,
+   "end": 22.432
+  },
+  {
+   "text": "what",
+   "start": 22.432,
+   "end": 22.592
+  },
+  {
+   "text": "made",
+   "start": 22.592,
+   "end": 22.832
+  },
+  {
+   "text": "mass",
+   "start": 22.832,
+   "end": 23.232
+  },
+  {
+   "text": "production",
+   "start": 23.232,
+   "end": 23.712
+  },
+  {
+   "text": "possible.",
+   "start": 23.712,
+   "end": 24.512
+  },
+  {
+   "text": "So,",
+   "start": 24.512,
+   "end": 24.832
+  },
+  {
+   "text": "yeah.",
+   "start": 24.832,
+   "end": 25.18
+  }
+ ]
+}

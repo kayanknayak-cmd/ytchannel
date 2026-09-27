@@ -1,0 +1,391 @@
+{
+ "script": 8,
+ "duration": 30.61,
+ "words": [
+  {
+   "text": "In",
+   "start": 0.0,
+   "end": 0.15
+  },
+  {
+   "text": "1914,",
+   "start": 0.15,
+   "end": 1.35
+  },
+  {
+   "text": "a",
+   "start": 1.43,
+   "end": 1.59
+  },
+  {
+   "text": "family",
+   "start": 1.59,
+   "end": 1.99
+  },
+  {
+   "text": "mailed",
+   "start": 1.99,
+   "end": 2.55
+  },
+  {
+   "text": "their",
+   "start": 2.55,
+   "end": 2.71
+  },
+  {
+   "text": "daughter",
+   "start": 2.71,
+   "end": 3.19
+  },
+  {
+   "text": "to",
+   "start": 3.19,
+   "end": 3.35
+  },
+  {
+   "text": "her",
+   "start": 3.35,
+   "end": 3.51
+  },
+  {
+   "text": "grandparents.",
+   "start": 3.51,
+   "end": 4.71
+  },
+  {
+   "text": "53",
+   "start": 4.71,
+   "end": 5.43
+  },
+  {
+   "text": "cents",
+   "start": 5.43,
+   "end": 5.83
+  },
+  {
+   "text": "in",
+   "start": 5.83,
+   "end": 6.07
+  },
+  {
+   "text": "stamps",
+   "start": 6.07,
+   "end": 6.87
+  },
+  {
+   "text": "stuck",
+   "start": 6.87,
+   "end": 7.19
+  },
+  {
+   "text": "to",
+   "start": 7.19,
+   "end": 7.35
+  },
+  {
+   "text": "her",
+   "start": 7.35,
+   "end": 7.51
+  },
+  {
+   "text": "coat.",
+   "start": 7.51,
+   "end": 8.15
+  },
+  {
+   "text": "Parcel",
+   "start": 8.15,
+   "end": 8.79
+  },
+  {
+   "text": "post",
+   "start": 8.79,
+   "end": 9.11
+  },
+  {
+   "text": "was",
+   "start": 9.11,
+   "end": 9.35
+  },
+  {
+   "text": "brand",
+   "start": 9.35,
+   "end": 9.67
+  },
+  {
+   "text": "new",
+   "start": 9.67,
+   "end": 9.99
+  },
+  {
+   "text": "and",
+   "start": 9.99,
+   "end": 10.23
+  },
+  {
+   "text": "nothing",
+   "start": 10.23,
+   "end": 10.47
+  },
+  {
+   "text": "in",
+   "start": 10.47,
+   "end": 10.55
+  },
+  {
+   "text": "the",
+   "start": 10.55,
+   "end": 10.63
+  },
+  {
+   "text": "rules",
+   "start": 10.63,
+   "end": 11.03
+  },
+  {
+   "text": "said",
+   "start": 11.03,
+   "end": 11.19
+  },
+  {
+   "text": "you",
+   "start": 11.19,
+   "end": 11.35
+  },
+  {
+   "text": "couldn't.",
+   "start": 11.35,
+   "end": 12.07
+  },
+  {
+   "text": "So",
+   "start": 12.07,
+   "end": 12.23
+  },
+  {
+   "text": "Mae",
+   "start": 12.23,
+   "end": 12.71
+  },
+  {
+   "text": "Pierstoff,",
+   "start": 12.71,
+   "end": 13.91
+  },
+  {
+   "text": "five",
+   "start": 14.07,
+   "end": 14.39
+  },
+  {
+   "text": "years",
+   "start": 14.39,
+   "end": 14.63
+  },
+  {
+   "text": "old,",
+   "start": 14.63,
+   "end": 15.03
+  },
+  {
+   "text": "rode",
+   "start": 15.03,
+   "end": 15.35
+  },
+  {
+   "text": "73",
+   "start": 15.35,
+   "end": 16.07
+  },
+  {
+   "text": "miles",
+   "start": 16.07,
+   "end": 16.47
+  },
+  {
+   "text": "in",
+   "start": 16.47,
+   "end": 16.55
+  },
+  {
+   "text": "a",
+   "start": 16.55,
+   "end": 16.71
+  },
+  {
+   "text": "train's",
+   "start": 16.71,
+   "end": 17.11
+  },
+  {
+   "text": "mail",
+   "start": 17.11,
+   "end": 17.43
+  },
+  {
+   "text": "car.",
+   "start": 17.43,
+   "end": 18.07
+  },
+  {
+   "text": "Okay,",
+   "start": 18.07,
+   "end": 18.55
+  },
+  {
+   "text": "with",
+   "start": 18.55,
+   "end": 18.79
+  },
+  {
+   "text": "a",
+   "start": 18.79,
+   "end": 18.95
+  },
+  {
+   "text": "relative",
+   "start": 18.95,
+   "end": 19.35
+  },
+  {
+   "text": "who",
+   "start": 19.35,
+   "end": 19.59
+  },
+  {
+   "text": "worked",
+   "start": 19.59,
+   "end": 20.07
+  },
+  {
+   "text": "there.",
+   "start": 20.07,
+   "end": 20.87
+  },
+  {
+   "text": "Right",
+   "start": 20.87,
+   "end": 21.27
+  },
+  {
+   "text": "after,",
+   "start": 21.27,
+   "end": 21.75
+  },
+  {
+   "text": "the",
+   "start": 21.75,
+   "end": 21.91
+  },
+  {
+   "text": "post",
+   "start": 21.91,
+   "end": 22.23
+  },
+  {
+   "text": "office",
+   "start": 22.23,
+   "end": 22.71
+  },
+  {
+   "text": "banned",
+   "start": 22.71,
+   "end": 23.11
+  },
+  {
+   "text": "mailing",
+   "start": 23.11,
+   "end": 23.67
+  },
+  {
+   "text": "people.",
+   "start": 23.67,
+   "end": 24.336
+  },
+  {
+   "text": "It",
+   "start": 24.336,
+   "end": 24.656
+  },
+  {
+   "text": "took",
+   "start": 24.656,
+   "end": 24.896
+  },
+  {
+   "text": "another",
+   "start": 24.896,
+   "end": 25.216
+  },
+  {
+   "text": "year",
+   "start": 25.216,
+   "end": 25.456
+  },
+  {
+   "text": "for",
+   "start": 25.456,
+   "end": 25.616
+  },
+  {
+   "text": "kids",
+   "start": 25.616,
+   "end": 26.416
+  },
+  {
+   "text": "to",
+   "start": 26.416,
+   "end": 26.736
+  },
+  {
+   "text": "actually",
+   "start": 26.736,
+   "end": 27.056
+  },
+  {
+   "text": "stop",
+   "start": 27.056,
+   "end": 27.456
+  },
+  {
+   "text": "showing",
+   "start": 27.456,
+   "end": 27.856
+  },
+  {
+   "text": "up.",
+   "start": 27.856,
+   "end": 28.336
+  },
+  {
+   "text": "People",
+   "start": 28.336,
+   "end": 28.736
+  },
+  {
+   "text": "still",
+   "start": 28.736,
+   "end": 29.056
+  },
+  {
+   "text": "don't",
+   "start": 29.056,
+   "end": 29.376
+  },
+  {
+   "text": "believe",
+   "start": 29.376,
+   "end": 29.696
+  },
+  {
+   "text": "it,",
+   "start": 29.696,
+   "end": 30.096
+  },
+  {
+   "text": "but.",
+   "start": 30.096,
+   "end": 30.61
+  }
+ ]
+}

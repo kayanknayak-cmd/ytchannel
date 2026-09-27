@@ -1,0 +1,396 @@
+{
+ "script": 5,
+ "duration": 29.61,
+ "words": [
+  {
+   "text": "One",
+   "start": 0.0,
+   "end": 0.42
+  },
+  {
+   "text": "man",
+   "start": 0.42,
+   "end": 0.74
+  },
+  {
+   "text": "gave",
+   "start": 0.74,
+   "end": 1.06
+  },
+  {
+   "text": "away",
+   "start": 1.06,
+   "end": 1.38
+  },
+  {
+   "text": "so",
+   "start": 1.38,
+   "end": 1.54
+  },
+  {
+   "text": "much",
+   "start": 1.54,
+   "end": 1.78
+  },
+  {
+   "text": "gold",
+   "start": 1.78,
+   "end": 2.1
+  },
+  {
+   "text": "that",
+   "start": 2.1,
+   "end": 2.34
+  },
+  {
+   "text": "the",
+   "start": 2.34,
+   "end": 2.42
+  },
+  {
+   "text": "price",
+   "start": 2.42,
+   "end": 2.74
+  },
+  {
+   "text": "of",
+   "start": 2.74,
+   "end": 2.9
+  },
+  {
+   "text": "gold",
+   "start": 2.9,
+   "end": 3.14
+  },
+  {
+   "text": "in",
+   "start": 3.14,
+   "end": 3.3
+  },
+  {
+   "text": "Cairo",
+   "start": 3.3,
+   "end": 3.86
+  },
+  {
+   "text": "fell",
+   "start": 3.86,
+   "end": 4.18
+  },
+  {
+   "text": "for",
+   "start": 4.18,
+   "end": 4.42
+  },
+  {
+   "text": "12",
+   "start": 4.42,
+   "end": 5.06
+  },
+  {
+   "text": "years.",
+   "start": 5.06,
+   "end": 5.86
+  },
+  {
+   "text": "Mansa",
+   "start": 5.86,
+   "end": 6.58
+  },
+  {
+   "text": "Musa,",
+   "start": 6.58,
+   "end": 7.46
+  },
+  {
+   "text": "king",
+   "start": 7.46,
+   "end": 7.7
+  },
+  {
+   "text": "of",
+   "start": 7.7,
+   "end": 7.86
+  },
+  {
+   "text": "Mali.",
+   "start": 7.86,
+   "end": 8.74
+  },
+  {
+   "text": "1324,",
+   "start": 8.74,
+   "end": 9.86
+  },
+  {
+   "text": "he's",
+   "start": 9.86,
+   "end": 10.1
+  },
+  {
+   "text": "on",
+   "start": 10.1,
+   "end": 10.26
+  },
+  {
+   "text": "his",
+   "start": 10.26,
+   "end": 10.42
+  },
+  {
+   "text": "way",
+   "start": 10.42,
+   "end": 10.58
+  },
+  {
+   "text": "to",
+   "start": 10.58,
+   "end": 10.66
+  },
+  {
+   "text": "Mecca",
+   "start": 10.66,
+   "end": 11.14
+  },
+  {
+   "text": "and",
+   "start": 11.14,
+   "end": 11.3
+  },
+  {
+   "text": "he",
+   "start": 11.3,
+   "end": 11.38
+  },
+  {
+   "text": "stops",
+   "start": 11.38,
+   "end": 11.78
+  },
+  {
+   "text": "in",
+   "start": 11.78,
+   "end": 11.94
+  },
+  {
+   "text": "Cairo",
+   "start": 11.94,
+   "end": 12.58
+  },
+  {
+   "text": "with,",
+   "start": 12.58,
+   "end": 13.06
+  },
+  {
+   "text": "by",
+   "start": 13.06,
+   "end": 13.3
+  },
+  {
+   "text": "one",
+   "start": 13.3,
+   "end": 13.54
+  },
+  {
+   "text": "account,",
+   "start": 13.54,
+   "end": 14.18
+  },
+  {
+   "text": "up",
+   "start": 14.18,
+   "end": 14.34
+  },
+  {
+   "text": "to",
+   "start": 14.34,
+   "end": 14.5
+  },
+  {
+   "text": "a",
+   "start": 14.5,
+   "end": 14.74
+  },
+  {
+   "text": "hundred",
+   "start": 14.74,
+   "end": 15.14
+  },
+  {
+   "text": "camels",
+   "start": 15.14,
+   "end": 15.86
+  },
+  {
+   "text": "carrying",
+   "start": 15.86,
+   "end": 16.34
+  },
+  {
+   "text": "gold.",
+   "start": 16.34,
+   "end": 17.06
+  },
+  {
+   "text": "And",
+   "start": 17.06,
+   "end": 17.22
+  },
+  {
+   "text": "he",
+   "start": 17.22,
+   "end": 17.46
+  },
+  {
+   "text": "just",
+   "start": 17.46,
+   "end": 17.7
+  },
+  {
+   "text": "hands",
+   "start": 17.7,
+   "end": 18.1
+  },
+  {
+   "text": "it",
+   "start": 18.1,
+   "end": 18.34
+  },
+  {
+   "text": "out.",
+   "start": 18.34,
+   "end": 18.9
+  },
+  {
+   "text": "Officials,",
+   "start": 18.9,
+   "end": 19.62
+  },
+  {
+   "text": "merchants,",
+   "start": 19.62,
+   "end": 20.34
+  },
+  {
+   "text": "everybody.",
+   "start": 20.34,
+   "end": 21.14
+  },
+  {
+   "text": "So",
+   "start": 21.14,
+   "end": 21.3
+  },
+  {
+   "text": "much",
+   "start": 21.3,
+   "end": 21.54
+  },
+  {
+   "text": "gold",
+   "start": 21.54,
+   "end": 21.78
+  },
+  {
+   "text": "hit",
+   "start": 21.78,
+   "end": 22.02
+  },
+  {
+   "text": "the",
+   "start": 22.02,
+   "end": 22.1
+  },
+  {
+   "text": "market,",
+   "start": 22.1,
+   "end": 22.5
+  },
+  {
+   "text": "it",
+   "start": 22.5,
+   "end": 22.66
+  },
+  {
+   "text": "got",
+   "start": 22.66,
+   "end": 22.82
+  },
+  {
+   "text": "cheap.",
+   "start": 22.82,
+   "end": 23.688
+  },
+  {
+   "text": "Fast.",
+   "start": 23.688,
+   "end": 24.568
+  },
+  {
+   "text": "A",
+   "start": 24.568,
+   "end": 24.808
+  },
+  {
+   "text": "historian",
+   "start": 24.808,
+   "end": 25.448
+  },
+  {
+   "text": "writing",
+   "start": 25.448,
+   "end": 25.848
+  },
+  {
+   "text": "twelve",
+   "start": 25.848,
+   "end": 26.168
+  },
+  {
+   "text": "years",
+   "start": 26.168,
+   "end": 26.408
+  },
+  {
+   "text": "later",
+   "start": 26.408,
+   "end": 26.728
+  },
+  {
+   "text": "said",
+   "start": 26.728,
+   "end": 26.968
+  },
+  {
+   "text": "it",
+   "start": 26.968,
+   "end": 27.208
+  },
+  {
+   "text": "still",
+   "start": 27.208,
+   "end": 27.448
+  },
+  {
+   "text": "hadn't",
+   "start": 27.448,
+   "end": 27.768
+  },
+  {
+   "text": "recovered.",
+   "start": 27.768,
+   "end": 28.648
+  },
+  {
+   "text": "All",
+   "start": 28.648,
+   "end": 29.128
+  },
+  {
+   "text": "because.",
+   "start": 29.128,
+   "end": 29.61
+  }
+ ]
+}

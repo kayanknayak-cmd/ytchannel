@@ -1,0 +1,391 @@
+{
+ "script": 7,
+ "duration": 25.76,
+ "words": [
+  {
+   "text": "One",
+   "start": 0.0,
+   "end": 0.25
+  },
+  {
+   "text": "family",
+   "start": 0.25,
+   "end": 0.97
+  },
+  {
+   "text": "was",
+   "start": 0.97,
+   "end": 1.21
+  },
+  {
+   "text": "rich",
+   "start": 1.21,
+   "end": 1.61
+  },
+  {
+   "text": "because",
+   "start": 1.61,
+   "end": 1.85
+  },
+  {
+   "text": "of",
+   "start": 1.85,
+   "end": 2.01
+  },
+  {
+   "text": "a",
+   "start": 2.01,
+   "end": 2.17
+  },
+  {
+   "text": "stone",
+   "start": 2.17,
+   "end": 2.49
+  },
+  {
+   "text": "at",
+   "start": 2.49,
+   "end": 2.65
+  },
+  {
+   "text": "the",
+   "start": 2.65,
+   "end": 2.73
+  },
+  {
+   "text": "bottom",
+   "start": 2.73,
+   "end": 3.05
+  },
+  {
+   "text": "of",
+   "start": 3.05,
+   "end": 3.13
+  },
+  {
+   "text": "the",
+   "start": 3.13,
+   "end": 3.29
+  },
+  {
+   "text": "ocean.",
+   "start": 3.29,
+   "end": 4.01
+  },
+  {
+   "text": "On",
+   "start": 4.01,
+   "end": 4.17
+  },
+  {
+   "text": "the",
+   "start": 4.17,
+   "end": 4.33
+  },
+  {
+   "text": "island",
+   "start": 4.33,
+   "end": 4.65
+  },
+  {
+   "text": "of",
+   "start": 4.65,
+   "end": 4.81
+  },
+  {
+   "text": "Yap",
+   "start": 4.81,
+   "end": 5.53
+  },
+  {
+   "text": "money",
+   "start": 5.53,
+   "end": 5.85
+  },
+  {
+   "text": "was",
+   "start": 5.85,
+   "end": 6.01
+  },
+  {
+   "text": "giant",
+   "start": 6.01,
+   "end": 6.49
+  },
+  {
+   "text": "carved",
+   "start": 6.49,
+   "end": 7.05
+  },
+  {
+   "text": "stones,",
+   "start": 7.05,
+   "end": 7.93
+  },
+  {
+   "text": "some",
+   "start": 7.93,
+   "end": 8.25
+  },
+  {
+   "text": "taller",
+   "start": 8.25,
+   "end": 8.65
+  },
+  {
+   "text": "than",
+   "start": 8.65,
+   "end": 8.81
+  },
+  {
+   "text": "a",
+   "start": 8.81,
+   "end": 8.97
+  },
+  {
+   "text": "person,",
+   "start": 8.97,
+   "end": 9.61
+  },
+  {
+   "text": "way",
+   "start": 9.61,
+   "end": 9.93
+  },
+  {
+   "text": "too",
+   "start": 9.93,
+   "end": 10.17
+  },
+  {
+   "text": "heavy",
+   "start": 10.17,
+   "end": 10.41
+  },
+  {
+   "text": "to",
+   "start": 10.41,
+   "end": 10.57
+  },
+  {
+   "text": "move,",
+   "start": 10.57,
+   "end": 10.97
+  },
+  {
+   "text": "so",
+   "start": 10.97,
+   "end": 11.21
+  },
+  {
+   "text": "mostly",
+   "start": 11.21,
+   "end": 11.69
+  },
+  {
+   "text": "they",
+   "start": 11.69,
+   "end": 11.85
+  },
+  {
+   "text": "didn't.",
+   "start": 11.85,
+   "end": 12.65
+  },
+  {
+   "text": "Everyone",
+   "start": 12.65,
+   "end": 13.21
+  },
+  {
+   "text": "just",
+   "start": 13.21,
+   "end": 13.45
+  },
+  {
+   "text": "remembered",
+   "start": 13.45,
+   "end": 13.93
+  },
+  {
+   "text": "who",
+   "start": 13.93,
+   "end": 14.17
+  },
+  {
+   "text": "owned",
+   "start": 14.17,
+   "end": 14.49
+  },
+  {
+   "text": "which",
+   "start": 14.49,
+   "end": 14.81
+  },
+  {
+   "text": "one.",
+   "start": 14.81,
+   "end": 15.45
+  },
+  {
+   "text": "And",
+   "start": 15.45,
+   "end": 15.61
+  },
+  {
+   "text": "one",
+   "start": 15.61,
+   "end": 15.93
+  },
+  {
+   "text": "stone",
+   "start": 15.93,
+   "end": 16.41
+  },
+  {
+   "text": "sank",
+   "start": 16.41,
+   "end": 16.97
+  },
+  {
+   "text": "on",
+   "start": 16.97,
+   "end": 17.21
+  },
+  {
+   "text": "the",
+   "start": 17.21,
+   "end": 17.29
+  },
+  {
+   "text": "trip",
+   "start": 17.29,
+   "end": 17.69
+  },
+  {
+   "text": "home,",
+   "start": 17.69,
+   "end": 18.17
+  },
+  {
+   "text": "but",
+   "start": 18.17,
+   "end": 18.33
+  },
+  {
+   "text": "everybody",
+   "start": 18.33,
+   "end": 18.81
+  },
+  {
+   "text": "agreed",
+   "start": 18.81,
+   "end": 19.21
+  },
+  {
+   "text": "it",
+   "start": 19.21,
+   "end": 19.29
+  },
+  {
+   "text": "was",
+   "start": 19.29,
+   "end": 19.45
+  },
+  {
+   "text": "down",
+   "start": 19.45,
+   "end": 19.69
+  },
+  {
+   "text": "there,",
+   "start": 19.69,
+   "end": 20.01
+  },
+  {
+   "text": "so",
+   "start": 20.01,
+   "end": 20.17
+  },
+  {
+   "text": "it",
+   "start": 20.17,
+   "end": 20.33
+  },
+  {
+   "text": "still",
+   "start": 20.33,
+   "end": 20.49
+  },
+  {
+   "text": "counted.",
+   "start": 20.49,
+   "end": 21.29
+  },
+  {
+   "text": "Which,",
+   "start": 21.29,
+   "end": 21.61
+  },
+  {
+   "text": "honestly,",
+   "start": 21.61,
+   "end": 22.25
+  },
+  {
+   "text": "is",
+   "start": 22.25,
+   "end": 22.57
+  },
+  {
+   "text": "kind",
+   "start": 22.57,
+   "end": 22.81
+  },
+  {
+   "text": "of",
+   "start": 22.81,
+   "end": 22.97
+  },
+  {
+   "text": "how",
+   "start": 22.97,
+   "end": 23.13
+  },
+  {
+   "text": "your",
+   "start": 23.13,
+   "end": 23.21
+  },
+  {
+   "text": "bank",
+   "start": 23.21,
+   "end": 23.45
+  },
+  {
+   "text": "account",
+   "start": 23.45,
+   "end": 23.77
+  },
+  {
+   "text": "works.",
+   "start": 23.77,
+   "end": 24.577
+  },
+  {
+   "text": "And",
+   "start": 24.577,
+   "end": 24.897
+  },
+  {
+   "text": "it's",
+   "start": 24.897,
+   "end": 25.297
+  },
+  {
+   "text": "why.",
+   "start": 25.297,
+   "end": 25.76
+  }
+ ]
+}

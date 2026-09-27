@@ -1,0 +1,401 @@
+{
+ "script": 6,
+ "duration": 29.68,
+ "words": [
+  {
+   "text": "Monopoly",
+   "start": 0.0,
+   "end": 0.87
+  },
+  {
+   "text": "was",
+   "start": 0.87,
+   "end": 1.19
+  },
+  {
+   "text": "actually",
+   "start": 1.19,
+   "end": 1.51
+  },
+  {
+   "text": "invented",
+   "start": 1.51,
+   "end": 2.15
+  },
+  {
+   "text": "as",
+   "start": 2.15,
+   "end": 2.39
+  },
+  {
+   "text": "a",
+   "start": 2.39,
+   "end": 2.63
+  },
+  {
+   "text": "warning",
+   "start": 2.63,
+   "end": 3.51
+  },
+  {
+   "text": "against",
+   "start": 3.51,
+   "end": 4.15
+  },
+  {
+   "text": "basically",
+   "start": 4.15,
+   "end": 4.95
+  },
+  {
+   "text": "everything",
+   "start": 4.95,
+   "end": 5.27
+  },
+  {
+   "text": "you",
+   "start": 5.27,
+   "end": 5.43
+  },
+  {
+   "text": "do",
+   "start": 5.43,
+   "end": 5.59
+  },
+  {
+   "text": "in",
+   "start": 5.59,
+   "end": 5.75
+  },
+  {
+   "text": "Monopoly.",
+   "start": 5.75,
+   "end": 6.71
+  },
+  {
+   "text": "In",
+   "start": 6.71,
+   "end": 6.87
+  },
+  {
+   "text": "1904,",
+   "start": 6.87,
+   "end": 7.83
+  },
+  {
+   "text": "a",
+   "start": 7.83,
+   "end": 7.91
+  },
+  {
+   "text": "woman",
+   "start": 7.91,
+   "end": 8.23
+  },
+  {
+   "text": "named",
+   "start": 8.23,
+   "end": 8.47
+  },
+  {
+   "text": "Lizzie",
+   "start": 8.47,
+   "end": 8.95
+  },
+  {
+   "text": "Maggie",
+   "start": 8.95,
+   "end": 9.67
+  },
+  {
+   "text": "patented",
+   "start": 9.67,
+   "end": 10.39
+  },
+  {
+   "text": "the",
+   "start": 10.39,
+   "end": 10.55
+  },
+  {
+   "text": "landlord's",
+   "start": 10.55,
+   "end": 11.19
+  },
+  {
+   "text": "game",
+   "start": 11.19,
+   "end": 11.75
+  },
+  {
+   "text": "to",
+   "start": 11.75,
+   "end": 11.99
+  },
+  {
+   "text": "show",
+   "start": 11.99,
+   "end": 12.31
+  },
+  {
+   "text": "how",
+   "start": 12.31,
+   "end": 12.55
+  },
+  {
+   "text": "owning",
+   "start": 12.55,
+   "end": 13.03
+  },
+  {
+   "text": "all",
+   "start": 13.03,
+   "end": 13.19
+  },
+  {
+   "text": "of",
+   "start": 13.19,
+   "end": 13.35
+  },
+  {
+   "text": "the",
+   "start": 13.35,
+   "end": 13.43
+  },
+  {
+   "text": "land",
+   "start": 13.43,
+   "end": 13.75
+  },
+  {
+   "text": "makes",
+   "start": 13.75,
+   "end": 13.99
+  },
+  {
+   "text": "a",
+   "start": 13.99,
+   "end": 14.23
+  },
+  {
+   "text": "few",
+   "start": 14.23,
+   "end": 14.47
+  },
+  {
+   "text": "people",
+   "start": 14.47,
+   "end": 14.71
+  },
+  {
+   "text": "rich",
+   "start": 14.71,
+   "end": 15.11
+  },
+  {
+   "text": "and",
+   "start": 15.11,
+   "end": 15.27
+  },
+  {
+   "text": "everyone",
+   "start": 15.27,
+   "end": 15.67
+  },
+  {
+   "text": "else",
+   "start": 15.67,
+   "end": 15.99
+  },
+  {
+   "text": "broke.",
+   "start": 15.99,
+   "end": 16.79
+  },
+  {
+   "text": "Thirty",
+   "start": 16.79,
+   "end": 17.27
+  },
+  {
+   "text": "years",
+   "start": 17.27,
+   "end": 17.51
+  },
+  {
+   "text": "later,",
+   "start": 17.51,
+   "end": 17.99
+  },
+  {
+   "text": "a",
+   "start": 17.99,
+   "end": 18.23
+  },
+  {
+   "text": "guy",
+   "start": 18.23,
+   "end": 18.47
+  },
+  {
+   "text": "named",
+   "start": 18.47,
+   "end": 18.71
+  },
+  {
+   "text": "Charles",
+   "start": 18.71,
+   "end": 19.11
+  },
+  {
+   "text": "Darrow",
+   "start": 19.11,
+   "end": 20.07
+  },
+  {
+   "text": "sold",
+   "start": 20.07,
+   "end": 20.47
+  },
+  {
+   "text": "his",
+   "start": 20.47,
+   "end": 20.63
+  },
+  {
+   "text": "version",
+   "start": 20.63,
+   "end": 21.11
+  },
+  {
+   "text": "to",
+   "start": 21.11,
+   "end": 21.19
+  },
+  {
+   "text": "the",
+   "start": 21.19,
+   "end": 21.35
+  },
+  {
+   "text": "Parker",
+   "start": 21.35,
+   "end": 21.75
+  },
+  {
+   "text": "brothers",
+   "start": 21.75,
+   "end": 22.15
+  },
+  {
+   "text": "and",
+   "start": 22.15,
+   "end": 22.31
+  },
+  {
+   "text": "said",
+   "start": 22.31,
+   "end": 22.55
+  },
+  {
+   "text": "he",
+   "start": 22.55,
+   "end": 22.71
+  },
+  {
+   "text": "came",
+   "start": 22.71,
+   "end": 22.95
+  },
+  {
+   "text": "up",
+   "start": 22.95,
+   "end": 23.03
+  },
+  {
+   "text": "with",
+   "start": 23.03,
+   "end": 23.19
+  },
+  {
+   "text": "it.",
+   "start": 23.19,
+   "end": 23.803
+  },
+  {
+   "text": "They",
+   "start": 23.803,
+   "end": 24.123
+  },
+  {
+   "text": "bought",
+   "start": 24.123,
+   "end": 24.443
+  },
+  {
+   "text": "her",
+   "start": 24.443,
+   "end": 24.683
+  },
+  {
+   "text": "patent",
+   "start": 24.683,
+   "end": 25.243
+  },
+  {
+   "text": "too,",
+   "start": 25.243,
+   "end": 25.723
+  },
+  {
+   "text": "for",
+   "start": 25.723,
+   "end": 25.963
+  },
+  {
+   "text": "five",
+   "start": 25.963,
+   "end": 26.283
+  },
+  {
+   "text": "hundred",
+   "start": 26.283,
+   "end": 26.603
+  },
+  {
+   "text": "bucks,",
+   "start": 26.603,
+   "end": 27.403
+  },
+  {
+   "text": "which",
+   "start": 27.403,
+   "end": 27.643
+  },
+  {
+   "text": "is",
+   "start": 27.643,
+   "end": 27.883
+  },
+  {
+   "text": "why",
+   "start": 27.883,
+   "end": 28.203
+  },
+  {
+   "text": "almost",
+   "start": 28.203,
+   "end": 28.603
+  },
+  {
+   "text": "nobody",
+   "start": 28.603,
+   "end": 29.083
+  },
+  {
+   "text": "knows",
+   "start": 29.083,
+   "end": 29.68
+  }
+ ]
+}

@@ -1,0 +1,326 @@
+{
+ "script": 2,
+ "duration": 27.24,
+ "words": [
+  {
+   "text": "In",
+   "start": 0.0,
+   "end": 0.16
+  },
+  {
+   "text": "2024,",
+   "start": 0.16,
+   "end": 1.36
+  },
+  {
+   "text": "it",
+   "start": 1.44,
+   "end": 1.68
+  },
+  {
+   "text": "cost",
+   "start": 1.68,
+   "end": 1.92
+  },
+  {
+   "text": "the",
+   "start": 1.92,
+   "end": 2.08
+  },
+  {
+   "text": "US",
+   "start": 2.08,
+   "end": 2.64
+  },
+  {
+   "text": "almost",
+   "start": 2.64,
+   "end": 3.04
+  },
+  {
+   "text": "4",
+   "start": 3.04,
+   "end": 3.36
+  },
+  {
+   "text": "cents",
+   "start": 3.36,
+   "end": 3.76
+  },
+  {
+   "text": "to",
+   "start": 3.76,
+   "end": 3.92
+  },
+  {
+   "text": "make",
+   "start": 3.92,
+   "end": 4.16
+  },
+  {
+   "text": "one",
+   "start": 4.16,
+   "end": 4.4
+  },
+  {
+   "text": "penny.",
+   "start": 4.4,
+   "end": 5.44
+  },
+  {
+   "text": "The",
+   "start": 5.44,
+   "end": 5.6
+  },
+  {
+   "text": "Mint",
+   "start": 5.6,
+   "end": 6.16
+  },
+  {
+   "text": "lost",
+   "start": 6.16,
+   "end": 6.48
+  },
+  {
+   "text": "$85",
+   "start": 6.48,
+   "end": 7.04
+  },
+  {
+   "text": "million",
+   "start": 7.04,
+   "end": 7.92
+  },
+  {
+   "text": "in",
+   "start": 7.92,
+   "end": 8.16
+  },
+  {
+   "text": "pennies",
+   "start": 8.16,
+   "end": 8.64
+  },
+  {
+   "text": "in",
+   "start": 8.64,
+   "end": 8.8
+  },
+  {
+   "text": "that",
+   "start": 8.8,
+   "end": 9.04
+  },
+  {
+   "text": "year",
+   "start": 9.04,
+   "end": 9.36
+  },
+  {
+   "text": "alone.",
+   "start": 9.36,
+   "end": 10.08
+  },
+  {
+   "text": "A",
+   "start": 10.08,
+   "end": 10.32
+  },
+  {
+   "text": "penny",
+   "start": 10.32,
+   "end": 10.64
+  },
+  {
+   "text": "is",
+   "start": 10.64,
+   "end": 10.88
+  },
+  {
+   "text": "basically",
+   "start": 10.88,
+   "end": 11.2
+  },
+  {
+   "text": "zinc",
+   "start": 11.2,
+   "end": 11.76
+  },
+  {
+   "text": "with",
+   "start": 11.76,
+   "end": 11.92
+  },
+  {
+   "text": "a",
+   "start": 11.92,
+   "end": 12.08
+  },
+  {
+   "text": "thin",
+   "start": 12.08,
+   "end": 12.4
+  },
+  {
+   "text": "copper",
+   "start": 12.4,
+   "end": 12.72
+  },
+  {
+   "text": "coat,",
+   "start": 12.72,
+   "end": 13.12
+  },
+  {
+   "text": "and",
+   "start": 13.12,
+   "end": 13.28
+  },
+  {
+   "text": "zinc",
+   "start": 13.28,
+   "end": 13.84
+  },
+  {
+   "text": "got",
+   "start": 13.84,
+   "end": 14.16
+  },
+  {
+   "text": "expensive.",
+   "start": 14.16,
+   "end": 15.12
+  },
+  {
+   "text": "So",
+   "start": 15.12,
+   "end": 15.44
+  },
+  {
+   "text": "in",
+   "start": 15.44,
+   "end": 15.6
+  },
+  {
+   "text": "November",
+   "start": 15.6,
+   "end": 16.16
+  },
+  {
+   "text": "2025,",
+   "start": 16.16,
+   "end": 17.04
+  },
+  {
+   "text": "they",
+   "start": 17.04,
+   "end": 17.2
+  },
+  {
+   "text": "struck",
+   "start": 17.2,
+   "end": 17.6
+  },
+  {
+   "text": "the",
+   "start": 17.6,
+   "end": 17.84
+  },
+  {
+   "text": "last",
+   "start": 17.84,
+   "end": 18.08
+  },
+  {
+   "text": "one,",
+   "start": 18.08,
+   "end": 18.88
+  },
+  {
+   "text": "after",
+   "start": 18.88,
+   "end": 19.28
+  },
+  {
+   "text": "232",
+   "start": 19.28,
+   "end": 20.48
+  },
+  {
+   "text": "years.",
+   "start": 20.56,
+   "end": 21.627
+  },
+  {
+   "text": "Oh,",
+   "start": 21.627,
+   "end": 21.947
+  },
+  {
+   "text": "and",
+   "start": 21.947,
+   "end": 22.107
+  },
+  {
+   "text": "the",
+   "start": 22.107,
+   "end": 22.187
+  },
+  {
+   "text": "nickel?",
+   "start": 22.187,
+   "end": 22.907
+  },
+  {
+   "text": "Almost",
+   "start": 22.907,
+   "end": 23.227
+  },
+  {
+   "text": "fourteen",
+   "start": 23.227,
+   "end": 23.787
+  },
+  {
+   "text": "cents.",
+   "start": 23.787,
+   "end": 24.507
+  },
+  {
+   "text": "And",
+   "start": 24.507,
+   "end": 24.667
+  },
+  {
+   "text": "the",
+   "start": 24.667,
+   "end": 24.827
+  },
+  {
+   "text": "penny",
+   "start": 24.827,
+   "end": 25.227
+  },
+  {
+   "text": "kept",
+   "start": 25.227,
+   "end": 25.467
+  },
+  {
+   "text": "losing",
+   "start": 25.467,
+   "end": 25.867
+  },
+  {
+   "text": "money,",
+   "start": 25.867,
+   "end": 26.587
+  },
+  {
+   "text": "because",
+   "start": 26.587,
+   "end": 27.24
+  }
+ ]
+}

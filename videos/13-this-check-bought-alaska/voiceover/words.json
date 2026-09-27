@@ -1,0 +1,311 @@
+{
+ "script": 13,
+ "duration": 25.79,
+ "words": [
+  {
+   "text": "This",
+   "start": 0.0,
+   "end": 0.2
+  },
+  {
+   "text": "check",
+   "start": 0.2,
+   "end": 0.68
+  },
+  {
+   "text": "bought",
+   "start": 0.68,
+   "end": 1.08
+  },
+  {
+   "text": "Alaska,",
+   "start": 1.08,
+   "end": 1.8
+  },
+  {
+   "text": "$7.2",
+   "start": 1.8,
+   "end": 2.68
+  },
+  {
+   "text": "million,",
+   "start": 2.68,
+   "end": 3.8
+  },
+  {
+   "text": "written",
+   "start": 3.8,
+   "end": 4.12
+  },
+  {
+   "text": "in",
+   "start": 4.12,
+   "end": 4.36
+  },
+  {
+   "text": "1868",
+   "start": 4.36,
+   "end": 5.32
+  },
+  {
+   "text": "to",
+   "start": 5.32,
+   "end": 5.48
+  },
+  {
+   "text": "Russia's",
+   "start": 5.48,
+   "end": 5.96
+  },
+  {
+   "text": "minister",
+   "start": 5.96,
+   "end": 6.44
+  },
+  {
+   "text": "in",
+   "start": 6.44,
+   "end": 6.6
+  },
+  {
+   "text": "Washington.",
+   "start": 6.6,
+   "end": 7.48
+  },
+  {
+   "text": "Critics",
+   "start": 7.48,
+   "end": 8.04
+  },
+  {
+   "text": "called",
+   "start": 8.04,
+   "end": 8.28
+  },
+  {
+   "text": "the",
+   "start": 8.28,
+   "end": 8.36
+  },
+  {
+   "text": "deal",
+   "start": 8.36,
+   "end": 8.84
+  },
+  {
+   "text": "Seward's",
+   "start": 8.84,
+   "end": 9.4
+  },
+  {
+   "text": "Folly,",
+   "start": 9.4,
+   "end": 9.96
+  },
+  {
+   "text": "Seward's",
+   "start": 9.96,
+   "end": 10.44
+  },
+  {
+   "text": "icebox,",
+   "start": 10.44,
+   "end": 11.32
+  },
+  {
+   "text": "then",
+   "start": 11.32,
+   "end": 11.64
+  },
+  {
+   "text": "gold.",
+   "start": 11.64,
+   "end": 12.28
+  },
+  {
+   "text": "The",
+   "start": 12.28,
+   "end": 12.44
+  },
+  {
+   "text": "Klondike",
+   "start": 12.44,
+   "end": 13.16
+  },
+  {
+   "text": "strike",
+   "start": 13.16,
+   "end": 13.4
+  },
+  {
+   "text": "in",
+   "start": 13.4,
+   "end": 13.72
+  },
+  {
+   "text": "1896",
+   "start": 13.72,
+   "end": 14.52
+  },
+  {
+   "text": "sent",
+   "start": 14.52,
+   "end": 14.76
+  },
+  {
+   "text": "stampedes",
+   "start": 14.76,
+   "end": 15.4
+  },
+  {
+   "text": "of",
+   "start": 15.4,
+   "end": 15.48
+  },
+  {
+   "text": "miners",
+   "start": 15.48,
+   "end": 15.88
+  },
+  {
+   "text": "through",
+   "start": 15.88,
+   "end": 16.04
+  },
+  {
+   "text": "Alaska",
+   "start": 16.04,
+   "end": 16.84
+  },
+  {
+   "text": "and",
+   "start": 16.84,
+   "end": 17.0
+  },
+  {
+   "text": "more",
+   "start": 17.0,
+   "end": 17.24
+  },
+  {
+   "text": "gold",
+   "start": 17.24,
+   "end": 17.48
+  },
+  {
+   "text": "turned",
+   "start": 17.48,
+   "end": 17.72
+  },
+  {
+   "text": "up",
+   "start": 17.72,
+   "end": 17.88
+  },
+  {
+   "text": "in",
+   "start": 17.88,
+   "end": 18.04
+  },
+  {
+   "text": "Alaska",
+   "start": 18.04,
+   "end": 18.52
+  },
+  {
+   "text": "itself,",
+   "start": 18.52,
+   "end": 19.24
+  },
+  {
+   "text": "almost",
+   "start": 19.24,
+   "end": 19.56
+  },
+  {
+   "text": "600,000",
+   "start": 19.56,
+   "end": 20.52
+  },
+  {
+   "text": "square",
+   "start": 20.52,
+   "end": 20.76
+  },
+  {
+   "text": "miles,",
+   "start": 20.76,
+   "end": 21.32
+  },
+  {
+   "text": "for",
+   "start": 21.32,
+   "end": 21.48
+  },
+  {
+   "text": "under",
+   "start": 21.48,
+   "end": 21.8
+  },
+  {
+   "text": "two",
+   "start": 21.8,
+   "end": 22.04
+  },
+  {
+   "text": "cents",
+   "start": 22.04,
+   "end": 22.28
+  },
+  {
+   "text": "an",
+   "start": 22.28,
+   "end": 22.44
+  },
+  {
+   "text": "acre.",
+   "start": 22.44,
+   "end": 23.153
+  },
+  {
+   "text": "Not",
+   "start": 23.153,
+   "end": 23.393
+  },
+  {
+   "text": "bad",
+   "start": 23.393,
+   "end": 23.633
+  },
+  {
+   "text": "for",
+   "start": 23.633,
+   "end": 23.793
+  },
+  {
+   "text": "one",
+   "start": 23.793,
+   "end": 23.953
+  },
+  {
+   "text": "piece",
+   "start": 23.953,
+   "end": 24.193
+  },
+  {
+   "text": "of",
+   "start": 24.193,
+   "end": 24.353
+  },
+  {
+   "text": "paper.",
+   "start": 24.353,
+   "end": 25.233
+  },
+  {
+   "text": "Because",
+   "start": 25.233,
+   "end": 25.79
+  }
+ ]
+}

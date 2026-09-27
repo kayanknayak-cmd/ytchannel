@@ -1,0 +1,391 @@
+{
+ "script": 11,
+ "duration": 27.69,
+ "words": [
+  {
+   "text": "In",
+   "start": 0.0,
+   "end": 0.08
+  },
+  {
+   "text": "1932,",
+   "start": 0.08,
+   "end": 1.28
+  },
+  {
+   "text": "Australia",
+   "start": 1.28,
+   "end": 1.92
+  },
+  {
+   "text": "sent",
+   "start": 1.92,
+   "end": 2.24
+  },
+  {
+   "text": "soldiers",
+   "start": 2.24,
+   "end": 2.64
+  },
+  {
+   "text": "with",
+   "start": 2.64,
+   "end": 2.8
+  },
+  {
+   "text": "machine",
+   "start": 2.8,
+   "end": 3.2
+  },
+  {
+   "text": "guns",
+   "start": 3.2,
+   "end": 3.52
+  },
+  {
+   "text": "to",
+   "start": 3.52,
+   "end": 3.68
+  },
+  {
+   "text": "fight",
+   "start": 3.68,
+   "end": 3.92
+  },
+  {
+   "text": "emus,",
+   "start": 3.92,
+   "end": 4.8
+  },
+  {
+   "text": "and",
+   "start": 4.8,
+   "end": 5.04
+  },
+  {
+   "text": "lost.",
+   "start": 5.04,
+   "end": 5.84
+  },
+  {
+   "text": "About",
+   "start": 5.84,
+   "end": 6.16
+  },
+  {
+   "text": "20,000",
+   "start": 6.16,
+   "end": 6.96
+  },
+  {
+   "text": "Emus",
+   "start": 6.96,
+   "end": 7.52
+  },
+  {
+   "text": "were",
+   "start": 7.52,
+   "end": 7.6
+  },
+  {
+   "text": "tearing",
+   "start": 7.6,
+   "end": 7.92
+  },
+  {
+   "text": "up",
+   "start": 7.92,
+   "end": 8.08
+  },
+  {
+   "text": "wheat",
+   "start": 8.08,
+   "end": 8.4
+  },
+  {
+   "text": "farms,",
+   "start": 8.4,
+   "end": 8.96
+  },
+  {
+   "text": "so",
+   "start": 8.96,
+   "end": 9.12
+  },
+  {
+   "text": "the",
+   "start": 9.12,
+   "end": 9.28
+  },
+  {
+   "text": "army",
+   "start": 9.28,
+   "end": 9.68
+  },
+  {
+   "text": "sent",
+   "start": 9.68,
+   "end": 9.92
+  },
+  {
+   "text": "a",
+   "start": 9.92,
+   "end": 10.08
+  },
+  {
+   "text": "major,",
+   "start": 10.08,
+   "end": 10.72
+  },
+  {
+   "text": "two",
+   "start": 10.72,
+   "end": 11.04
+  },
+  {
+   "text": "soldiers,",
+   "start": 11.04,
+   "end": 11.76
+  },
+  {
+   "text": "two",
+   "start": 11.76,
+   "end": 12.0
+  },
+  {
+   "text": "machine",
+   "start": 12.0,
+   "end": 12.4
+  },
+  {
+   "text": "guns,",
+   "start": 12.4,
+   "end": 12.72
+  },
+  {
+   "text": "and",
+   "start": 12.72,
+   "end": 12.88
+  },
+  {
+   "text": "10,000",
+   "start": 12.88,
+   "end": 13.44
+  },
+  {
+   "text": "rounds.",
+   "start": 13.44,
+   "end": 14.24
+  },
+  {
+   "text": "The",
+   "start": 14.24,
+   "end": 14.4
+  },
+  {
+   "text": "emus",
+   "start": 14.4,
+   "end": 14.96
+  },
+  {
+   "text": "split",
+   "start": 14.96,
+   "end": 15.28
+  },
+  {
+   "text": "into",
+   "start": 15.28,
+   "end": 15.44
+  },
+  {
+   "text": "little",
+   "start": 15.44,
+   "end": 15.68
+  },
+  {
+   "text": "groups",
+   "start": 15.68,
+   "end": 16.16
+  },
+  {
+   "text": "and",
+   "start": 16.16,
+   "end": 16.4
+  },
+  {
+   "text": "ran.",
+   "start": 16.4,
+   "end": 17.04
+  },
+  {
+   "text": "One",
+   "start": 17.04,
+   "end": 17.36
+  },
+  {
+   "text": "gun",
+   "start": 17.36,
+   "end": 17.76
+  },
+  {
+   "text": "jammed.",
+   "start": 17.76,
+   "end": 18.4
+  },
+  {
+   "text": "They",
+   "start": 18.4,
+   "end": 18.56
+  },
+  {
+   "text": "put",
+   "start": 18.56,
+   "end": 18.72
+  },
+  {
+   "text": "a",
+   "start": 18.72,
+   "end": 18.8
+  },
+  {
+   "text": "gun",
+   "start": 18.8,
+   "end": 19.04
+  },
+  {
+   "text": "on",
+   "start": 19.04,
+   "end": 19.2
+  },
+  {
+   "text": "a",
+   "start": 19.2,
+   "end": 19.28
+  },
+  {
+   "text": "truck,",
+   "start": 19.28,
+   "end": 19.84
+  },
+  {
+   "text": "but",
+   "start": 19.84,
+   "end": 20.0
+  },
+  {
+   "text": "the",
+   "start": 20.0,
+   "end": 20.08
+  },
+  {
+   "text": "truck",
+   "start": 20.08,
+   "end": 20.4
+  },
+  {
+   "text": "was",
+   "start": 20.4,
+   "end": 20.56
+  },
+  {
+   "text": "too",
+   "start": 20.56,
+   "end": 20.8
+  },
+  {
+   "text": "slow.",
+   "start": 20.8,
+   "end": 21.53
+  },
+  {
+   "text": "The",
+   "start": 21.53,
+   "end": 21.77
+  },
+  {
+   "text": "major",
+   "start": 21.77,
+   "end": 22.17
+  },
+  {
+   "text": "said",
+   "start": 22.17,
+   "end": 22.33
+  },
+  {
+   "text": "these",
+   "start": 22.33,
+   "end": 22.49
+  },
+  {
+   "text": "birds",
+   "start": 22.49,
+   "end": 22.97
+  },
+  {
+   "text": "could",
+   "start": 22.97,
+   "end": 23.13
+  },
+  {
+   "text": "face",
+   "start": 23.13,
+   "end": 23.37
+  },
+  {
+   "text": "machine",
+   "start": 23.37,
+   "end": 23.85
+  },
+  {
+   "text": "guns",
+   "start": 23.85,
+   "end": 24.17
+  },
+  {
+   "text": "like",
+   "start": 24.17,
+   "end": 24.41
+  },
+  {
+   "text": "tanks.",
+   "start": 24.41,
+   "end": 25.29
+  },
+  {
+   "text": "And",
+   "start": 25.29,
+   "end": 25.45
+  },
+  {
+   "text": "that's",
+   "start": 25.45,
+   "end": 25.77
+  },
+  {
+   "text": "the",
+   "start": 25.77,
+   "end": 25.93
+  },
+  {
+   "text": "true",
+   "start": 25.93,
+   "end": 26.33
+  },
+  {
+   "text": "story",
+   "start": 26.33,
+   "end": 26.81
+  },
+  {
+   "text": "of",
+   "start": 26.81,
+   "end": 27.13
+  },
+  {
+   "text": "how.",
+   "start": 27.13,
+   "end": 27.69
+  }
+ ]
+}

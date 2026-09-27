@@ -1,0 +1,361 @@
+{
+ "script": 9,
+ "duration": 23.84,
+ "words": [
+  {
+   "text": "You",
+   "start": 0.0,
+   "end": 0.1
+  },
+  {
+   "text": "ask",
+   "start": 0.1,
+   "end": 0.5
+  },
+  {
+   "text": "Hershey",
+   "start": 0.5,
+   "end": 1.06
+  },
+  {
+   "text": "to",
+   "start": 1.06,
+   "end": 1.14
+  },
+  {
+   "text": "make",
+   "start": 1.14,
+   "end": 1.3
+  },
+  {
+   "text": "a",
+   "start": 1.3,
+   "end": 1.38
+  },
+  {
+   "text": "chocolate",
+   "start": 1.38,
+   "end": 1.78
+  },
+  {
+   "text": "bar",
+   "start": 1.78,
+   "end": 2.1
+  },
+  {
+   "text": "that",
+   "start": 2.1,
+   "end": 2.26
+  },
+  {
+   "text": "tastes",
+   "start": 2.26,
+   "end": 2.74
+  },
+  {
+   "text": "bad,",
+   "start": 2.74,
+   "end": 3.3
+  },
+  {
+   "text": "on",
+   "start": 3.3,
+   "end": 3.62
+  },
+  {
+   "text": "purpose.",
+   "start": 3.62,
+   "end": 4.5
+  },
+  {
+   "text": "That's",
+   "start": 4.5,
+   "end": 4.74
+  },
+  {
+   "text": "what",
+   "start": 4.74,
+   "end": 4.9
+  },
+  {
+   "text": "the",
+   "start": 4.9,
+   "end": 4.98
+  },
+  {
+   "text": "U.S.",
+   "start": 4.98,
+   "end": 5.38
+  },
+  {
+   "text": "Army",
+   "start": 5.38,
+   "end": 5.78
+  },
+  {
+   "text": "did",
+   "start": 5.78,
+   "end": 5.94
+  },
+  {
+   "text": "in",
+   "start": 5.94,
+   "end": 6.1
+  },
+  {
+   "text": "1937.",
+   "start": 6.1,
+   "end": 7.3
+  },
+  {
+   "text": "The",
+   "start": 7.3,
+   "end": 7.54
+  },
+  {
+   "text": "list,",
+   "start": 7.54,
+   "end": 8.26
+  },
+  {
+   "text": "four",
+   "start": 8.26,
+   "end": 8.58
+  },
+  {
+   "text": "ounces,",
+   "start": 8.58,
+   "end": 9.46
+  },
+  {
+   "text": "won't",
+   "start": 9.46,
+   "end": 9.78
+  },
+  {
+   "text": "melt",
+   "start": 9.78,
+   "end": 10.02
+  },
+  {
+   "text": "in",
+   "start": 10.02,
+   "end": 10.18
+  },
+  {
+   "text": "the",
+   "start": 10.18,
+   "end": 10.26
+  },
+  {
+   "text": "heat,",
+   "start": 10.26,
+   "end": 10.74
+  },
+  {
+   "text": "loaded",
+   "start": 10.74,
+   "end": 11.06
+  },
+  {
+   "text": "with",
+   "start": 11.06,
+   "end": 11.22
+  },
+  {
+   "text": "energy,",
+   "start": 11.22,
+   "end": 11.7
+  },
+  {
+   "text": "and",
+   "start": 11.7,
+   "end": 11.86
+  },
+  {
+   "text": "it",
+   "start": 11.86,
+   "end": 12.02
+  },
+  {
+   "text": "should",
+   "start": 12.02,
+   "end": 12.18
+  },
+  {
+   "text": "taste,",
+   "start": 12.18,
+   "end": 12.74
+  },
+  {
+   "text": "quote,",
+   "start": 12.74,
+   "end": 13.3
+  },
+  {
+   "text": "a",
+   "start": 13.3,
+   "end": 13.54
+  },
+  {
+   "text": "little",
+   "start": 13.54,
+   "end": 13.78
+  },
+  {
+   "text": "better",
+   "start": 13.78,
+   "end": 14.02
+  },
+  {
+   "text": "than",
+   "start": 14.02,
+   "end": 14.26
+  },
+  {
+   "text": "a",
+   "start": 14.26,
+   "end": 14.42
+  },
+  {
+   "text": "boiled",
+   "start": 14.42,
+   "end": 14.82
+  },
+  {
+   "text": "potato.",
+   "start": 14.82,
+   "end": 15.78
+  },
+  {
+   "text": "Because",
+   "start": 15.78,
+   "end": 16.02
+  },
+  {
+   "text": "it's",
+   "start": 16.02,
+   "end": 16.34
+  },
+  {
+   "text": "emergency",
+   "start": 16.34,
+   "end": 16.98
+  },
+  {
+   "text": "food.",
+   "start": 16.98,
+   "end": 17.46
+  },
+  {
+   "text": "Troops",
+   "start": 17.46,
+   "end": 17.94
+  },
+  {
+   "text": "were",
+   "start": 17.94,
+   "end": 18.1
+  },
+  {
+   "text": "supposed",
+   "start": 18.1,
+   "end": 18.34
+  },
+  {
+   "text": "to",
+   "start": 18.34,
+   "end": 18.5
+  },
+  {
+   "text": "save",
+   "start": 18.5,
+   "end": 18.82
+  },
+  {
+   "text": "it.",
+   "start": 18.82,
+   "end": 19.22
+  },
+  {
+   "text": "But",
+   "start": 19.22,
+   "end": 19.38
+  },
+  {
+   "text": "if",
+   "start": 19.38,
+   "end": 19.54
+  },
+  {
+   "text": "it",
+   "start": 19.54,
+   "end": 19.7
+  },
+  {
+   "text": "tastes",
+   "start": 19.7,
+   "end": 20.1
+  },
+  {
+   "text": "good,",
+   "start": 20.1,
+   "end": 20.5
+  },
+  {
+   "text": "they",
+   "start": 20.5,
+   "end": 20.74
+  },
+  {
+   "text": "eat",
+   "start": 20.74,
+   "end": 20.9
+  },
+  {
+   "text": "it",
+   "start": 20.9,
+   "end": 21.06
+  },
+  {
+   "text": "before",
+   "start": 21.06,
+   "end": 21.3
+  },
+  {
+   "text": "the",
+   "start": 21.3,
+   "end": 21.38
+  },
+  {
+   "text": "emergency.",
+   "start": 21.38,
+   "end": 22.5
+  },
+  {
+   "text": "So,",
+   "start": 22.5,
+   "end": 22.9
+  },
+  {
+   "text": "what",
+   "start": 22.9,
+   "end": 23.14
+  },
+  {
+   "text": "do",
+   "start": 23.14,
+   "end": 23.3
+  },
+  {
+   "text": "you",
+   "start": 23.3,
+   "end": 23.46
+  },
+  {
+   "text": "do?",
+   "start": 23.46,
+   "end": 23.84
+  }
+ ]
+}

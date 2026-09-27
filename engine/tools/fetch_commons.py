@@ -61,11 +61,16 @@ def main():
     ap.add_argument('--get', metavar='DIR')
     ap.add_argument('--width', type=int, default=None)
     ap.add_argument('--category')
+    ap.add_argument('--search', help='full-text search of Commons files')
     a = ap.parse_args()
     titles = list(a.titles)
     if a.category:
         q = {'action': 'query', 'format': 'json', 'list': 'categorymembers', 'cmtitle': a.category, 'cmtype': 'file', 'cmlimit': '100'}
         titles += [m['title'] for m in get(API + '?' + urllib.parse.urlencode(q))['query']['categorymembers']]
+        time.sleep(1)
+    if a.search:
+        q = {'action': 'query', 'format': 'json', 'list': 'search', 'srsearch': a.search, 'srnamespace': '6', 'srlimit': '25'}
+        titles += [m['title'] for m in get(API + '?' + urllib.parse.urlencode(q))['query']['search']]
         time.sleep(1)
     rows = info(titles, a.width)
     for r in rows:
