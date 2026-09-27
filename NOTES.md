@@ -10,3 +10,4 @@
 - Replaced Pringles, bubble wrap, Post-it, Kodak (no PD imagery) with mailed kids, Alaska check, Carrington event, Balmis orphans.
 - All scripts PG. Owner talks fast (~200 wpm) and edits on the fly; tools/vo_sync.py handles it.
 - 2026-09-27: repo reorganized per owner request: finished/, videos/NN-*/, inbox/, engine/.
+- 2026-09-27: videos 02-18 finished. Loop check flags on 08/14 are the reveal-tear sliver, verified seamless.
