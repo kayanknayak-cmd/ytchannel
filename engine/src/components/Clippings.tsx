@@ -201,7 +201,7 @@ export const Headline: React.FC<HeadlineProps> = ({
   const drawing = Math.floor((f - at) / step);
   const words = text.split(' ');
   const longest = Math.max(...words.map((w) => w.length));
-  const est = mode === 'letters' ? longest * size * 0.82 : 0;
+  const est = mode === 'letters' ? longest * size * 1.0 : 0;
   if (est > maxWidth) size = size * (maxWidth / est);
   let idx = 0;
   return (

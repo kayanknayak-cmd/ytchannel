@@ -52,6 +52,12 @@ export type Shot = {
 
 const RED = '#d7382b';
 /** Hero photo width: 900px, narrower for tall photos so they stay clear of the captions. */
+/** Big clipping size: multi-word lines wrap to two rows, so shrink them to stay inside the frame. */
+const bigSize = (shot: Shot) => {
+  const t = shot.big!.text;
+  const long = t.includes(' ') ? t.length > 12 ? 0.72 : 0.85 : 1;
+  return Math.round((shot.layout === 'stat' ? 190 : 150) * long);
+};
 const heroW = (p: Pic) => Math.min(900, 1100 * p.aspect);
 const YEL = '#f4c430';
 
@@ -214,19 +220,19 @@ const ShotView: React.FC<{shot: Shot; ev: (c?: Cue, fb?: number) => number; end:
         )}
         {shot.layout === 'pair' && photo?.label && (
           <AbsoluteFill style={{top: 1150, left: 60, width: 460}}>
-            <Headline text={photo.label.text} size={130} at={ev(photo.label.cue ?? photo.cue, 0) + 2} seed={`${id}-la`} maxWidth={460} stocks={photo.label.stock ? {[photo.label.text]: photo.label.stock} : {}} />
+            <Headline text={photo.label.text} size={96} at={ev(photo.label.cue ?? photo.cue, 0) + 2} seed={`${id}-la`} maxWidth={460} stocks={photo.label.stock ? {[photo.label.text]: photo.label.stock} : {}} />
           </AbsoluteFill>
         )}
         {shot.layout === 'pair' && photo2?.label && (
           <AbsoluteFill style={{top: 1150, left: 570, width: 460}}>
-            <Headline text={photo2.label.text} size={130} at={ev(photo2.label.cue ?? photo2.cue) + 2} seed={`${id}-lb`} maxWidth={460} stocks={photo2.label.stock ? {[photo2.label.text]: photo2.label.stock} : {}} />
+            <Headline text={photo2.label.text} size={96} at={ev(photo2.label.cue ?? photo2.cue) + 2} seed={`${id}-lb`} maxWidth={460} stocks={photo2.label.stock ? {[photo2.label.text]: photo2.label.stock} : {}} />
           </AbsoluteFill>
         )}
         {shot.big && (
-          <AbsoluteFill style={{top: shot.big.y ?? (shot.layout === 'stat' ? 1480 : shot.layout === 'pair' ? 1450 : captionTop), alignItems: 'center', padding: '0 30px'}}>
+          <AbsoluteFill style={{top: shot.big.y ?? (shot.layout === 'stat' ? 1400 : shot.layout === 'pair' ? 1450 : captionTop), alignItems: 'center', padding: '0 30px'}}>
             <Headline
               text={shot.big.text}
-              size={shot.layout === 'stat' ? 200 : 150}
+              size={bigSize(shot)}
               at={ev(shot.big.cue)}
               seed={`${id}-big`}
               maxWidth={1020}
