@@ -49,3 +49,6 @@ Anything the owner must see goes in chat, not only here. Read this file first in
 - EEVEE works only with apt libegl1/mesa (software), not faster. Cycles CPU is the path.
 - VO received: 02 (37.3s), 03 (36.0s). Both match SCRIPTS_V2 verbatim. Owner uploaded 02 twice (identical).
 - VO received: 04 39.5s, 05 36.2s, 06 40.5s, 07 33.6s, 08 34.0s (08 filename lacks voice name: confirm same voice). All verbatim. Remaining: 09, 10.
+- LOOP FIX: every VO ends "You're a scientist" which repeats the opening. Each video is cut just before that final line (01 cut at 48.9s before "So, you've got a pigeon in a box").
+- Pipeline: engine/blender/lib.py (shared cast/motion/camera), scenes/vNN.py (one per video), preview.py (contact sheet), queue.sh + queue.txt (renders one at a time forever, encodes 1080x1920 with VO, commits finished/NN-slug.mp4). Restart after container reset: nohup engine/blender/queue.sh & (renders resume: no-overwrite + placeholders). Scratch frames in scratchpad are lost on reset.
+- Visual grammar: grey = test subject (pigeon, volunteer, kid), white = neutral, glasses = works for the scientist (actors), red = wrong/answer A/danger, gold = right/reward.
