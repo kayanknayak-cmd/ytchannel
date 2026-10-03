@@ -47,3 +47,4 @@ Anything the owner must see goes in chat, not only here. Read this file first in
 - Animation: engine/blender/v01.py builds the full 52.2s scene (14 camera shots, pecks, pellets, slot machines in giant open-top box, giant scientist reveal). Render: 720x1280 16spp Cycles + motion blur, ~12s/frame, PNG seq then ffmpeg upscale to 1080x1920 + VO.
 - Word timings: voiceover/words.json (sherpa-onnx parakeet; model in /home/user/ytchannel/.models).
 - EEVEE works only with apt libegl1/mesa (software), not faster. Cycles CPU is the path.
+- VO received: 02 (37.3s), 03 (36.0s). Both match SCRIPTS_V2 verbatim. Owner uploaded 02 twice (identical).
