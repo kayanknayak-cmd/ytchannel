@@ -38,3 +38,4 @@ Anything the owner must see goes in chat, not only here. Read this file first in
 - Style v1: cream bg #F2E6D8, coral/teal/mustard/navy/pigeon-blue, matte + env light, floating confetti spheres, glass box w/ navy base.
 - Storyboard v1 REJECTED by owner: "AI slop", random pastel confetti, mushy light. Lesson: intentional palette, no random decor, real lighting.
 - Storyboard v2: cobalt set #3F5E9E (floor+fog seamless), bone #EDE5D8 objects, gold #F2B33D = reward, vermilion #F04A2A = "you". Spot key + cool rim, light bloom, vignette+grain. Dark ink set tried and rejected (muddy).
+- Storyboard v2 ALSO rejected: 'too simple or too complex, looks bad'. Conclusion: hand-coded procedural 3D from me hits a quality ceiling. Need references / pro assets / different medium before more renders.
