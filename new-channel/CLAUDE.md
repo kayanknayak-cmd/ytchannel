@@ -42,3 +42,4 @@ Anything the owner must see goes in chat, not only here. Read this file first in
 - Storyboard v3: Blender Cycles via pip 'bpy' 5.0.1 (works, CPU, ~3-5 min/frame @64spp). engine/blender/frame.py. Warm off-white set #E4DACB, all-white objects, grey pigeon, red button, gold pellets, big soft area key, AgX. Product-photo minimal.
 - v3 approved as direction ('right direction'). Pigeon v2: side profile, egg body + darker wing #7E8A9C + tail + floating head, faces button.
 - Owner: pigeon = just a plain grey sphere. Don't add detail to it.
+- Owner then: pigeon = sphere body + floating sphere head + gold beak. No eyes/wings/tail.

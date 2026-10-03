@@ -51,6 +51,9 @@ cyl(0.16,0.06,(bx+0.5,by+d/2-0.06,0.95),M['red'],0.025).rotation_euler=(math.pi/
 bpy.context.object.location=(bx+0.5,by+d/2-0.06,0.95)
 # pigeon: just a sphere
 sphere(0.34,(bx-0.25,by-0.05,0.12+0.34),M['grey'])
+hx,hy,hz=bx-0.18,by-0.05,1.05
+sphere(0.17,(hx,hy,hz),M['grey'])
+bpy.ops.mesh.primitive_cone_add(radius1=0.045,depth=0.15,location=(hx+0.2,hy,hz-0.01),vertices=48); o=obj_done(bpy.context.object,M['gold']); o.rotation_euler=(0,math.radians(90),0)
 # pellets
 for i,(x,z) in enumerate([(0.35,0.45),(0.42,0.62),(0.33,0.78)]): sphere(0.05,(bx+x,by-0.05,z),M['gold'])
 
