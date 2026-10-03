@@ -29,3 +29,4 @@ Anything the owner must see goes in chat, not only here. Read this file first in
 - Behind-the-counter angle: owner unsure. My proposal: "You're the experimenter" as the core frame; business/gambling as recurring episodes.
 - Cadence idea: batch ~30 videos, post every 3rd day. My pushback: batch 10, post, read retention, then adjust; post more often early.
 - Voice: owner deferred to me. Proposed sly/conspiratorial insider, mid-fast pace.
+- Voice rec (unverified vs current library): Callum first, then George, Brian. Owner to test with script 03 on v3.
