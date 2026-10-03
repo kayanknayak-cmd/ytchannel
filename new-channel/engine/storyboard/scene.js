@@ -1,106 +1,87 @@
 import * as THREE from 'three';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
-import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { GTAOPass } from 'three/addons/postprocessing/GTAOPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 
-const W=1080,H=1920, shot=new URLSearchParams(location.search).get('s')||'1';
-const C={bg:0xF2E6D8, floor:0xEAD9C6, coat:0xFBF7F2, skin:0xF2C7A5, coral:0xFF6F59, teal:0x3AA597, mustard:0xF5B841, navy:0x2E3A59, pigeon:0x9AA8C4, pink:0xF4A7B9, glass:0xCFE8F5, gold:0xE8B04B};
+const W=1080,H=1920, shot=new URLSearchParams(location.search).get('s')||'A';
+// Palette: ink set, bone objects, one reward color, one "you" color.
+const P={ink:0x3F5E9E, bone:0xEDE5D8, slate:0xB9C3D3, gold:0xF2B33D, red:0xF04A2A, dark:0x1C2438};
 const r=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});
 r.setSize(W,H); r.shadowMap.enabled=true; r.shadowMap.type=THREE.VSMShadowMap;
-r.toneMapping=THREE.ACESFilmicToneMapping; r.toneMappingExposure=1.05; r.outputColorSpace=THREE.SRGBColorSpace;
+r.toneMapping=THREE.ACESFilmicToneMapping; r.toneMappingExposure=1.0;
 document.body.appendChild(r.domElement);
-const scene=new THREE.Scene(); scene.background=new THREE.Color(C.bg); scene.fog=new THREE.Fog(C.bg,14,30);
-const pm=new THREE.PMREMGenerator(r); scene.environment=pm.fromScene(new RoomEnvironment(),0.04).texture; scene.environmentIntensity=0.55;
-const cam=new THREE.PerspectiveCamera(30,W/H,0.1,100);
-scene.add(new THREE.HemisphereLight(0xffffff,C.floor,0.9));
-const sun=new THREE.DirectionalLight(0xfff1e0,2.4); sun.position.set(4,9,6); sun.castShadow=true;
-sun.shadow.mapSize.set(2048,2048); sun.shadow.radius=8; sun.shadow.bias=-0.0005;
-Object.assign(sun.shadow.camera,{left:-8,right:8,top:8,bottom:-8}); scene.add(sun);
-const rim=new THREE.DirectionalLight(0xc9dcff,0.8); rim.position.set(-6,4,-5); scene.add(rim);
+const scene=new THREE.Scene(); scene.background=new THREE.Color(P.ink); scene.fog=new THREE.Fog(P.ink,14,30);
+const cam=new THREE.PerspectiveCamera(26,W/H,0.1,100);
 
-const mat=(c,o={})=>new THREE.MeshStandardMaterial({color:c,roughness:0.55,metalness:0,...o});
-function M(g,c,o){const m=new THREE.Mesh(g,c.isMaterial?c:mat(c,o));m.castShadow=m.receiveShadow=true;return m;}
-const floor=M(new THREE.CircleGeometry(40,64),C.floor); floor.rotation.x=-Math.PI/2; scene.add(floor);
+scene.add(new THREE.HemisphereLight(0xdfe8ff,0x5a74b0,0.7));
+const key=new THREE.SpotLight(0xfff0dc,110,40,0.55,0.9,1.2); key.position.set(-4,11,7); key.castShadow=true;
+key.shadow.mapSize.set(2048,2048); key.shadow.radius=10; key.shadow.blurSamples=16; key.shadow.bias=-0.0004; scene.add(key,key.target);
+const rim=new THREE.DirectionalLight(0x8fb0ff,1.4); rim.position.set(5,4,-6); scene.add(rim);
+const fill=new THREE.DirectionalLight(0xfff3e6,0.9); fill.position.set(4,2,6); scene.add(fill);
 
-// rounded cylinder via lathe
-function pill(rad,h,bevel){const p=[];p.push(new THREE.Vector2(0,0));
- for(let i=0;i<=8;i++){const a=-Math.PI/2+i/8*Math.PI/2;p.push(new THREE.Vector2(rad-bevel+Math.cos(a)*bevel,bevel+Math.sin(a)*bevel));}
- for(let i=0;i<=8;i++){const a=i/8*Math.PI/2;p.push(new THREE.Vector2(rad-bevel+Math.cos(a)*bevel,h-bevel+Math.sin(a)*bevel));}
- p.push(new THREE.Vector2(0,h));return new THREE.LatheGeometry(p,64);}
-function person(body=C.coat,{glasses=false,scale=1}={}){const g=new THREE.Group();
- g.add(M(pill(0.42,1.5,0.22),body));
- const head=M(new THREE.SphereGeometry(0.34,48,32),C.skin); head.position.y=2.0; g.add(head);
- if(glasses){[-0.13,0.13].forEach(x=>{const l=M(new THREE.TorusGeometry(0.075,0.018,12,32),C.navy);l.position.set(x,2.03,0.32);g.add(l);});}
- const sh=M(new THREE.CircleGeometry(0.42,32),mat(0x000000,{transparent:true,opacity:0}));g.add(sh);
- g.scale.setScalar(scale);return g;}
-function hand(c=C.skin){return M(new THREE.SphereGeometry(0.11,24,16),c);}
-function pigeon(s=1){const g=new THREE.Group();
- const b=M(new THREE.SphereGeometry(0.36,48,32),C.pigeon);b.scale.set(1,0.9,1.15);b.position.y=0.36;g.add(b);
- const h=M(new THREE.SphereGeometry(0.2,40,24),C.pigeon);h.position.set(0,1.1,0.18);g.add(h);
- const beak=M(new THREE.ConeGeometry(0.06,0.16,20),C.mustard);beak.rotation.x=Math.PI/2;beak.position.set(0,1.08,0.42);g.add(beak);
- [-0.08,0.08].forEach(x=>{const e=M(new THREE.SphereGeometry(0.035,16,12),C.navy);e.position.set(x,1.15,0.35);g.add(e);});
- const neck=M(new THREE.TorusGeometry(0.14,0.03,12,32),C.teal,{roughness:0.3,metalness:0.2});neck.rotation.x=Math.PI/2;neck.position.set(0,0.74,0.12);g.add(neck);
- g.scale.setScalar(s);return g;}
-function pellet(c=C.mustard){return M(new THREE.SphereGeometry(0.07,20,14),c);}
-function button(c=C.coral){const g=new THREE.Group();g.add(M(pill(0.26,0.12,0.05),0xffffff));const t=M(pill(0.18,0.12,0.06),c);t.position.y=0.08;g.add(t);return g;}
-function box(w=2.6,h=2.4,d=2.2){const g=new THREE.Group();
- const glass=new THREE.MeshPhysicalMaterial({color:C.glass,transmission:0.0,transparent:true,opacity:0.22,roughness:0.1,clearcoat:1});
- const shell=new THREE.Mesh(new RoundedBoxGeometry(w,h,d,6,0.25),glass);shell.position.y=h/2;g.add(shell);
- const base=M(new RoundedBoxGeometry(w+0.2,0.25,d+0.2,4,0.1),C.navy);base.position.y=0.12;g.add(base);
- const lid=M(new RoundedBoxGeometry(w+0.2,0.18,d+0.2,4,0.08),C.navy);lid.position.y=h;g.add(lid);return g;}
-function die(c=C.coat){const g=new THREE.Group();g.add(M(new RoundedBoxGeometry(0.5,0.5,0.5,5,0.12),c));
- const pip=(x,y,z)=>{const p=M(new THREE.SphereGeometry(0.045,12,8),C.navy);p.position.set(x,y,z);g.add(p);};
- pip(0,0,0.25);pip(-0.13,0.13,0.25);pip(0.13,-0.13,0.25);pip(0.25,0.12,0.12);pip(0.25,-0.12,-0.12);pip(0.12,0.25,0.12);pip(-0.12,0.25,-0.12);return g;}
-function slot(){const g=new THREE.Group();
- const body=M(new RoundedBoxGeometry(2.2,3.0,1.4,6,0.35),C.coral);body.position.y=1.5;g.add(body);
- const top=M(new THREE.SphereGeometry(0.6,48,32,0,Math.PI*2,0,Math.PI/2),C.mustard);top.position.y=3.0;g.add(top);
- const win=M(new RoundedBoxGeometry(1.7,0.8,0.2,4,0.1),0xffffff);win.position.set(0,2.0,0.66);g.add(win);
- [C.teal,C.pink,C.mustard].forEach((c,i)=>{const b=M(new THREE.SphereGeometry(0.2,32,20),c,{roughness:0.25});b.position.set(-0.5+i*0.5,2.0,0.8);g.add(b);});
- const arm=M(new THREE.CylinderGeometry(0.05,0.05,1.1,16),0xdddddd,{metalness:0.6,roughness:0.25});arm.position.set(1.3,2.2,0);arm.rotation.z=-0.25;g.add(arm);
- const knob=M(new THREE.SphereGeometry(0.17,32,20),C.coral,{roughness:0.2});knob.position.set(1.44,2.75,0);g.add(knob);
- const tray=M(new RoundedBoxGeometry(1.5,0.3,0.5,4,0.1),C.navy);tray.position.set(0,0.6,0.75);g.add(tray);
- [0,1,2,3,4].forEach(i=>{const c=M(new THREE.CylinderGeometry(0.12,0.12,0.04,24),C.gold,{metalness:0.8,roughness:0.25});c.position.set(-0.4+i*0.2+Math.sin(i)*0.05,0.8+i*0.03,0.85);c.rotation.x=1.2;g.add(c);});
+const mat=(c,ro=0.62)=>new THREE.MeshStandardMaterial({color:c,roughness:ro});
+const M=(g,c,ro)=>{const m=new THREE.Mesh(g,c.isMaterial?c:mat(c,ro));m.castShadow=m.receiveShadow=true;return m;};
+const floor=M(new THREE.PlaneGeometry(80,80),P.ink,0.9); floor.rotation.x=-Math.PI/2; scene.add(floor);
+const S=(r,c,ro)=>M(new THREE.SphereGeometry(r,64,40),c,ro);
+
+function pill(rad,h,bev){const p=[new THREE.Vector2(0,0)];
+ for(let i=0;i<=10;i++){const a=-Math.PI/2+i/10*Math.PI/2;p.push(new THREE.Vector2(rad-bev+Math.cos(a)*bev,bev+Math.sin(a)*bev));}
+ for(let i=0;i<=10;i++){const a=i/10*Math.PI/2;p.push(new THREE.Vector2(rad-bev+Math.cos(a)*bev,h-bev+Math.sin(a)*bev));}
+ p.push(new THREE.Vector2(0,h));return new THREE.LatheGeometry(p,96);}
+function person(c,{glasses=false}={}){const g=new THREE.Group();
+ g.add(M(pill(0.4,1.45,0.2),c));const h=S(0.3,c);h.position.y=1.92;g.add(h);
+ if(glasses)[-0.12,0.12].forEach(x=>{const l=M(new THREE.TorusGeometry(0.07,0.014,12,40),P.dark,0.3);l.position.set(x,1.95,0.29);g.add(l);});
  return g;}
-function floaters(n,c,spread=3,y0=1,y1=5,seed=1){let s=seed;const rnd=()=>{s=(s*9301+49297)%233280;return s/233280;};
- for(let i=0;i<n;i++){const m=M(new THREE.SphereGeometry(0.05+rnd()*0.12,20,14),[C.pink,C.teal,C.mustard,C.coral][i%4]);
-  m.position.set((rnd()-0.5)*spread*2,y0+rnd()*(y1-y0),-1-rnd()*4);scene.add(m);}}
+function pigeon(){const g=new THREE.Group();
+ const b=M(new THREE.CapsuleGeometry(0.3,0.32,16,48),P.slate);b.rotation.x=1.15;b.position.set(0,0.36,-0.05);g.add(b);
+ const tail=M(new THREE.ConeGeometry(0.14,0.35,32),P.slate);tail.rotation.x=-1.9;tail.position.set(0,0.42,-0.55);g.add(tail);
+ const h=S(0.19,P.slate);h.position.set(0,1.0,0.22);g.add(h);
+ const bk=M(new THREE.ConeGeometry(0.045,0.14,24),P.gold,0.4);bk.rotation.x=Math.PI/2;bk.position.set(0,0.98,0.46);g.add(bk);
+ [-0.085,0.085].forEach(x=>{const e=S(0.026,P.dark,0.2);e.position.set(x,1.05,0.38);g.add(e);});
+ return g;}
+function skinnerBox(){const g=new THREE.Group(),w=2.4,h=2.0,d=1.8,t=0.14;
+ const slab=(sx,sy,sz,x,y,z)=>{const m=M(new RoundedBoxGeometry(sx,sy,sz,5,0.06),P.bone);m.position.set(x,y,z);g.add(m);};
+ slab(w,t,d,0,t/2,0);slab(w,t,d,0,h,0);slab(t,h,d,-w/2,h/2,0);slab(t,h,d,w/2,h/2,0);slab(w,h,t,0,h/2,-d/2);
+ const btn=M(pill(0.17,0.08,0.035),P.red,0.35);btn.rotation.x=Math.PI/2;btn.position.set(0.55,1.0,-d/2+0.07);g.add(btn);
+ const dish=M(pill(0.22,0.07,0.03),P.dark,0.5);dish.position.set(0.55,t,-0.35);g.add(dish);
+ const lamp=S(0.07,0xfff1c9);lamp.material.emissive=new THREE.Color(0xffd27a);lamp.material.emissiveIntensity=2;lamp.position.set(-0.6,1.75,-d/2+0.1);g.add(lamp);
+ return g;}
+const pellet=()=>{const m=S(0.06,P.gold,0.35);m.material.emissive=new THREE.Color(P.gold);m.material.emissiveIntensity=0.35;return m;};
 
-const S={
-'1':()=>{ // "You're a scientist, and you've got a pigeon in a box."
- const b=box();b.position.set(0.7,0,-0.6);scene.add(b);const p=pigeon();p.position.set(0.7,0.25,-0.6);p.rotation.y=-0.5;scene.add(p);
- const sc=person(C.coat,{glasses:true});sc.position.set(-0.9,0,0.9);sc.rotation.y=0.5;scene.add(sc);
- const h=hand();h.position.set(-0.4,1.3,1.2);scene.add(h);
- const clip=M(new RoundedBoxGeometry(0.5,0.65,0.05,3,0.04),C.mustard);clip.position.set(-0.35,1.45,1.3);clip.rotation.set(-0.3,0.4,0.1);scene.add(clip);
- floaters(9,0,3.5,1,5,3);cam.position.set(0,2.8,13);cam.lookAt(0,1.9,0);},
-'2':()=>{ // "Peck the button, get food."
- const p=pigeon(1.4);p.position.set(-0.3,0,0);p.rotation.set(0.35,0.4,0);scene.add(p);
- const bt=button();bt.scale.setScalar(1.6);bt.position.set(0.55,0,0.7);scene.add(bt);
- [[0.9,1.1],[1.2,1.6],[0.7,2.0],[1.4,2.4],[1.0,2.9]].forEach(([x,y],i)=>{const q=pellet();q.position.set(x,y,0.6+i*0.1);q.scale.setScalar(1.6);scene.add(q);});
- cam.position.set(0.5,1.6,5.2);cam.lookAt(0.3,1.0,0);},
-'3':()=>{ // "It eats, gets full... Boring."
- scene.background=new THREE.Color(0xDCD6CF);scene.fog.color.set(0xDCD6CF);
- const b=box();scene.add(b);const p=pigeon(1.1);p.scale.set(1.35,0.95,1.35);p.position.set(0,0.25,0);scene.add(p);
- for(let i=0;i<22;i++){const q=pellet();q.position.set(Math.cos(i*2.4)*(0.5+i*0.03),0.32,Math.sin(i*2.4)*(0.5+i*0.03));scene.add(q);}
- const bt=button(0xB9B2AA);bt.position.set(0.8,0.25,0.6);scene.add(bt);
- cam.position.set(0,3.6,10);cam.lookAt(0,1.2,0);},
-'4':()=>{ // "Now food comes at random."
- const p=pigeon(1.2);p.position.set(0,0,0);scene.add(p);
- [[-1.3,3.0,0.3,0.6],[1.2,2.4,0.8,-0.4],[-0.6,4.0,-0.6,1.1],[1.0,4.3,0.2,2.0]].forEach(([x,y,rx,ry])=>{const d=die();d.position.set(x,y,0);d.rotation.set(rx,ry,0.3);scene.add(d);});
- const q=pellet();q.scale.setScalar(2.4);q.position.set(0,2.6,0.5);scene.add(q);
- floaters(10,0,3,1,5.5,7);cam.position.set(0,2.6,8.5);cam.lookAt(0,2.3,0);},
-'5':()=>{ // "And the pigeon goes nuts."
- const bt=button();bt.scale.setScalar(1.4);bt.position.set(0.5,0,0.6);scene.add(bt);
- for(let i=0;i<4;i++){const p=pigeon(1.3);p.position.set(-0.4+i*0.06,0,-i*0.02);p.rotation.set(0.1+i*0.18,0.35,0);
-  if(i<3)p.traverse(o=>{if(o.isMesh){o.material=o.material.clone();o.material.transparent=true;o.material.opacity=0.18+i*0.12;o.castShadow=false;}});scene.add(p);}
- for(let i=0;i<14;i++){const q=pellet([C.mustard,C.coral][i%2]);const a=i*0.9;q.position.set(0.6+Math.cos(a)*(0.6+i*0.12),1+i*0.22,0.4+Math.sin(a)*0.5);scene.add(q);}
- cam.position.set(0.2,1.8,6);cam.lookAt(0.2,1.3,0);},
-'6':()=>{ // "Casinos found it too... slot machine."
- const s=slot();s.position.set(0.3,0,0);s.rotation.y=-0.35;scene.add(s);
- const pp=person(C.teal);pp.position.set(-1.1,0,1.4);pp.rotation.y=0.9;scene.add(pp);
- floaters(12,0,4,1,6,11);cam.position.set(0,3,13);cam.lookAt(0,2,0);},
-'7':()=>{ // "That's not a pigeon. That's you."
- const b=box(2.8,3.2,2.4);scene.add(b);const pp=person(C.teal);pp.position.set(0,0.25,0);pp.scale.setScalar(0.9);scene.add(pp);
- const bt=button();bt.position.set(0.7,0.25,0.7);scene.add(bt);
- const sc=person(C.coat,{glasses:true,scale:2.2});sc.position.set(1.4,0,-3.5);sc.rotation.y=-0.6;scene.add(sc);
- cam.position.set(-1,3,13);cam.lookAt(0.3,2.8,0);},
+const shots={
+A:()=>{ // You're a scientist, and you've got a pigeon in a box.
+ const b=skinnerBox();b.position.set(0.55,0,-0.4);b.rotation.y=-0.25;scene.add(b);
+ const p=pigeon();p.position.set(0.35,0.14,-0.3);p.rotation.y=0.35;scene.add(p);
+ const sc=person(P.bone,{glasses:true});sc.position.set(-1.05,0,1.1);sc.rotation.y=0.45;scene.add(sc);
+ const hd=S(0.1,P.bone);hd.position.set(-0.6,1.15,1.45);scene.add(hd);
+ key.target.position.set(0,0.8,0);cam.position.set(0.1,2.8,15.5);cam.lookAt(-0.2,1.5,0);},
+B:()=>{ // Peck the button, get food.
+ const b=skinnerBox();b.position.set(-0.3,0,0);scene.add(b);
+ const p=pigeon();p.position.set(-0.35,0.14,-0.05);p.rotation.set(0.3,0.9,0);scene.add(p);
+ [[0.55,0.3,-0.2],[0.65,0.55,-0.25],[0.5,0.8,-0.15]].forEach(([x,y,z])=>{const q=pellet();q.position.set(x,y,z);scene.add(q);});
+ key.target.position.set(0,0.8,0);cam.position.set(1.2,1.7,8.4);cam.lookAt(-0.3,1.0,0);},
+C:()=>{ // And the pigeon goes nuts.
+ const b=skinnerBox();b.position.set(-0.3,0,0);scene.add(b);
+ for(let i=0;i<3;i++){const p=pigeon();p.position.set(-0.35,0.14,-0.05);p.rotation.set(0.05+i*0.25,0.9,0);
+  if(i<2)p.traverse(o=>{if(o.isMesh){o.material=o.material.clone();o.material.transparent=true;o.material.opacity=0.22+i*0.18;o.castShadow=false;}});scene.add(p);}
+ for(let i=0;i<9;i++){const q=pellet();const a=i*1.3;q.position.set(0.5+Math.cos(a)*0.06*i,0.3+i*0.15,-0.2+Math.sin(a)*0.15);scene.add(q);}
+ key.target.position.set(0,0.8,0);cam.position.set(1.2,1.7,8.4);cam.lookAt(-0.3,1.05,0);},
+D:()=>{ // That's not a pigeon. That's you.
+ const b=skinnerBox();b.scale.setScalar(1.25);b.position.set(0,0,-0.2);scene.add(b);
+ const you=person(P.red);you.scale.setScalar(0.72);you.position.set(-0.25,0.17,0.0);you.rotation.y=-0.2;scene.add(you);
+ const sc=person(P.bone,{glasses:true});sc.scale.setScalar(2.1);sc.position.set(1.9,0,-3.2);sc.rotation.y=-0.45;scene.add(sc);
+ key.target.position.set(0,1,0);cam.position.set(-0.4,3.2,16);cam.lookAt(0.4,2.4,0);},
 };
-S[shot](); r.render(scene,cam); window.DONE=true;
+shots[shot]();
+
+const comp=new EffectComposer(r);comp.addPass(new RenderPass(scene,cam));
+const ao=new GTAOPass(scene,cam,W,H);ao.updateGtaoMaterial({radius:0.6,distanceExponent:1.5,thickness:1.5,scale:1.2});
+comp.addPass(new UnrealBloomPass(new THREE.Vector2(W,H),0.12,0.4,1.2));
+comp.addPass(new OutputPass());
+comp.addPass(new ShaderPass({uniforms:{tDiffuse:{value:null}},vertexShader:'varying vec2 v;void main(){v=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',
+ fragmentShader:'uniform sampler2D tDiffuse;varying vec2 v;float h(vec2 p){return fract(sin(dot(p,vec2(12.9898,78.233)))*43758.5453);}void main(){vec4 c=texture2D(tDiffuse,v);vec2 q=v-.5;q.x*=.62;float vg=smoothstep(.75,.2,length(q));c.rgb*=mix(.8,1.,vg);c.rgb+=(h(v*1000.)-.5)*.035;gl_FragColor=c;}'}));
+comp.render(); window.DONE=true;
