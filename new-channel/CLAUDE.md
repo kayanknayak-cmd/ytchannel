@@ -52,3 +52,4 @@ Anything the owner must see goes in chat, not only here. Read this file first in
 - LOOP FIX: every VO ends "You're a scientist" which repeats the opening. Each video is cut just before that final line (01 cut at 48.9s before "So, you've got a pigeon in a box").
 - Pipeline: engine/blender/lib.py (shared cast/motion/camera), scenes/vNN.py (one per video), preview.py (contact sheet), queue.sh + queue.txt (renders one at a time forever, encodes 1080x1920 with VO, commits finished/NN-slug.mp4). Restart after container reset: nohup engine/blender/queue.sh & (renders resume: no-overwrite + placeholders). Scratch frames in scratchpad are lost on reset.
 - Visual grammar: grey = test subject (pigeon, volunteer, kid), white = neutral, glasses = works for the scientist (actors), red = wrong/answer A/danger, gold = right/reward.
+- Scenes 02-08 built and queued (queue.txt). Gotcha: two keys landing on the same frame collapse (F() rounding); use F(t)-n for holds.
