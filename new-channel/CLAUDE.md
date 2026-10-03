@@ -22,3 +22,10 @@ Anything the owner must see goes in chat, not only here. Read this file first in
 ## Inputs
 - Owner shared https://www.youtube.com/watch?v=QXfugR3ZIAs ("I Blew Up a Shorts Channel in 7 Days!", Isaac / @isaacverse).
   Transcript not accessible from this environment; ask owner for takeaways.
+
+## Update (session 1, Q&A)
+- Goal: views for fun, not money. So no RPM optimization; pick topics purely for reach.
+- Owner likes: "you're a scientist designing an experiment", gambling, accessible behavioral psych ("quick dopamine hits").
+- Behind-the-counter angle: owner unsure. My proposal: "You're the experimenter" as the core frame; business/gambling as recurring episodes.
+- Cadence idea: batch ~30 videos, post every 3rd day. My pushback: batch 10, post, read retention, then adjust; post more often early.
+- Voice: owner deferred to me. Proposed sly/conspiratorial insider, mid-fast pace.
