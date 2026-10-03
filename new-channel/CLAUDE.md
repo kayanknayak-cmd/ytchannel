@@ -48,3 +48,4 @@ Anything the owner must see goes in chat, not only here. Read this file first in
 - Word timings: voiceover/words.json (sherpa-onnx parakeet; model in /home/user/ytchannel/.models).
 - EEVEE works only with apt libegl1/mesa (software), not faster. Cycles CPU is the path.
 - VO received: 02 (37.3s), 03 (36.0s). Both match SCRIPTS_V2 verbatim. Owner uploaded 02 twice (identical).
+- VO received: 04 39.5s, 05 36.2s, 06 40.5s, 07 33.6s, 08 34.0s (08 filename lacks voice name: confirm same voice). All verbatim. Remaining: 09, 10.
