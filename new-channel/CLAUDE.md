@@ -31,3 +31,8 @@ Anything the owner must see goes in chat, not only here. Read this file first in
 - Voice: owner deferred to me. Proposed sly/conspiratorial insider, mid-fast pace.
 - Voice rec (unverified vs current library): Callum first, then George, Brian. Owner to test with script 03 on v3.
 - VOICE LOCKED: Callum, Scottish accent variant (English). Owner likes the twist. Watch: Americanisms (candy, guy) and runtime over 45s.
+
+## Video 01 (pigeon box)
+- VO received: voice is actually "Adam - Classic Scottish Storyteller" (not Callum). 52.2s: OVER the 45s target; flag to owner.
+- Storyboard v1 stills: videos/01-pigeon-box/storyboard/ (7 frames + sheet.png). Code: engine/storyboard (three.js + playwright, serve dir on :8765).
+- Style v1: cream bg #F2E6D8, coral/teal/mustard/navy/pigeon-blue, matte + env light, floating confetti spheres, glass box w/ navy base.
