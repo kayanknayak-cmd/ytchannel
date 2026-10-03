@@ -101,7 +101,7 @@ def cyclorama(col=None):
     bpy.ops.mesh.primitive_plane_add(size=1); o=bpy.context.object; bm=bmesh.new(); prof=[(-60,0),(2,0)]
     for i in range(1,21): a=i/20*math.pi/2; prof.append((2+math.sin(a)*4,4-math.cos(a)*4))
     prof+=[(6,10),(6,30)]
-    vs=[[bm.verts.new((x,y,z)) for (y,z) in prof] for x in (-30,60)]
+    vs=[[bm.verts.new((x,y,z)) for (y,z) in prof] for x in (-30,100)]
     for i in range(len(prof)-1): bm.faces.new((vs[0][i],vs[1][i],vs[1][i+1],vs[0][i+1]))
     bm.to_mesh(o.data); bm.free(); done(o,st.setmat); return o
 def area(loc,tgt,size,energy,col=(1,0.95,0.88)):
