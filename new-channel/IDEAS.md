@@ -12,7 +12,7 @@ Separate direction from the existing collage channel. Nothing here reuses it.
 Simple round 3D characters are not new (pill/bean people, clay-style 3D are common). "Never seen before" has to come from a consistent signature: the floating-head character, one camera language, one palette system, and a recurring cast.
 
 ## Niches (ranked)
-1. **Psychology and behavior** (biases, social experiments, why people do X). Character-driven, so the cylinder person becomes the brand. Evergreen, huge search demand, scenes are just a few characters + props. RECOMMENDED.
+1. **Psychology and behavior**. Owner picked this; see CLAUDE.md for the chosen angle.
 2. **Your body, inside** (what happens when you skip sleep, hold your breath). Round shapes fit cells and organs naturally; very high retention topic. Needs careful fact-checking.
 3. **Money mechanics** (compound interest, inflation, how banks make money). Floating coins and stacks animate beautifully; strong RPM. Crowded niche, visuals must carry it.
 4. **How everyday things work** (elevators, locks, fridges). Cutaway mechanisms in simple geometry look great, but each video needs custom models (slower to build).

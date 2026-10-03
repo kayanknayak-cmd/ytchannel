@@ -1,0 +1,24 @@
+# New channel: Claude's workspace
+
+The owner reads chat in full and rarely opens the repo. This folder is Claude's memory, context, opinions and outputs.
+Anything the owner must see goes in chat, not only here. Read this file first in every session on this branch.
+
+## Owner
+- Wants concise answers, real pushback, fact-checked claims. No em dashes. Ask questions with the clickable question tool.
+- Wants to discuss and find the niche most likely to blow up before spending effort building videos.
+
+## Decisions so far
+- Shorts only, 30-45s, ElevenLabs voiceover.
+- Look: polished soft 3D, all-round primitives, floating elements. Person = rounded cylinder + floating sphere head.
+- Niche: psychology / why people decide things. Not "scientific" in tone.
+- Every script opens in second person, casting the viewer as a character ("You own a casino...").
+
+## Working proposal (not yet confirmed by owner)
+- Angle: "you're the one designing other people's decisions": the viewer runs the business that profits from psychology
+  (casino, supermarket, popcorn decoy pricing, slot near-misses, gym overselling, airlines, buffets, F2P games).
+- Loop ending: "...and now you're the customer."
+- Risks: claims still need fact-checking (e.g., casino-clock story is only partly true); second-person hook alone is not unique.
+
+## Inputs
+- Owner shared https://www.youtube.com/watch?v=QXfugR3ZIAs ("I Blew Up a Shorts Channel in 7 Days!", Isaac / @isaacverse).
+  Transcript not accessible from this environment; ask owner for takeaways.
