@@ -43,3 +43,7 @@ Anything the owner must see goes in chat, not only here. Read this file first in
 - v3 approved as direction ('right direction'). Pigeon v2: side profile, egg body + darker wing #7E8A9C + tail + floating head, faces button.
 - Owner: pigeon = just a plain grey sphere. Don't add detail to it.
 - Owner then: pigeon = sphere body + floating sphere head + gold beak. No eyes/wings/tail.
+- Beak enlarged (r .07, depth .24). Owner said: "make the video".
+- Animation: engine/blender/v01.py builds the full 52.2s scene (14 camera shots, pecks, pellets, slot machines in giant open-top box, giant scientist reveal). Render: 720x1280 16spp Cycles + motion blur, ~12s/frame, PNG seq then ffmpeg upscale to 1080x1920 + VO.
+- Word timings: voiceover/words.json (sherpa-onnx parakeet; model in /home/user/ytchannel/.models).
+- EEVEE works only with apt libegl1/mesa (software), not faster. Cycles CPU is the path.
