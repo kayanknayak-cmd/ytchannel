@@ -49,12 +49,16 @@ for size,loc in [((w,d,t),(0,0,t/2)),((w,d,t),(0,0,h)),((t,d,h),(-w/2,0,h/2)),((
     o=cube(size,(loc[0]+bx,loc[1]+by,loc[2]),M['white'],0.05)
 cyl(0.16,0.06,(bx+0.5,by+d/2-0.06,0.95),M['red'],0.025).rotation_euler=(math.pi/2,0,0)
 bpy.context.object.location=(bx+0.5,by+d/2-0.06,0.95)
-# pigeon: egg body + floating head + beak
-px,py=bx-0.2,by-0.05
-sphere(0.32,(px,py,0.12+0.3),M['grey'],(0.95,1.15,0.9)).rotation_euler=(0.3,0,0.5)
-sphere(0.17,(px+0.06,py-0.12,0.98),M['grey'])
-bpy.ops.mesh.primitive_cone_add(radius1=0.045,depth=0.14,location=(px+0.14,py-0.27,0.96),vertices=48); b=obj_done(bpy.context.object,M['gold']); b.rotation_euler=(math.radians(90),0,math.radians(-25)+math.pi)
-for dx in (-0.06,0.1): sphere(0.022,(px+dx,py-0.26,1.02),M['ink'])
+# pigeon: side profile facing the button (+x): egg body, wing, tail, floating head
+M['wing']=mat('wing','#7E8A9C',0.5)
+px,py,pz=bx-0.42,by-0.05,0.41
+o=sphere(0.3,(px,py,pz),M['grey'],(1.3,0.9,0.95)); o.rotation_euler=(0,math.radians(-12),0)
+o=sphere(0.3,(px-0.05,py-0.25,pz+0.03),M['wing'],(0.8,0.2,0.42)); o.rotation_euler=(0,math.radians(-18),0)
+o=sphere(0.2,(px-0.38,py,pz+0.1),M['wing'],(1.0,0.55,0.28)); o.rotation_euler=(0,math.radians(-22),0)
+hx,hz=px+0.34,pz+0.46
+sphere(0.17,(hx,py,hz),M['grey'])
+bpy.ops.mesh.primitive_cone_add(radius1=0.045,depth=0.15,location=(hx+0.2,py,hz-0.02),vertices=48); o=obj_done(bpy.context.object,M['gold']); o.rotation_euler=(0,math.radians(90),0)
+sphere(0.024,(hx+0.07,py-0.15,hz+0.04),M['ink'])
 # pellets
 for i,(x,z) in enumerate([(0.35,0.45),(0.42,0.62),(0.33,0.78)]): sphere(0.05,(bx+x,by-0.05,z),M['gold'])
 
@@ -73,11 +77,11 @@ cam.data.lens=52; cam.data.dof.use_dof=True; cam.data.dof.focus_distance=11.3; c
 d=Vector((0.2,0,1.25))-cam.location; cam.rotation_euler=d.to_track_quat('-Z','Y').to_euler()
 
 # lights: big soft key, rim, world
-bpy.ops.object.light_add(type='AREA',location=(-5,-5,7)); k=bpy.context.object; k.data.size=3.5; k.data.energy=3200; k.data.color=(1,0.95,0.88)
+bpy.ops.object.light_add(type='AREA',location=(-6,-4,6)); k=bpy.context.object; k.data.size=2.5; k.data.energy=4200; k.data.color=(1,0.95,0.88)
 d=Vector((0,0,0.8))-k.location; k.rotation_euler=d.to_track_quat('-Z','Y').to_euler()
 bpy.ops.object.light_add(type='AREA',location=(5,3,4)); rl=bpy.context.object; rl.data.size=3; rl.data.energy=500; rl.data.color=(0.85,0.9,1)
 d=Vector((0,0,1))-rl.location; rl.rotation_euler=d.to_track_quat('-Z','Y').to_euler()
-w=bpy.data.worlds.new('w'); sc.world=w; w.use_nodes=True; w.node_tree.nodes['Background'].inputs[0].default_value=(*hexc('#DCE3EE')[:3],1); w.node_tree.nodes['Background'].inputs[1].default_value=0.12
+w=bpy.data.worlds.new('w'); sc.world=w; w.use_nodes=True; w.node_tree.nodes['Background'].inputs[0].default_value=(*hexc('#DCE3EE')[:3],1); w.node_tree.nodes['Background'].inputs[1].default_value=0.08
 
 sc.render.engine='CYCLES'; sc.cycles.device='CPU'; sc.cycles.samples=int(sys.argv[-2]) if sys.argv[-2].isdigit() else 64
 sc.cycles.use_denoising=True; sc.render.resolution_x=1080; sc.render.resolution_y=1920
