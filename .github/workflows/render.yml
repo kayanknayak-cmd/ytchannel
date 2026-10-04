@@ -90,5 +90,5 @@ jobs:
         with: {pattern: 'mp4-*', path: new-channel/finished, merge-multiple: true}
       - run: |
           git config user.name "render-bot"; git config user.email "render-bot@users.noreply.github.com"
-          git add new-channel/finished && git commit -m "Render farm: finished videos" || exit 0
+          git add -f new-channel/finished && git commit -m "Render farm: finished videos" || exit 0
           for i in 1 2 3; do git pull -q --rebase origin new-channel && git push -q origin HEAD:new-channel && break; sleep 10; done
