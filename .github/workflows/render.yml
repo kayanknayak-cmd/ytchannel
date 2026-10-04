@@ -1,0 +1,94 @@
+# Render farm for the new channel: edit new-channel/engine/blender/render-request.txt (space-separated video numbers) and push.
+name: render
+on:
+  push:
+    branches: [new-channel]
+    paths: ['new-channel/engine/blender/render-request.txt']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: render
+env:
+  B: new-channel/engine/blender
+  CHUNKS: 16
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.p.outputs.matrix }}
+      videos: ${{ steps.p.outputs.videos }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: p
+        run: |
+          python3 - <<'PY'
+          import json, math, os
+          B=os.environ['B']; n=int(os.environ['CHUNKS'])
+          vids=json.load(open(f'{B}/videos.json')); req=open(f'{B}/render-request.txt').read().split()
+          inc=[]
+          for nn in req:
+              end=math.ceil(vids[nn]['dur']*24); size=math.ceil(end/n)
+              for c in range(n):
+                  s=c*size+1; e=min(end,(c+1)*size)
+                  if s<=e: inc.append({'nn':nn,'c':c,'s':s,'e':e})
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write('matrix='+json.dumps({'include':inc})+'\n'); f.write('videos='+json.dumps(req)+'\n')
+          PY
+  render:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11', cache: pip, cache-dependency-path: '.github/workflows/render.yml'}
+      - run: sudo apt-get update -q && sudo apt-get install -y -q libxi6 libxxf86vm1 libxfixes3 libxrender1 libgl1 libsm6 libxkbcommon0 >/dev/null
+      - run: pip install -q bpy==5.0.1 numpy
+      - name: Build scene
+        run: |
+          S=$(python3 -c "import json;print(json.load(open('$B/videos.json'))['${{ matrix.nn }}']['script'])")
+          mkdir -p out && python3 $B/$S $PWD/out/
+      - name: Render frames ${{ matrix.s }}-${{ matrix.e }}
+        run: python3 $B/render_chunk.py out ${{ matrix.s }} ${{ matrix.e }} $PWD/frames
+      - uses: actions/upload-artifact@v4
+        with: {name: 'frames-${{ matrix.nn }}-${{ matrix.c }}', path: frames/*.png, retention-days: 3}
+  encode:
+    needs: [plan, render]
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        nn: ${{ fromJson(needs.plan.outputs.videos) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: {pattern: 'frames-${{ matrix.nn }}-*', path: frames, merge-multiple: true}
+      - run: pip install -q imageio-ffmpeg
+      - name: Encode with voiceover
+        run: |
+          read SLUG DUR < <(python3 -c "import json;v=json.load(open('$B/videos.json'))['${{ matrix.nn }}'];print(v['slug'],v['dur'])")
+          END=$(python3 -c "import math;print(math.ceil($DUR*24))"); N=$(ls frames/*.png | wc -l)
+          echo "frames $N / $END"; [ "$N" -eq "$END" ] || exit 1
+          FF=$(python3 -c "import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())"); mkdir -p mp4
+          $FF -y -loglevel error -framerate 24 -start_number 1 -i frames/%04d.png -i new-channel/videos/${{ matrix.nn }}-$SLUG/voiceover/original.mp3 \
+            -frames:v $END -t $DUR -vf scale=1080:1920:flags=lanczos -c:v libx264 -crf 18 -preset slow -pix_fmt yuv420p -c:a aac -b:a 192k -movflags +faststart mp4/${{ matrix.nn }}-$SLUG.mp4
+      - uses: actions/upload-artifact@v4
+        with: {name: 'mp4-${{ matrix.nn }}', path: mp4/*.mp4, retention-days: 7}
+  publish:
+    needs: encode
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: new-channel}
+      - uses: actions/download-artifact@v4
+        with: {pattern: 'mp4-*', path: new-channel/finished, merge-multiple: true}
+      - run: |
+          git config user.name "render-bot"; git config user.email "render-bot@users.noreply.github.com"
+          git add new-channel/finished && git commit -m "Render farm: finished videos" || exit 0
+          for i in 1 2 3; do git pull -q --rebase origin new-channel && git push -q origin HEAD:new-channel && break; sleep 10; done

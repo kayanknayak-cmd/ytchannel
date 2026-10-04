@@ -54,3 +54,4 @@ Anything the owner must see goes in chat, not only here. Read this file first in
 - Visual grammar: grey = test subject (pigeon, volunteer, kid), white = neutral, glasses = works for the scientist (actors), red = wrong/answer A/danger, gold = right/reward.
 - Scenes 02-08 built and queued (queue.txt). Gotcha: two keys landing on the same frame collapse (F() rounding); use F(t)-n for holds.
 - Container SUSPENDED at 22:32 when session went idle; processes died, scratchpad frames survived. Restart: nohup engine/blender/queue.sh & (resumes). Rendering only progresses while the session is active.
+- RENDER FARM (replaces local queue): .github/workflows/render.yml. Push a change to new-channel/engine/blender/render-request.txt (video numbers) -> 16 chunks/video on GitHub Actions (public repo = free, 20 parallel), encode with VO, commit to new-channel/finished/. Manifest: engine/blender/videos.json. Local queue stopped.
