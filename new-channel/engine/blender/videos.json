@@ -1,0 +1,10 @@
+{
+ "01": {"slug": "pigeon-box", "script": "v01.py", "dur": 48.9},
+ "02": {"slug": "wrong-line", "script": "scenes/v02.py", "dur": 35.7},
+ "03": {"slug": "button", "script": "scenes/v03.py", "dur": 34.5},
+ "04": {"slug": "marshmallow", "script": "scenes/v04.py", "dur": 37.85},
+ "05": {"slug": "prison", "script": "scenes/v05.py", "dur": 34.6},
+ "06": {"slug": "smoke", "script": "scenes/v06.py", "dur": 38.8},
+ "07": {"slug": "gorilla", "script": "scenes/v07.py", "dur": 31.85},
+ "08": {"slug": "free-chocolate", "script": "scenes/v08.py", "dur": 32.35}
+}
