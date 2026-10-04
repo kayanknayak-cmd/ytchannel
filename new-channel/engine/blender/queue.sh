@@ -10,11 +10,7 @@ while true; do
     [ -f "$dir/.done" ] || [ ! -f "$blend" ] && continue
     end=$(python3 -c "import math;print(math.ceil($dur*24))")
     echo "$(date) start $nn"
-    if [ "$nn" = "01" ]; then  # already rendering from earlier; frames past the loop cut aren't needed
-      while [ ! -s "$dir/$(printf %04d $end).png" ]; do sleep 30; done; sleep 40; pkill -f "anim.py v01.blend"
-    else
-      python3 anim.py "$blend" > "$dir/render.log" 2>&1
-    fi
+    python3 anim.py "$blend" "$end" > "$dir/render.log" 2>&1
     mkdir -p $NC/finished
     $FF -y -loglevel error -framerate 24 -start_number 1 -i "$dir/%04d.png" -i $NC/videos/$nn-$slug/voiceover/original.mp3 \
       -frames:v $end -t $dur -vf "scale=1080:1920:flags=lanczos" -c:v libx264 -crf 18 -preset slow -pix_fmt yuv420p -c:a aac -b:a 192k \
